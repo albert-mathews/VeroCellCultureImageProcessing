@@ -1,0 +1,20 @@
+The refrerenced images files are light microscope images of Vero E6 cell cultures.
+The images were taken at 10x and 20x magnification using bright field and occasionally phase contrast modes.
+Each page provides a numerical value for the sclae bar in the image, e.g. 400 micrometers for 10x, and 200 micrometers for 20x.
+In the experiment there were two experimental paths that differed in the culture process.
+For the most part, the culture medium follows the cell providers recommended medium formulation.
+Both cultures were seeded at the same cell density on day one, and maintained for five days without medium change.
+Over the five days the cultures were maintained in typical conditions of a cell culture incubation device (e.g. temperature, humidity, CO2 levels, etc.).
+
+Each page of the document shows two images. On the left is what we'll call culture A, and on the right culture B.
+Each pair of images was taken on the same day, at about the same time.
+There are 10 images from each day, so 50 images of each culture, for a total of 100 images.
+
+Please answer these questions providing as many details as possible:
+1. Please provide your general understanding of the image set provided.
+2. please list and explain any additional information that you would require or find helpful to provide better feedback about the dataset.
+3. Please provide a table that details any presence of CPE detected. The table should have as columns the following headings:
+Culture A or B, Day, image number, CPE type, Approximate location of CPE within the image, any comments about this finding.
+For example, one line in the table may be:
+A, 1, 101, Cell Rounding, 4 o'clock near the edge, There are several cells in the same area exhibiting similar CPE.
+4. Please provide your best assessment about what the difference in the culture process was between cultures A and B. Please be as detailed as possible.
