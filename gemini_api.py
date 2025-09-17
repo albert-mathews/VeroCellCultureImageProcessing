@@ -3,11 +3,7 @@ import os
 import json
 import pandas as pd
 import re
-
-# --- Configuration ---
-# Set your Gemini API key here
-os.environ['GOOGLE_API_KEY'] = 'AIzaSyBaRfzwEzEO1teemeH3AEYeZKbwERrl1fk'
-genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
+from dotenv import load_dotenv
 
 # Path to the text file with upload logs
 upload_log_file = 'upload_pngs_output.txt'

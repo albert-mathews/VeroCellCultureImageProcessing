@@ -1,8 +1,12 @@
 import google.generativeai as genai
 import os
+from dotenv import load_dotenv
 
-# Configure your API key
-os.environ['GOOGLE_API_KEY'] = 'AIzaSyBaRfzwEzEO1teemeH3AEYeZKbwERrl1fk'
+# Load variables from the .env file
+load_dotenv()
+
+# Get the API key from the environment variable
+os.environ['GOOGLE_API_KEY'] = os.getenv('GOOGLE_API_KEY')
 genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 
 # The file ID of the file you want to delete

@@ -2,10 +2,13 @@ import google.generativeai as genai
 import os
 import json
 import time
+from dotenv import load_dotenv
 
-# --- Configuration ---
-# Set your Gemini API key here
-os.environ['GOOGLE_API_KEY'] = 'AIzaSyBaRfzwEzEO1teemeH3AEYeZKbwERrl1fk'
+# Load variables from the .env file
+load_dotenv()
+
+# Get the API key from the environment variable
+os.environ['GOOGLE_API_KEY'] = os.getenv('GOOGLE_API_KEY')
 genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 
 # Path to the folder containing your images
