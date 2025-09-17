@@ -1,0 +1,136 @@
+import google.generativeai as genai
+import os
+import json
+import pandas as pd
+from dotenv import load_dotenv
+
+# --- Configuration ---
+load_dotenv()
+os.environ['GOOGLE_API_KEY'] = os.getenv('GOOGLE_API_KEY')
+genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
+
+# Path to your image folder
+image_folder = 'converted_pngs'
+
+# Your common prompt for all images
+# NOTE: The prompt is crucial. It must instruct the model to return a structured JSON response.
+common_prompt = """
+Analyze the provided image of a cell culture.
+The imags are of Vero E6 cells, cultivated in typical growth medium.
+The images are taken using bright field or phase constrast miscropscope.
+The maginification is either 10x or 20x. Each image as a scale bar. 400um is 10x, and 200um is 20x.
+Your primary task is to detect the presence of CPE (Cytopathic Effect).
+CPE can be identified by signs such as:
+Cell rounding
+Cell shrinkage
+Cell lysis (cytolysis)
+Pyknosis
+Karyorrhexis
+Intranuclear inclusion bodies
+Intracytoplasmic inclusion bodies
+Nuclear and cytoplasmic inclusions
+Syncytium formation (multinucleated giant cells)
+Cytoplasmic vacuolization
+Cytomegaly (cell enlargement)
+Cell detachment
+Plaque formation
+Focus formation (loss of contact inhibition)
+Immortalization
+Malignant transformation
+Hemadsorption
+Chromosomal abnormalities
+Cytoskeletal changes
+
+Please return your analysis as a JSON object with the following structure:
+{
+    "cpe_detected": boolean,
+    "cpe_quadrant": number | null,
+    "cpe_types": string[] | null,
+    "full_response_text": string
+}
+
+Here are the specific instructions for each key:
+- "cpe_detected": A boolean. True if any form of CPE is detected, otherwise False.
+- "cpe_quadrant": An integer from 1 to 4 representing the quadrant where the most significant CPE is detected. Quadrant 1 is top-left, 2 is top-right, 3 is lower-left, and 4 is lower-right. If no CPE is detected, set this to null.
+- "cpe_types": A list of strings. Include 'rounding', 'detachment', or 'lysis' for each type of CPE detected. If no CPE is found, set this to null.
+- "full_response_text": A brief textual summary of your overall findings for the image.
+
+Example response for a positive detection:
+{
+    "cpe_detected": true,
+    "cpe_quadrant": 1,
+    "cpe_types": ["rounding", "lysis"],
+    "full_response_text": "Significant cell rounding and lysis detected in the upper-left quadrant."
+}
+"""
+
+# The dictionary to store all results
+all_results = {}
+
+# Initialize the Gemini model
+model = genai.GenerativeModel('gemini-1.5-pro-latest')
+
+# --- Processing Loop ---
+print("Starting image processing... 🔬")
+for filename in os.listdir(image_folder):
+    if filename.lower().endswith(('.png', '.jpg', '.jpeg')):
+        full_path = os.path.join(image_folder, filename)
+        
+        try:
+            # Upload the image file for processing
+            uploaded_file = genai.upload_file(path=full_path)
+            
+            # Wait for the file to be active before processing
+            while uploaded_file.state.name != 'ACTIVE':
+                print(f"Waiting for {filename} to be processed...")
+                time.sleep(5)
+                uploaded_file = genai.get_file(uploaded_file.name)
+
+            # Send the prompt and the uploaded file to the model
+            response = model.generate_content([
+                common_prompt, 
+                uploaded_file
+            ])
+            
+            # Extract and parse the JSON response from the model
+            response_json_str = response.text.strip('`').strip('json').strip()
+            response_dict = json.loads(response_json_str)
+
+            # Store the structured response in our dictionary
+            all_results[filename] = [
+                response_dict.get('cpe_detected', False),
+                response_dict.get('cpe_quadrant'),
+                response_dict.get('cpe_types'),
+                response_dict.get('full_response_text', '')
+            ]
+
+            print(f"Processed {filename}. CPE detected: {response_dict.get('cpe_detected')}")
+            
+            # Clean up the temporary uploaded file
+            genai.delete_file(uploaded_file.name)
+
+        except Exception as e:
+            print(f"An error occurred while processing {filename}: {e}")
+            all_results[filename] = [False, None, None, f"Error: {e}"]
+            
+print("\nProcessing complete! 🎉")
+
+# --- Step 3: Generate and Display the Tabulated Results ---
+print("\n--- Tabulated CPE Detections ---")
+if all_results:
+    # Convert the dictionary to a pandas DataFrame
+    data_for_table = {
+        'Image Name': list(all_results.keys()),
+        'CPE Detected': [v[0] for v in all_results.values()],
+        'Quadrant': [v[1] for v in all_results.values()],
+        'CPE Types': [v[2] for v in all_results.values()]
+    }
+    df = pd.DataFrame(data_for_table)
+    print(df.to_string(index=False))
+
+    # --- Step 4: Save the Dictionary to a File ---
+    output_filename = 'cpe_detection_results.json'
+    with open(output_filename, 'w') as f:
+        json.dump(all_results, f, indent=4)
+    
+    print(f"\nDictionary of results saved to '{output_filename}'")
