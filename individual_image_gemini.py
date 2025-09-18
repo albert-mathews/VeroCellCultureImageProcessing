@@ -3,6 +3,7 @@ import os
 import json
 import pandas as pd
 from dotenv import load_dotenv
+import time
 
 # --- Configuration ---
 load_dotenv()
@@ -12,8 +13,21 @@ genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 # Path to your image folder
 image_folder = 'converted_pngs'
 
+# The name of the file to save/load results
+results_filename = 'cpe_detection_results.json'
+
+# --- Add this new section to load existing results ---
+all_results = {}
+if os.path.exists(results_filename):
+    load_choice = input(f"'{results_filename}' found. Do you want to load it and use existing file IDs to skip re-uploading images? (yes/no): ").lower()
+    if load_choice == 'yes':
+        with open(results_filename, 'r') as f:
+            all_results = json.load(f)
+        print("Loaded previous results. Skipping image uploads for existing files.")
+    else:
+        print("Starting fresh. All images will be re-uploaded.")
+
 # Your common prompt for all images
-# NOTE: The prompt is crucial. It must instruct the model to return a structured JSON response.
 common_prompt = """
 Analyze the provided image of a cell culture.
 The imags are of Vero E6 cells, cultivated in typical growth medium.
@@ -70,9 +84,6 @@ Example response for a positive detection:
 }
 """
 
-# The dictionary to store all results
-all_results = {}
-
 # Initialize the Gemini model
 model = genai.GenerativeModel('gemini-1.5-pro-latest')
 
@@ -81,17 +92,33 @@ print("Starting image processing... 🔬")
 for filename in os.listdir(image_folder):
     if filename.lower().endswith(('.png', '.jpg', '.jpeg')):
         full_path = os.path.join(image_folder, filename)
-        
-        try:
-            # Upload the image file for processing
-            uploaded_file = genai.upload_file(path=full_path)
-            
-            # Wait for the file to be active before processing
-            while uploaded_file.state.name != 'ACTIVE':
-                print(f"Waiting for {filename} to be processed...")
-                time.sleep(5)
-                uploaded_file = genai.get_file(uploaded_file.name)
+        file_id = None
 
+        # Check if the file already has an ID from a previous run
+        if filename in all_results and len(all_results[filename]) > 4:
+            # The fourth element is the file ID (index 3)
+            file_id = all_results[filename][4] 
+            print(f"Using pre-existing file ID for {filename}: {file_id}")
+            uploaded_file = genai.get_file(file_id)
+        else:
+            try:
+                # Upload the image file for processing
+                uploaded_file = genai.upload_file(path=full_path)
+                file_id = uploaded_file.name
+                print(f"Uploaded {filename}. File ID: {file_id}")
+                
+                # Wait for the file to be active before processing
+                while uploaded_file.state.name != 'ACTIVE':
+                    print(f"Waiting for {filename} to be processed...")
+                    time.sleep(5)
+                    uploaded_file = genai.get_file(uploaded_file.name)
+            
+            except Exception as e:
+                print(f"An error occurred while uploading {filename}: {e}")
+                all_results[filename] = [False, None, None, f"Error: {e}", None]
+                continue # Skip to the next image on upload error
+
+        try:
             # Send the prompt and the uploaded file to the model
             response = model.generate_content([
                 common_prompt, 
@@ -102,13 +129,14 @@ for filename in os.listdir(image_folder):
             response_json_str = response.text.strip('`').strip('json').strip()
             response_dict = json.loads(response_json_str)
 
-            # Store the structured response in our dictionary
+            # Store the structured response in our dictionary, including the file ID
             all_results[filename] = [
                 response_dict.get('cpe_detected', False),
                 response_dict.get('cpe_quadrant'),
                 response_dict.get('cpe_types'),
                 response_dict.get('confluency'),
-                response_dict.get('full_response_text', '')
+                response_dict.get('full_response_text', ''),
+                file_id  # Add the file ID to the list
             ]
 
             print(f"Processed {filename}. CPE detected: {response_dict.get('cpe_detected')}. Confluency: {response_dict.get('confluency')}")
@@ -118,7 +146,7 @@ for filename in os.listdir(image_folder):
 
         except Exception as e:
             print(f"An error occurred while processing {filename}: {e}")
-            all_results[filename] = [False, None, None, f"Error: {e}"]
+            all_results[filename] = [False, None, None, f"Error: {e}", file_id]
             
 print("\nProcessing complete! 🎉")
 
@@ -135,9 +163,10 @@ if all_results:
     df = pd.DataFrame(data_for_table)
     print(df.to_string(index=False))
 
-    # --- Step 4: Save the Dictionary to a File ---
-    output_filename = 'cpe_detection_results.json'
-    with open(output_filename, 'w') as f:
+    # --- Step 4: Save the Dictionary to a JSON file ---
+    with open(results_filename, 'w') as f:
         json.dump(all_results, f, indent=4)
     
-    print(f"\nDictionary of results saved to '{output_filename}'")
+    print(f"\nDictionary of results saved to '{results_filename}'")
+else:
+    print("No results to display.")
