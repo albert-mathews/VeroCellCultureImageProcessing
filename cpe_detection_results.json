@@ -3,7 +3,8 @@
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 20%."
     ],
     "EXP_path1_passage4_102.png": [
         true,
@@ -12,675 +13,709 @@
             "rounding",
             "detachment"
         ],
-        "Cell rounding and detachment are observed throughout the image, indicating CPE. Many cells appear rounded and floating, rather than adhering to the surface and displaying the typical elongated, fibroblast-like morphology of Vero E6 cells."
+        15,
+        "CPE is detected in the form of cell rounding and detachment.  The confluency is approximately 15%."
     ],
     "EXP_path1_passage4_103.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear normal with a healthy morphology. Some cell debris noted, however, the cells otherwise appear normal in shape, spread appropriately."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and normal. Confluency is approximately 20%."
     ],
     "EXP_path1_passage4_104.png": [
-        true,
+        false,
         null,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "There are multiple rounded, detached cells present throughout the image, indicative of CPE.  While some cells remain attached and appear normal, the presence of these floating, rounded cells is a clear sign of cytopathic effect."
+        null,
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 20%."
     ],
     "EXP_path1_passage4_105.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear normal with their typical elongated morphology.  There is no evidence of cell rounding, detachment, lysis, or syncytia formation."
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path1_passage4_106.png": [
         false,
         null,
         null,
-        "No significant CPE detected.  Cells appear healthy and attached with normal morphology."
+        20,
+        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 20%."
     ],
     "EXP_path1_passage4_107.png": [
         false,
         null,
         null,
-        "No CPE observed. Vero E6 cells appear normal with typical morphology at low confluency.  Some floating cells and debris visible but this level does not suggest CPE."
+        15,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 15%."
     ],
     "EXP_path1_passage4_108.png": [
-        true,
+        false,
         null,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "There are many rounded, detached cells visible throughout the image, indicative of CPE.  No obvious lysis is observed."
+        null,
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 20%."
     ],
     "EXP_path1_passage4_109.png": [
         false,
         null,
         null,
-        "No CPE observed.  Cells appear healthy and normal with typical morphology for Vero E6 cells. The 400um scale bar indicates 10x magnification."
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path1_passage4_110.png": [
-        true,
+        false,
         null,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "There are several rounded, detached cells visible throughout the image, indicative of CPE.  These are mostly individual cells, not clustered, and the overall confluence appears low."
+        null,
+        20,
+        "No CPE detected. Confluency is approximately 20%."
     ],
     "EXP_path1_passage4_201.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology."
+        30,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. The confluency is approximately 30%."
     ],
     "EXP_path1_passage4_202.png": [
-        true,
-        3,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "Cell rounding and detachment are observed, most notably in the lower left quadrant. Some small, bright, rounded objects are also visible, possibly indicative of cell debris or other artifacts."
+        false,
+        null,
+        null,
+        30,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 30%."
     ],
     "EXP_path1_passage4_203.png": [
         false,
         null,
         null,
-        "No significant CPE detected. Vero E6 cells appear healthy and exhibit normal morphology."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 20%."
     ],
     "EXP_path1_passage4_204.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear normal with healthy morphology at 20x magnification."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 20%."
     ],
     "EXP_path1_passage4_205.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology with their characteristic adherent, elongated, and fibroblast-like appearance.  There are some rounded cells present but this are less frequent and they seem to be cells in suspension or in the process of adhering to the surface."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 20%."
     ],
     "EXP_path1_passage4_206.png": [
         false,
         null,
         null,
-        "No significant CPE detected. Cells appear healthy and attached, with normal morphology."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 20%."
     ],
     "EXP_path1_passage4_207.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear normal with typical morphology at 10x magnification."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 20%."
     ],
     "EXP_path1_passage4_208.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and normal with typical morphology."
+        20,
+        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 20%."
     ],
     "EXP_path1_passage4_209.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear normal with healthy morphology."
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path1_passage4_210.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 20%."
     ],
     "EXP_path1_passage4_301.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology."
+        30,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 30%."
     ],
     "EXP_path1_passage4_302.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and confluent with normal morphology."
+        50,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at 50%."
     ],
     "EXP_path1_passage4_303.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology at 10x magnification."
+        25,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 25%."
     ],
     "EXP_path1_passage4_304.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear normal with healthy morphology. Some floating rounded cells are visible, possibly mitotic cells."
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path1_passage4_305.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology.  The cells are spread out, with typical adherence and spreading."
+        20,
+        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 20%."
     ],
     "EXP_path1_passage4_306.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and confluent with normal morphology."
+        30,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 30%."
     ],
     "EXP_path1_passage4_307.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology with typical adherence and spreading."
+        30,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at 30%."
     ],
     "EXP_path1_passage4_308.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear normal with typical morphology."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 20%."
     ],
     "EXP_path1_passage4_309.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear normal with typical morphology. Some debris is present in the background."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 20%."
     ],
     "EXP_path1_passage4_310.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and confluent with normal morphology."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 20%."
     ],
     "EXP_path1_passage4_401.png": [
         false,
         null,
         null,
-        "No CPE detected.  Cells appear healthy and confluent with normal morphology."
+        60,
+        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at 60%."
     ],
     "EXP_path1_passage4_402.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and confluent with normal morphology."
+        60,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 60%."
     ],
     "EXP_path1_passage4_403.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and confluent with normal morphology."
+        60,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 60%."
     ],
     "EXP_path1_passage4_404.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and confluent in the lower quadrants, with scattered individual and small groups of cells in the upper part of the image.  Normal morphology observed."
+        60,
+        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 60%."
     ],
     "EXP_path1_passage4_405.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear normal with typical morphology."
+        50,
+        "No CPE detected. Vero E6 cells appear healthy and normal with an estimated confluency of 50%."
     ],
     "EXP_path1_passage4_406.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and confluent with normal morphology."
+        60,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 60%."
     ],
     "EXP_path1_passage4_407.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and confluent with normal morphology."
+        70,
+        "No CPE detected. Vero E6 cells appear healthy and confluent at approximately 70%."
     ],
     "EXP_path1_passage4_408.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and confluent with normal morphology."
+        80,
+        "No CPE detected. Confluency approximately 80%."
     ],
     "EXP_path1_passage4_409.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology at this magnification.  The cells have typical adherent, fibroblast-like morphology."
+        70,
+        "No CPE detected. Vero E6 cells appear healthy and confluent at approximately 70%."
     ],
     "EXP_path1_passage4_410.png": [
         false,
         null,
         null,
-        "No CPE observed.  Cells appear normal and confluent, with typical morphology for Vero E6 cells. "
+        70,
+        "No CPE detected. The Vero E6 cells appear healthy and confluent, approximately 70%."
     ],
     "EXP_path1_passage4_501.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and confluent with normal morphology."
+        70,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at 70%."
     ],
     "EXP_path1_passage4_502.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear normal and healthy with confluent monolayer formation."
+        60,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at 60%."
     ],
     "EXP_path1_passage4_503.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and confluent with normal morphology."
+        60,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at 60%."
     ],
     "EXP_path1_passage4_504.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and confluent with normal morphology."
+        60,
+        "No CPE detected. The Vero E6 cells appear healthy and show normal morphology. Confluency is estimated at approximately 60%."
     ],
     "EXP_path1_passage4_505.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and confluent with normal morphology."
+        50,
+        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at 50%."
     ],
     "EXP_path1_passage4_506.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and confluent with normal morphology."
+        30,
+        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at 30%."
     ],
     "EXP_path1_passage4_507.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology."
+        30,
+        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 30%."
     ],
     "EXP_path1_passage4_508.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology."
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path1_passage4_509.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and confluent with normal morphology."
+        60,
+        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 60%."
     ],
     "EXP_path1_passage4_510.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and confluent with normal morphology."
+        90,
+        "No CPE detected. The Vero E6 cells appear healthy and confluent, estimated at approximately 90%."
     ],
     "EXP_path2_passage4_101.png": [
         false,
         null,
         null,
-        "No CPE detected. Cells appear healthy and exhibit normal morphology."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 20%."
     ],
     "EXP_path2_passage4_102.png": [
         false,
         null,
         null,
-        "No CPE observed. Cells appear healthy and normal with expected morphology for Vero E6 cells at this magnification (20x).  Some debris is visible, but this is common in cell culture and isn't indicative of CPE."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 20%."
     ],
     "EXP_path2_passage4_103.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear normal with their characteristic morphology."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 20%."
     ],
     "EXP_path2_passage4_104.png": [
         false,
         null,
         null,
-        "No CPE observed. Vero E6 cells appear healthy and exhibit normal morphology at 20x magnification."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 20%."
     ],
     "EXP_path2_passage4_105.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and normal with typical morphology at 10x magnification."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 20%."
     ],
     "EXP_path2_passage4_106.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and normal with their characteristic morphology.  Some floating, rounded, refractile cells may indicate some cells lifting off, but this is not widespread or definitively CPE related in this image."
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path2_passage4_107.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear normal with typical morphology."
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path2_passage4_108.png": [
         false,
         null,
         null,
-        "No CPE detected. Cells appear sparsely distributed and exhibit normal morphology with spindle or irregular shapes. Some degree of expected variability in cell size is observed. No evidence of rounding, lysis, or detachment."
+        10,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 10%."
     ],
     "EXP_path2_passage4_109.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology.  Cells are spread out and attached. There is no evidence of rounding, detachment, or lysis."
+        10,
+        "No CPE detected. Vero E6 cells appear healthy and sparsely distributed with an estimated confluency of 10%."
     ],
     "EXP_path2_passage4_110.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology."
+        10,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 10%."
     ],
     "EXP_path2_passage4_201.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear normal with healthy morphology."
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path2_passage4_202.png": [
         false,
         null,
         null,
-        "No CPE detected.  Cells appear sparsely populated, but individually they appear healthy with normal morphology."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 20%."
     ],
     "EXP_path2_passage4_203.png": [
-        true,
+        false,
         null,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "CPE is present in this image. Many cells appear rounded and detached. The scale bar indicates that this is a 10x image."
+        null,
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology at approximately 20% confluency."
     ],
     "EXP_path2_passage4_204.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear normal with healthy morphology.  The cells are spread out and attached, with no signs of rounding, detachment, or lysis. No syncytia or inclusion bodies are visible."
+        15,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 15%."
     ],
     "EXP_path2_passage4_205.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear normal with typical morphology at 10x magnification."
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path2_passage4_206.png": [
-        true,
+        false,
         null,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "CPE is present in the form of cell rounding and detachment.  Many cells appear rounded and floating, rather than displaying the typical adherent, elongated morphology of Vero E6 cells."
+        null,
+        10,
+        "No CPE detected. The Vero E6 cells appear sparsely distributed with a confluency of approximately 10%.  Cells exhibit normal morphology."
     ],
     "EXP_path2_passage4_207.png": [
         false,
         null,
         null,
-        "No CPE detected. Cells appear healthy and exhibit normal morphology. They are spread out, indicating they are still actively growing."
+        15,
+        "No CPE detected. The Vero E6 cells appear healthy and sparsely distributed with an estimated confluency of 15%."
     ],
     "EXP_path2_passage4_208.png": [
-        true,
+        false,
         null,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "There are many rounded, detached cells visible throughout the image, indicative of CPE.  No localized area of CPE is significantly worse than others."
+        null,
+        15,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 15%."
     ],
     "EXP_path2_passage4_209.png": [
         false,
         null,
         null,
-        "No significant CPE observed. Cells appear healthy and exhibit normal morphology at this magnification."
+        10,
+        "No CPE detected. The cells appear sparsely distributed, with a confluency of approximately 10%."
     ],
     "EXP_path2_passage4_210.png": [
         false,
         null,
         null,
-        "No CPE detected.  Cells appear healthy and exhibit normal morphology with adherence."
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path2_passage4_212.png": [
         false,
         null,
         null,
-        "No CPE detected. Cells appear normal and spread out, showing regular morphology and no signs of rounding, lysis or detachment."
+        15,
+        "No CPE detected. The confluency is approximately 15%."
     ],
     "EXP_path2_passage4_213.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear normal with their typical morphology."
+        10,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 10%."
     ],
     "EXP_path2_passage4_301.png": [
-        true,
+        false,
         null,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "CPE is present, characterized by cell rounding and detachment.  These changes are distributed across the image and not concentrated in a specific quadrant."
+        null,
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path2_passage4_302.png": [
-        true,
+        false,
         null,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "There are a number of rounded, detached cells visible throughout the image, indicating CPE.  While some cells appear elongated and attached, the presence of a significant number of rounded, phase-bright, and seemingly floating cells suggests cytopathic effect."
+        null,
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path2_passage4_303.png": [
         false,
         null,
         null,
-        "No CPE detected.  Cells appear largely normal with typical morphology for Vero E6 cells at low confluence."
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path2_passage4_304.png": [
         true,
-        3,
+        null,
         [
             "rounding",
             "detachment"
         ],
-        "CPE is detected, primarily in the lower left quadrant.  Many cells exhibit a rounded morphology and appear detached from the surface.  This is suggestive of CPE."
+        20,
+        "CPE is detected in the form of cell rounding and detachment.  Many cells appear rounded and floating, indicating they have detached from the substrate. The confluency is approximately 20%."
     ],
     "EXP_path2_passage4_306.png": [
         true,
-        4,
+        null,
         [
             "rounding",
             "detachment"
         ],
-        "CPE is detected, primarily in the lower right quadrant.  Many cells appear rounded and detached from the substrate.  There are also some rounded, floating cells throughout the image."
+        15,
+        "CPE is detected in the form of cell rounding and detachment.  The confluency is approximately 15%."
     ],
     "EXP_path2_passage4_307.png": [
         false,
         null,
         null,
-        "No CPE detected. Cells appear sparsely distributed but maintain normal morphology.  The scale bar indicates 10x magnification."
+        10,
+        "No CPE detected. The Vero E6 cells appear sparsely distributed with a confluency of approximately 10%."
     ],
     "EXP_path2_passage4_308.png": [
         false,
         null,
         null,
-        "No significant CPE detected.  Cells appear sparsely populated but exhibit normal morphology for Vero E6 cells with some showing filopodia extensions and other adhering flat to the substrate. Some debris is visible, likely consisting of cellular debris or media components, which is expected in cell culture."
+        10,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 10%."
     ],
     "EXP_path2_passage4_309.png": [
         false,
         null,
         null,
-        "No CPE detected. Cells appear healthy and exhibit normal morphology at this magnification."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and sparsely distributed, with an estimated confluency of 20%."
     ],
     "EXP_path2_passage4_310.png": [
         false,
         null,
         null,
-        "No CPE observed. Vero E6 cells appear normal with their typical morphology."
+        10,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 10%."
     ],
     "EXP_path2_passage4_401.png": [
-        true,
+        false,
         null,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "There are a number of rounded, detached cells visible throughout the image, indicative of CPE.  While some adherent cells appear slightly elongated, this is likely due to low confluence and normal for Vero E6 cells.  No obvious lysis is observed."
+        null,
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path2_passage4_402.png": [
-        true,
+        false,
         null,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "CPE is present in this image, characterized by cell rounding and detachment.  Numerous rounded, refractile cells are visible floating in the media.  While some adherent cells appear normal, the presence of detached, rounded cells is indicative of CPE."
+        null,
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 20%."
     ],
     "EXP_path2_passage4_403.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear normal with their characteristic morphology.  Cells are spread out with visible processes. No rounding, detachment, or lysis observed."
+        20,
+        "No CPE detected. Confluency approximately 20%."
     ],
     "EXP_path2_passage4_404.png": [
-        true,
-        3,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "The Vero E6 cells exhibit some cytopathic effects, notably cell rounding and detachment.  These changes are most apparent in the lower-left quadrant.  There are a number of rounded, refractile cells that appear detached or loosely attached. The overall cell density appears somewhat reduced, further suggesting CPE."
+        false,
+        null,
+        null,
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 20%."
     ],
     "EXP_path2_passage4_405.png": [
         false,
         null,
         null,
-        "No significant CPE detected. Cells appear to be sparsely distributed.  The 400um scale bar indicates 10x magnification, implying there might be fewer cells present than expected at this magnification with this cell line, but without further information, this is difficult to interpret. No obvious signs of cell rounding, detachment, or lysis are observed."
+        10,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 10%."
     ],
     "EXP_path2_passage4_406.png": [
         false,
         null,
         null,
-        "No CPE observed. Vero E6 cells appear normal with their typical morphology.  Some cells are elongated and spindle-shaped, others are more flattened and polygonal. No signs of rounding, detachment, or lysis are evident."
+        15,
+        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology. Confluency is approximately 15%."
     ],
     "EXP_path2_passage4_407.png": [
-        true,
+        false,
         null,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "CPE is present in the form of cell rounding and detachment.  Many cells appear rounded and floating, rather than the typical adhered, spread-out morphology of healthy Vero E6 cells."
+        null,
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path2_passage4_408.png": [
-        true,
+        false,
         null,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "CPE is present in this image, with evidence of cell rounding and detachment.  Many cells appear rounded and floating, rather than the typical adherent, spread-out morphology of healthy Vero E6 cells.  The CPE appears somewhat diffuse across the image, rather than concentrated in one particular quadrant."
+        null,
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path2_passage4_409.png": [
-        true,
+        false,
         null,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "There are signs of CPE present in this image, including cell rounding and detachment.  Many cells appear rounded and floating rather than the typical adhered, elongated morphology expected of Vero E6 cells.  This is diffuse across the image, and thus no specific quadrant was indicated."
+        null,
+        20,
+        "No CPE detected. The confluency of the Vero E6 cells is approximately 20%."
     ],
     "EXP_path2_passage4_410.png": [
-        true,
-        4,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "CPE is detected, primarily in the lower right quadrant.  There is evidence of cell rounding and detachment. Some cells appear smaller and slightly refractive, suggestive of early stages of cell death.  The remaining adherent cells appear largely normal."
+        false,
+        null,
+        null,
+        25,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 25%."
     ],
     "EXP_path2_passage4_501.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and exhibit normal morphology."
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path2_passage4_502.png": [
         false,
         null,
         null,
-        "No CPE detected.  Cells appear healthy and attached with normal morphology."
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and normal. Confluency is estimated at approximately 20%."
     ],
     "EXP_path2_passage4_503.png": [
         false,
         null,
         null,
-        "No CPE detected. Vero E6 cells appear healthy and normal with no signs of rounding, detachment or lysis."
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path2_passage4_504.png": [
-        true,
-        2,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "CPE is present, with a number of rounded, detached cells visible, particularly in the top-right quadrant."
+        false,
+        null,
+        null,
+        20,
+        "No CPE detected. Confluency is approximately 20%."
     ],
     "EXP_path2_passage4_505.png": [
-        true,
+        false,
         null,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "There are a number of rounded, detached cells visible throughout the image, indicating CPE.  While some cells remain attached and appear normal, the presence of numerous floating, rounded cells is a clear sign of cytopathic effect."
+        null,
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ],
     "EXP_path2_passage4_506.png": [
         true,
-        3,
+        null,
         [
             "rounding",
             "detachment"
         ],
-        "CPE is present, characterized by cell rounding and detachment.  This is most apparent in the lower left quadrant where there are numerous rounded, detached cells."
+        15,
+        "CPE is detected in the form of cell rounding and detachment.  Many cells appear rounded and floating. The confluency is approximately 15%."
     ],
     "EXP_path2_passage4_507.png": [
-        true,
+        false,
         null,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "CPE is present in this image, characterized by cell rounding and detachment.  The CPE appears distributed across the image, rather than concentrated in one quadrant."
+        null,
+        15,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 15%."
     ],
     "EXP_path2_passage4_508.png": [
-        true,
-        1,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "There are many rounded, detached cells visible throughout the image, indicative of CPE.  This is most apparent in quadrant 1."
+        false,
+        null,
+        null,
+        15,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 15%."
     ],
     "EXP_path2_passage4_509.png": [
-        true,
+        false,
         null,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "CPE is present, characterized by cell rounding and detachment. These changes appear generally distributed across the image, and there's not one quadrant more severely affected than others."
+        null,
+        20,
+        "No CPE detected. The Vero E6 cells appear healthy and exhibit normal morphology. Confluency is estimated at approximately 20%."
     ],
     "EXP_path2_passage4_510.png": [
-        true,
-        2,
-        [
-            "rounding",
-            "detachment"
-        ],
-        "There are multiple rounded, detached cells present, indicative of CPE. These are most prominent in the upper right quadrant."
+        false,
+        null,
+        null,
+        20,
+        "No CPE detected. The confluency of the Vero E6 cell culture is approximately 20%."
     ]
 }

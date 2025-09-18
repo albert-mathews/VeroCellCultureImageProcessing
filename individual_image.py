@@ -41,11 +41,15 @@ Hemadsorption
 Chromosomal abnormalities
 Cytoskeletal changes
 
+your seconday task is to estimate the confluency of the culture in the image. estimate with precision or 5% or 10% if possible.
+this is roughly the area of the image taken up by cells. 
+
 Please return your analysis as a JSON object with the following structure:
 {
     "cpe_detected": boolean,
     "cpe_quadrant": number | null,
     "cpe_types": string[] | null,
+    "confluency": number,
     "full_response_text": string
 }
 
@@ -53,6 +57,7 @@ Here are the specific instructions for each key:
 - "cpe_detected": A boolean. True if any form of CPE is detected, otherwise False.
 - "cpe_quadrant": An integer from 1 to 4 representing the quadrant where the most significant CPE is detected. Quadrant 1 is top-left, 2 is top-right, 3 is lower-left, and 4 is lower-right. If no CPE is detected, set this to null.
 - "cpe_types": A list of strings. Include 'rounding', 'detachment', or 'lysis' for each type of CPE detected. If no CPE is found, set this to null.
+- "confluency": 0 to 100% with 0% being no cells, and 100% being ful of cells, and 50% being half full of cells.
 - "full_response_text": A brief textual summary of your overall findings for the image.
 
 Example response for a positive detection:
@@ -60,6 +65,7 @@ Example response for a positive detection:
     "cpe_detected": true,
     "cpe_quadrant": 1,
     "cpe_types": ["rounding", "lysis"],
+    "confluency": 50,
     "full_response_text": "Significant cell rounding and lysis detected in the upper-left quadrant."
 }
 """
@@ -101,10 +107,11 @@ for filename in os.listdir(image_folder):
                 response_dict.get('cpe_detected', False),
                 response_dict.get('cpe_quadrant'),
                 response_dict.get('cpe_types'),
+                response_dict.get('confluency'),
                 response_dict.get('full_response_text', '')
             ]
 
-            print(f"Processed {filename}. CPE detected: {response_dict.get('cpe_detected')}")
+            print(f"Processed {filename}. CPE detected: {response_dict.get('cpe_detected')}. Confluency: {response_dict.get('confluency')}")
             
             # Clean up the temporary uploaded file
             genai.delete_file(uploaded_file.name)
