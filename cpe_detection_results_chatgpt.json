@@ -1,0 +1,810 @@
+{
+  "EXP_path1_passage4_101.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 20,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_102.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the top-left quadrant. Overall confluency is low, around 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_103.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 20,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_104.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 2,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the top-right quadrant. Overall confluency is low at approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_105.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 20,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_106.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 20,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_107.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. The overall confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_108.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 30,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. The overall confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_109.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 20,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_110.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 20,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_201.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 40,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 40,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 40%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_202.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 30,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_203.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 30,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_204.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 20,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_205.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 40,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 40,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. The overall confluency is approximately 40%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_206.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 40,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 40,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 40%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_207.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 30,\n    \"full_response_text\": \"No cytopathic effects detected. The confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_208.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 2,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 30,\n    \"full_response_text\": \"Cell rounding and detachment observed, most prominently in the top-right quadrant. Overall confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_209.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 30,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_210.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 30,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_301.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 40,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 40,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 40%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_302.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 60,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 60,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. The overall confluency is approximately 60%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_303.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 40,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 40,\n    \"full_response_text\": \"No cytopathic effects detected. The confluency is approximately 40%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_304.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 30,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_305.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 70,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 70,\n    \"full_response_text\": \"No significant cytopathic effects detected. The cell culture is approximately 70% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_306.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 70,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 70,\n    \"full_response_text\": \"No significant cytopathic effects detected. The cell culture is approximately 70% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_307.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 40,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 40,\n    \"full_response_text\": \"No cytopathic effects detected. The cell culture is approximately 40% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_308.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 40,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 2,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 40,\n    \"full_response_text\": \"Cell rounding and detachment observed, most prominently in the top-right quadrant. Overall confluency is approximately 40%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_309.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 40,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 40,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 40%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_310.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 40,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 40,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 40%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_401.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 70,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 70,\n    \"full_response_text\": \"No cytopathic effect detected. The cell culture is approximately 70% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_402.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 70,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 70,\n    \"full_response_text\": \"No significant cytopathic effects detected. The cell culture is approximately 70% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_403.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 60,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 60,\n    \"full_response_text\": \"No significant cytopathic effects detected. The cell culture is approximately 60% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_404.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 70,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 70,\n    \"full_response_text\": \"No significant cytopathic effects detected. The cell culture is approximately 70% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_405.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 70,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 70,\n    \"full_response_text\": \"No cytopathic effects detected. The cell culture is approximately 70% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_406.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 40,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 40,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. The overall confluency is approximately 40%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_407.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 80,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 80,\n    \"full_response_text\": \"No cytopathic effects detected. The cell culture is approximately 80% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_408.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 70,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 4,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 70,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, particularly in the bottom-right quadrant. The overall confluency is approximately 70%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_409.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 70,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 70,\n    \"full_response_text\": \"No cytopathic effects detected. The cell culture is approximately 70% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_410.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 60,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 60,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. The overall confluency is approximately 60%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_501.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 70,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 70,\n    \"full_response_text\": \"No cytopathic effects detected. The cell culture is approximately 70% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_502.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 70,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 70,\n    \"full_response_text\": \"No significant cytopathic effects detected. The cell culture is approximately 70% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_503.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 70,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 70,\n    \"full_response_text\": \"No cytopathic effects detected. The cell culture is approximately 70% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_504.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 70,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 70,\n    \"full_response_text\": \"No significant cytopathic effects detected. The cell culture is approximately 70% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_505.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 70,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 70,\n    \"full_response_text\": \"No significant cytopathic effects detected. The cell culture is approximately 70% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_506.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 70,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 70,\n    \"full_response_text\": \"No significant cytopathic effects detected. The cell culture is approximately 70% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_507.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 40,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 40,\n    \"full_response_text\": \"No cytopathic effects detected. The cell culture is approximately 40% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_508.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 40,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 40,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 40%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_509.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 70,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 70,\n    \"full_response_text\": \"No cytopathic effects detected. The cell culture is approximately 70% confluent.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path1_passage4_510.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 60,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 2,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 60,\n    \"full_response_text\": \"Cell rounding and detachment observed, most prominently in the top-right quadrant. Overall confluency is approximately 60%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_101.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 30,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. The overall confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_102.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 20,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_103.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 20,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_104.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 20,\n    \"full_response_text\": \"No cytopathic effects detected. The confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_105.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 20,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_106.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 20,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_107.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. Overall confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_108.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 10,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 10,\n    \"full_response_text\": \"No cytopathic effects detected. The confluency is approximately 10%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_109.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 20,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_110.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. Overall confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_201.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 30,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_202.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. Overall confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_203.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 30,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. The overall confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_204.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 2,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the top-right quadrant. The overall confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_205.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 20,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_206.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 2,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the top-right quadrant. The overall confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_207.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. The overall confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_208.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 2,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cell rounding and detachment observed, primarily in the top-right quadrant. Overall confluency is low at approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_209.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 20,\n    \"full_response_text\": \"No cytopathic effects detected. The confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_210.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 2,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the top-right quadrant. Overall confluency is low, around 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_212.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 3,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cell rounding and detachment observed, primarily in the lower-left quadrant. Overall confluency is low at approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_213.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 10,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 10,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 10%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_301.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. The overall confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_302.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 20,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_303.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 30,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. The overall confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_304.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 2,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cell rounding and detachment observed, primarily in the top-right quadrant. Overall confluency is low at approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_306.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 2,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cell rounding and detachment observed, primarily in the top-right quadrant. Overall confluency is low at approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_307.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 20,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_308.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 10,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 10,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 10%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_309.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 30,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. The overall confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_310.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 4,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the lower-right quadrant. The overall confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_401.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 30,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. The overall confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_402.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 30,\n    \"full_response_text\": \"Cell rounding and detachment observed, particularly in the upper-left quadrant. Overall confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_403.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 30,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. The overall confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_404.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 2,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 30,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the top-right quadrant. The overall confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_405.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 2,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the top-right quadrant. The overall confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_406.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 10,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 10,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 10%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_407.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. Overall confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_408.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. Overall confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_409.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the top-left quadrant. The overall confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_410.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 2,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 30,\n    \"full_response_text\": \"Cell rounding and detachment observed, most prominently in the top-right quadrant. Overall confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_501.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 40,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 40,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the top-left quadrant. The overall confluency is approximately 40%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_502.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 30,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. The overall confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_503.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 30,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_504.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 2,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the top-right quadrant. Overall confluency is low at approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_505.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 30,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the top-left quadrant. The overall confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_506.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 2,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the top-right quadrant. The overall confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_507.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. Overall confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_508.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 2,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the top-right quadrant. The overall confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_509.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 1,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cytopathic effects such as cell rounding and detachment are observed, primarily in the upper-left quadrant. Overall confluency is approximately 20%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_510.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 20,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": true,\n    \"cpe_quadrant\": 2,\n    \"cpe_types\": [\"rounding\", \"detachment\"],\n    \"confluency\": 20,\n    \"full_response_text\": \"Cell rounding and detachment observed, primarily in the top-right quadrant. Overall confluency is low at approximately 20%.\"\n}\n```",
+    "image_id": null
+  }
+}

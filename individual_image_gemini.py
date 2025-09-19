@@ -14,7 +14,7 @@ genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 image_folder = 'converted_pngs'
 
 # The name of the file to save/load results
-results_filename = 'cpe_detection_results.json'
+results_filename = 'cpe_detection_results_gemini.json'
 
 # --- Add this new section to load existing results ---
 all_results = {}
