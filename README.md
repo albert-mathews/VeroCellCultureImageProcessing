@@ -21,8 +21,19 @@ trial 3. i changed the script to save the google AI studio uploaded image file I
 like trial 2. this detected very little CPE.
 see 5a3bb3e262af8c99ec96f8dac7a6a96d4d7122ea
 
+Gemini did not seem to be very consistent. graphical review of the json output should better express this.
+
 
 ## ChatGPT Results
+<need to extract the actualy results form the "full_response_text" fields since only that field and confluency were populated in the dict.
 
+
+
+## Next steps.
+
+1. try chat gpt a few more times. but have it correct populate the dict.
+2. try other LLMs
+3. write up results comparing to CRO results. 
+4. repeat but request searching for VLPs in the TEM images.
 
 
