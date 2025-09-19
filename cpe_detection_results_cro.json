@@ -1,0 +1,107 @@
+{
+  "EXP_path2_passage4_101.png": {
+    "cpe_detected": true,
+    "cpe_quadrant": null,
+    "cpe_types": [
+            "rounded"
+        ],
+    "confluency": null,
+    "full_response_text": null,
+    "image_id": null
+  },
+  "EXP_path2_passage4_201.png": {
+    "cpe_detected": true,
+    "cpe_quadrant": null,
+    "cpe_types": [
+            "rounded"
+        ],
+    "confluency": null,
+    "full_response_text": null,
+    "image_id": null
+  },
+  "EXP_path2_passage4_303.png": {
+    "cpe_detected": true,
+    "cpe_quadrant": null,
+    "cpe_types": [
+			"rounded",
+            "vacuoles"
+        ],
+    "confluency": null,
+    "full_response_text": null,
+    "image_id": null
+  },
+  "EXP_path2_passage4_402.png": {
+    "cpe_detected": true,
+    "cpe_quadrant": null,
+    "cpe_types": [
+			"rounded",
+            "vacuoles"
+        ],
+    "confluency": null,
+    "full_response_text": null,
+    "image_id": null
+  },
+  "EXP_path2_passage4_405.png": {
+    "cpe_detected": true,
+    "cpe_quadrant": null,
+    "cpe_types": [
+			"rounded",
+            "granular and irregular shape"
+        ],
+    "confluency": null,
+    "full_response_text": null,
+    "image_id": null
+  },
+  "EXP_path2_passage4_406.png": {
+    "cpe_detected": true,
+    "cpe_quadrant": null,
+    "cpe_types": [
+			"rounded",
+            "granular and irregular shape"
+        ],
+    "confluency": null,
+    "full_response_text": null,
+    "image_id": null
+  },
+  "EXP_path2_passage4_503.png": {
+    "cpe_detected": null,
+    "cpe_quadrant": null,
+    "cpe_types": null,
+    "confluency": 30,
+    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 30,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 30%.\"\n}\n```",
+    "image_id": null
+  },
+  "EXP_path2_passage4_504.png": {
+    "cpe_detected": true,
+    "cpe_quadrant": null,
+    "cpe_types": [
+            "vacuoles",
+			"granular cytoplasm"
+        ],
+    "confluency": null,
+    "full_response_text": null,
+    "image_id": null
+  },
+  "EXP_path2_passage4_507.png": {
+    "cpe_detected": true,
+    "cpe_quadrant": null,
+    "cpe_types": [
+            "rounded",
+			"granular and irregular shape"
+        ],
+    "confluency": null,
+    "full_response_text": null,
+    "image_id": null
+  },
+  "EXP_path2_passage4_508.png": {
+    "cpe_detected": true,
+    "cpe_quadrant": null,
+    "cpe_types": [
+            "rounded",
+			"granular and irregular shape"
+        ],
+    "confluency": null,
+    "full_response_text": null,
+    "image_id": null
+  },
+}
