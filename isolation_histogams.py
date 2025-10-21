@@ -19,6 +19,7 @@ plt.hist(s, bins=len(flat), edgecolor='black')
 plt.xlabel("Publication Year")
 plt.ylabel("Count")
 plt.title("Histogram of Publication Year")
+plt.grid(axis='y', linestyle='--', alpha=0.7)
 
 # cell line
 # values = sh.get("H3:H22")
@@ -29,20 +30,31 @@ plt.title("Histogram of Publication Year")
 # plt.xlabel("Cell Name")
 # plt.ylabel("Count")
 # plt.title("Histogram of Cells Used in Culture")
+data = sh.get("G3:G22")
+flat_data = [row[0] for row in data if row and row[0].strip() != ""]  # flatten and skip blanks
+s = pd.Series(flat_data)
+counts = s.value_counts()  # sorted by frequency
+plt.figure()
+plt.bar(counts.index, counts.values, color='skyblue', edgecolor='black')
+plt.xticks(rotation=45, ha='right')
+plt.ylabel("Count")
+plt.title("Histogram of Cell Line Occurrences")
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
 
 
 #incedence of detection methods
 headers = sh.get("I2:Q2")[0]  # one row, list of header names
-data = sh.get("I3:Q22")
-cols = list(zip(*data))  # now each item is a column
-y_counts = [sum(1 for v in col if v.strip().lower() == 'y') for col in cols]
+values = sh.get("I28:Q28")[0]  # take the first (and only) row
+numeric_values = [float(v) if v != "" else 0 for v in values]
 x = np.arange(len(headers))
-plt.figure()
-plt.bar(x, y_counts, color='skyblue', edgecolor='black')
+plt.figure()  # new figure window
+plt.bar(x, numeric_values, color='skyblue', edgecolor='black')
 plt.xticks(x, headers, rotation=45, ha='right')
-plt.ylabel("Count of 'y'")
-plt.title("True counts per data element")
+plt.ylabel("Incedence rate (%)")
+plt.title("Incedence of Isolation Methods")
 plt.tight_layout()
+plt.grid(axis='y', linestyle='--', alpha=0.7)
 
 
 
