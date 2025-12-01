@@ -15,10 +15,49 @@ flat = [float(v[0]) for v in values if v and v[0] != ""]
 s = pd.Series(flat)
 # Plot histogram
 plt.figure()
-plt.hist(s, bins=len(flat), edgecolor='black')
+plt.hist(s, bins=len(flat)*2, edgecolor='black')
 plt.xlabel("Publication Year")
 plt.ylabel("Count")
 plt.title("Histogram of Publication Year")
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+# Specimen Sample Type
+headers = sh.get("AA2:AF2")[0]  # one row, list of header names
+values = sh.get("AA27:AF27")[0]  # take the first (and only) row
+numeric_values = [float(v) if v != "" else 0 for v in values]
+x = np.arange(len(headers))
+plt.figure()  # new figure window
+plt.bar(x, numeric_values, color='skyblue', edgecolor='black')
+plt.xticks(x, headers, rotation=45, ha='right')
+plt.ylabel("Incendece (%)")
+plt.title("Incedence of Sample Type")
+plt.tight_layout()
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+# Inoculum Prepration Method
+headers = sh.get("S2:Z2")[0]  # one row, list of header names
+values = sh.get("S27:Z27")[0]  # take the first (and only) row
+numeric_values = [float(v) if v != "" else 0 for v in values]
+x = np.arange(len(headers))
+plt.figure()  # new figure window
+plt.bar(x, numeric_values, color='skyblue', edgecolor='black')
+plt.xticks(x, headers, rotation=45, ha='right')
+plt.ylabel("Incendece (%)")
+plt.title("Incedence of Inoculum Prepration Method")
+plt.tight_layout()
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+
+# Centrifuge value
+values = sh.get("W3:W20")
+flat = [float(v[0]) for v in values if v and v[0] != ""]
+s = pd.Series(flat)
+# Plot histogram
+plt.figure()
+plt.hist(s, bins=max(len(flat),40), edgecolor='black')
+plt.xlabel("Centrifuge x g")
+plt.ylabel("Count ")
+plt.title("Histogram of Centrifuge Spin")
 plt.grid(axis='y', linestyle='--', alpha=0.7)
 
 # cell line
@@ -45,18 +84,29 @@ plt.tight_layout()
 
 #incedence of detection methods
 headers = sh.get("I2:Q2")[0]  # one row, list of header names
-values = sh.get("I28:Q28")[0]  # take the first (and only) row
+values = sh.get("I27:Q27")[0]  # take the first (and only) row
 numeric_values = [float(v) if v != "" else 0 for v in values]
 x = np.arange(len(headers))
 plt.figure()  # new figure window
 plt.bar(x, numeric_values, color='skyblue', edgecolor='black')
 plt.xticks(x, headers, rotation=45, ha='right')
-plt.ylabel("Incedence rate (%)")
-plt.title("Incedence of Isolation Methods")
+plt.ylabel("Incedence (%)")
+plt.title("Incedence of Detection Method")
 plt.tight_layout()
 plt.grid(axis='y', linestyle='--', alpha=0.7)
 
 
+# FBS
+values = sh.get("B3:B22")
+flat = [float(v[0]) for v in values if v and v[0] != ""]
+s = pd.Series(flat)
+# Plot histogram
+plt.figure()
+plt.hist(s, bins=len(flat)*2, edgecolor='black')
+plt.xlabel("Publication Year")
+plt.ylabel("Count")
+plt.title("Histogram of Publication Year")
+plt.grid(axis='y', linestyle='--', alpha=0.7)
 
 
 # show all plots
