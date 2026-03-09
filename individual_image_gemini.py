@@ -80,7 +80,7 @@ Example response for a positive detection:
 """
 
 # Initialize the Gemini model
-model = genai.GenerativeModel('gemini-1.5-pro-latest')  # Update to latest if needed, e.g., 'gemini-3-pro'
+model = genai.GenerativeModel('gemini-3-pro')  # Updated to latest recommended model
 
 # --- Processing Loop ---
 print("Starting image processing... 🔬")
@@ -114,11 +114,11 @@ for filename in os.listdir(image_folder):
                 continue # Skip to the next image on upload error
 
         try:
-            # Send the prompt and the uploaded file to the model
-            response = model.generate_content([
-                common_prompt, 
-                uploaded_file
-            ])
+            # Send the prompt and the uploaded file to the model with temperature=0 for consistency
+            response = model.generate_content(
+                [common_prompt, uploaded_file],
+                generation_config=genai.GenerationConfig(temperature=0)
+            )
             
             # Extract and parse the JSON response from the model
             response_json_str = response.text.strip('`').strip('json').strip()
@@ -135,7 +135,7 @@ for filename in os.listdir(image_folder):
             ]
 
             print(f"Processed {filename}. CPE detected: {response_dict.get('cpe_detected')}. Viability: {response_dict.get('viability')}")
-            
+
             # Clean up the temporary uploaded file
             genai.delete_file(uploaded_file.name)
 
@@ -148,12 +148,13 @@ print("\nProcessing complete! 🎉")
 # --- Step 3: Generate and Display the Tabulated Results ---
 print("\n--- Tabulated CPE Detections ---")
 if all_results:
-    # Convert the dictionary to a pandas DataFrame
+    # Convert the dictionary to a pandas DataFrame (added Viability column)
     data_for_table = {
         'Image Name': list(all_results.keys()),
         'CPE Detected': [v[0] for v in all_results.values()],
         'Quadrant': [v[1] for v in all_results.values()],
-        'CPE Types': [v[2] for v in all_results.values()]
+        'CPE Types': [v[2] for v in all_results.values()],
+        'Viability': [v[3] for v in all_results.values()]
     }
     df = pd.DataFrame(data_for_table)
     print(df.to_string(index=False))
