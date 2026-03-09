@@ -5,6 +5,7 @@ import math
 import time
 import base64
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import numpy as np
 import pandas as pd
@@ -20,16 +21,17 @@ image_folder = "converted_pngs"
 results_filename = "cpe_detection_results_chatgpt.json"
 
 MODEL_NAME = "gpt-4o"
-TILE_GRID = 4                    # 4x4 grid = 16 tiles per image
-CONSENSUS_RUNS = 3               # repeated analyses per tile
-POSITIVE_TILE_THRESHOLD = 0.10   # image positive if >=10% of tiles are clear CPE
+TILE_GRID = 4                       # 4x4 grid = 16 tiles per image
+CONSENSUS_RUNS = 2                  # repeated analyses per tile
+POSITIVE_TILE_THRESHOLD = 0.10      # image positive if >=10% of tiles are clear CPE
 EARLY_STRESS_TILE_THRESHOLD = 0.20  # image flagged early stress if >=20% tiles are early_stress and not CPE+
 MAX_RETRIES = 3
 RETRY_DELAY_SECONDS = 2
 IMAGE_EXTENSIONS = (".png", ".jpg", ".jpeg")
+MAX_TILE_WORKERS = 8                # parallel tile workers per image; lower if you hit rate limits
 
 # Optional: skip tiles that are nearly blank/background
-SKIP_LOW_DETAIL_TILES = True
+SKIP_LOW_DETAIL_TILES = False
 LOW_DETAIL_STD_THRESHOLD = 4.0
 
 JSON_SCHEMA = {
@@ -180,8 +182,8 @@ few_shot_examples = [
             "cpe_detected": False,
             "cpe_types": None,
             "viability": None,
-            "full_response_text": "Cells are adherent and are growing in clusters that are beginning to merge. Very few bright dividing cells. A mitotic figure close to the bottom left corner of the field."
             "confidence": 0.90,
+            "full_response_text": "Cells are adherent and growing in clusters that are beginning to merge. Very few bright dividing cells are present. No convincing cytopathic effect is visible."
         }
     },
     {
@@ -191,8 +193,8 @@ few_shot_examples = [
             "cpe_detected": True,
             "cpe_types": ["rounding", "vacuolation", "refractile cells", "dying cells"],
             "viability": None,
-            "full_response_text": "Few small clusters present with some bright spots (vacuoles). There is a pair of dividing cells at 7 o’clock. Multiple single cells with some degree of spreading. Multiple rounded cells. Some cells appear rounded and refractile, which could indicate potentially dying cells (6 o’clock)."
             "confidence": 0.86,
+            "full_response_text": "Few small clusters are present with bright vacuolar features. Multiple rounded and refractile cells are visible, including cells suggestive of dying morphology. Findings are consistent with clear cytopathic effect."
         }
     }
 ]
@@ -419,11 +421,13 @@ def analyze_tile(tile_image: Image.Image) -> dict:
         elif r["culture_state"] == "early_stress":
             early_stress_type_counter.update(r.get("cpe_types") or [])
 
+    threshold = math.ceil(CONSENSUS_RUNS / 2)
+
     if majority_state == "clear_cpe" and positive_type_counter:
         cpe_types = [
             cpe_type
             for cpe_type, count in positive_type_counter.most_common()
-            if count >= math.ceil(CONSENSUS_RUNS / 2)
+            if count >= threshold
         ]
         if not cpe_types:
             cpe_types = [positive_type_counter.most_common(1)[0][0]]
@@ -431,7 +435,7 @@ def analyze_tile(tile_image: Image.Image) -> dict:
         cpe_types = [
             cpe_type
             for cpe_type, count in early_stress_type_counter.most_common()
-            if count >= math.ceil(CONSENSUS_RUNS / 2)
+            if count >= threshold
         ]
         if not cpe_types:
             cpe_types = [early_stress_type_counter.most_common(1)[0][0]]
@@ -624,6 +628,27 @@ def print_summary_table(all_results: dict):
     print(df.to_string(index=False))
 
 
+def process_single_tile(tile: dict) -> dict | None:
+    tile_id = tile["tile_id"]
+    tile_image = tile["image"]
+
+    if not tile_has_enough_detail(tile_image):
+        return {
+            "tile_id": tile_id,
+            "row": tile["row"],
+            "col": tile["col"],
+            "skipped": True,
+            "reason": "low_detail",
+        }
+
+    tile_result = analyze_tile(tile_image)
+    tile_result["tile_id"] = tile_id
+    tile_result["row"] = tile["row"]
+    tile_result["col"] = tile["col"]
+    tile_result["skipped"] = False
+    return tile_result
+
+
 def main():
     all_results = load_existing_results(results_filename)
 
@@ -641,29 +666,37 @@ def main():
         try:
             tiles = split_into_tiles(full_path, grid=TILE_GRID)
             tile_results = []
+            worker_count = min(MAX_TILE_WORKERS, len(tiles)) or 1
 
-            for tile in tiles:
-                tile_id = tile["tile_id"]
-                tile_image = tile["image"]
+            with ThreadPoolExecutor(max_workers=worker_count) as executor:
+                future_to_tile = {
+                    executor.submit(process_single_tile, tile): tile
+                    for tile in tiles
+                }
 
-                if not tile_has_enough_detail(tile_image):
-                    print(f"  Skipping low-detail tile {tile_id}")
-                    continue
+                for future in as_completed(future_to_tile):
+                    tile = future_to_tile[future]
+                    tile_id = tile["tile_id"]
+                    try:
+                        tile_result = future.result()
+                        if tile_result is None:
+                            continue
+                        if tile_result.get("skipped"):
+                            print(f"  Skipping low-detail tile {tile_id}")
+                            continue
 
-                tile_result = analyze_tile(tile_image)
-                tile_result["tile_id"] = tile_id
-                tile_result["row"] = tile["row"]
-                tile_result["col"] = tile["col"]
-                tile_results.append(tile_result)
+                        tile_results.append(tile_result)
+                        print(
+                            f"  {tile_id}: state={tile_result['tile_state']} | "
+                            f"clear_cpe_votes={tile_result['positive_votes']}/{CONSENSUS_RUNS} | "
+                            f"stress_votes={tile_result['early_stress_votes']}/{CONSENSUS_RUNS} | "
+                            f"conf={tile_result['model_confidence_mean']:.2f} | "
+                            f"viability={tile_result['viability_mean'] if tile_result['viability_mean'] is not None else 'null'}"
+                        )
+                    except Exception as exc:
+                        print(f"  Tile {tile_id} failed: {exc}")
 
-                print(
-                    f"  {tile_id}: state={tile_result['tile_state']} | "
-                    f"clear_cpe_votes={tile_result['positive_votes']}/{CONSENSUS_RUNS} | "
-                    f"stress_votes={tile_result['early_stress_votes']}/{CONSENSUS_RUNS} | "
-                    f"conf={tile_result['model_confidence_mean']:.2f} | "
-                    f"viability={tile_result['viability_mean'] if tile_result['viability_mean'] is not None else 'null'}"
-                )
-
+            tile_results.sort(key=lambda x: (x["row"], x["col"]))
             image_result = aggregate_image_result(tile_results)
             all_results[filename] = image_result
 
