@@ -121,6 +121,7 @@ few_shot_examples = [
             "cpe_types": None,
             "viability": 95,
             "full_response_text": "Cells are adherent and are growing in clusters that are beginning to merge. Very few bright dividing cells. A mitotic figure close to the bottom left corner of the field."
+            "confidence": 0.90,
         }
     },
     {
