@@ -44,7 +44,7 @@ JSON_SCHEMA = {
                     "items": {"type": "string"}
                 },
                 "viability": {
-                    "type": "number",
+                    "type": ["number", "null"],
                     "minimum": 0,
                     "maximum": 100
                 },
@@ -73,7 +73,7 @@ You are a virology specialist. Your specialty is analyzing light microscope imag
 Analyze the provided image region of a cell culture. This image may be either a full microscope field or a tile cropped from a larger field.
 The images are of Vero E6 cells, cultivated in typical growth medium.
 The images are taken using bright field or phase contrast microscopy.
-The magnification is either 10x or 20x. Each original image has a scale bar. A cropped tile may not include the scale bar.
+The magnification is either 10x or 20x.
 
 Your primary task is to detect the presence of CPE (cytopathic effect).
 Specific CPE morphologies you should be looking for:
@@ -89,6 +89,38 @@ Other CPE morphologies you should look for:
 - intranuclear inclusion bodies
 - pyknosis
 - karyorrhexis
+
+
+Before determining whether CPE is present, perform a structured visual inspection of the image.
+
+Step 1 — Cell density
+Estimate whether the monolayer is sparse, moderate, or dense.
+
+Step 2 — Cell morphology
+Look for:
+- rounding
+- detachment
+- vacuolation
+- refractile cells
+- syncytium formation
+- nuclear fragmentation
+
+Step 3 — Spatial clustering
+Determine if abnormal cells appear:
+- isolated
+- clustered
+- widespread
+
+Step 4 — Cell viability cues
+Look for signs of dying or stressed cells such as:
+- refractility
+- irregular cell borders
+- shrinking or swelling
+
+Step 5 — Decision
+Using the observations above, determine if cytopathic effect (CPE) is present.
+
+Only after performing these inspection steps should you produce the final JSON result.
 
 Your secondary task is to estimate viability of the visible culture region, i.e. the ratio of live cells divided by total cells.
 These images do not have trypan blue stain, so estimate viability from morphology only.
@@ -119,7 +151,7 @@ few_shot_examples = [
         "expected_output": {
             "cpe_detected": False,
             "cpe_types": None,
-            "viability": 95,
+            "viability": None,
             "full_response_text": "Cells are adherent and are growing in clusters that are beginning to merge. Very few bright dividing cells. A mitotic figure close to the bottom left corner of the field."
             "confidence": 0.90,
         }
@@ -129,7 +161,7 @@ few_shot_examples = [
         "expected_output": {
             "cpe_detected": True,
             "cpe_types": ["rounding", "vacuolation", "refractile cells", "dying cells"],
-            "viability": 40,
+            "viability": None,
             "full_response_text": "Few small clusters present with some bright spots (vacuoles). There is a pair of dividing cells at 7 o’clock. Multiple single cells with some degree of spreading. Multiple rounded cells. Some cells appear rounded and refractile, which could indicate potentially dying cells (6 o’clock)."
             "confidence": 0.86,
         }
