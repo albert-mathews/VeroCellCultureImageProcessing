@@ -1,3 +1,5 @@
+# individual_image_grok.py
+
 import os
 import io
 import json
@@ -12,6 +14,23 @@ import pandas as pd
 from PIL import Image
 from dotenv import load_dotenv
 from openai import OpenAI  # Using OpenAI lib for xAI compatibility
+
+# Import shared functions from the original script (assuming same folder)
+from individual_image_chatgpt import (
+    load_existing_results,
+    image_file_to_b64,
+    pil_image_to_b64,
+    build_messages,
+    split_into_tiles,
+    tile_has_enough_detail,
+    normalize_cpe_types,
+    normalize_culture_state,
+    sanitize_model_result,
+    analyze_tile,
+    aggregate_image_result,
+    print_summary_table,
+    process_single_tile,
+)
 
 # --- Configuration ---
 load_dotenv()
@@ -199,9 +218,6 @@ few_shot_examples = [
     }
 ]
 
-# Rest of the script remains identical to the original, as the changes are primarily in configuration, model calls, and prompt.
-# In call_model_with_retries, add temperature=0:
-
 def call_model_with_retries(messages):
     last_error = None
     for attempt in range(1, MAX_RETRIES + 1):
@@ -220,7 +236,92 @@ def call_model_with_retries(messages):
                 time.sleep(RETRY_DELAY_SECONDS * attempt)
     raise last_error
 
-# ... (the rest of the functions: load_existing_results, image_file_to_b64, pil_image_to_b64, build_messages, split_into_tiles, tile_has_enough_detail, normalize_cpe_types, normalize_culture_state, sanitize_model_result, analyze_tile, aggregate_image_result, print_summary_table, process_single_tile, main are unchanged)
+def main():
+    all_results = load_existing_results(results_filename)
+
+    print("Starting image processing... 🔬")
+    for filename in sorted(os.listdir(image_folder)):
+        if not filename.lower().endswith(IMAGE_EXTENSIONS):
+            continue
+        if filename in all_results:
+            print(f"Skipping already processed {filename}")
+            continue
+
+        full_path = os.path.join(image_folder, filename)
+        print(f"\nProcessing {filename}...")
+
+        try:
+            tiles = split_into_tiles(full_path, grid=TILE_GRID)
+            tile_results = []
+            worker_count = min(MAX_TILE_WORKERS, len(tiles)) or 1
+
+            with ThreadPoolExecutor(max_workers=worker_count) as executor:
+                future_to_tile = {
+                    executor.submit(process_single_tile, tile): tile
+                    for tile in tiles
+                }
+
+                for future in as_completed(future_to_tile):
+                    tile = future_to_tile[future]
+                    tile_id = tile["tile_id"]
+                    try:
+                        tile_result = future.result()
+                        if tile_result is None:
+                            continue
+                        if tile_result.get("skipped"):
+                            print(f"  Skipping low-detail tile {tile_id}")
+                            continue
+
+                        tile_results.append(tile_result)
+                        print(
+                            f"  {tile_id}: state={tile_result['tile_state']} | "
+                            f"clear_cpe_votes={tile_result['positive_votes']}/{CONSENSUS_RUNS} | "
+                            f"stress_votes={tile_result['early_stress_votes']}/{CONSENSUS_RUNS} | "
+                            f"conf={tile_result['model_confidence_mean']:.2f} | "
+                            f"viability={tile_result['viability_mean'] if tile_result['viability_mean'] is not None else 'null'}"
+                        )
+                    except Exception as exc:
+                        print(f"  Tile {tile_id} failed: {exc}")
+
+            tile_results.sort(key=lambda x: (x["row"], x["col"]))
+            image_result = aggregate_image_result(tile_results)
+            all_results[filename] = image_result
+
+            print(
+                f"Finished {filename}. State: {image_result['culture_state']} | "
+                f"CPE detected: {image_result['cpe_detected']} | "
+                f"confidence={image_result['confidence']:.2f} | "
+                f"positive tiles={image_result['positive_tiles']}/{image_result['total_tiles']} | "
+                f"stress tiles={image_result['early_stress_tiles']}/{image_result['total_tiles']} | "
+                f"viability={image_result['viability'] if image_result['viability'] is not None else 'null'}"
+            )
+
+            with open(results_filename, "w", encoding="utf-8") as f:
+                json.dump(all_results, f, indent=4)
+
+        except Exception as exc:
+            print(f"An error occurred while processing {filename}: {exc}")
+            all_results[filename] = {
+                "culture_state": "healthy",
+                "cpe_detected": False,
+                "cpe_types": None,
+                "viability": None,
+                "confidence": 0,
+                "positive_tiles": 0,
+                "early_stress_tiles": 0,
+                "total_tiles": 0,
+                "positive_tile_fraction": 0,
+                "early_stress_tile_fraction": 0,
+                "full_response_text": f"Error: {exc}",
+                "tile_results": []
+            }
+            with open(results_filename, "w", encoding="utf-8") as f:
+                json.dump(all_results, f, indent=4)
+
+    print("\nProcessing complete! 🎉")
+    print("\n--- Tabulated CPE Detections ---")
+    print_summary_table(all_results)
+    print(f"\nDictionary of results saved to '{results_filename}'")
 
 if __name__ == "__main__":
     main()
