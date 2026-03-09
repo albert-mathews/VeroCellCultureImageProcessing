@@ -20,14 +20,15 @@ image_folder = "converted_pngs"
 results_filename = "cpe_detection_results_chatgpt.json"
 
 MODEL_NAME = "gpt-4o"
-TILE_GRID = 4                 # 4x4 grid = 16 tiles per image
-CONSENSUS_RUNS = 3            # number of repeated analyses per tile
-POSITIVE_TILE_THRESHOLD = 0.10  # image positive if >=10% of tiles are positive
+TILE_GRID = 4                    # 4x4 grid = 16 tiles per image
+CONSENSUS_RUNS = 3               # repeated analyses per tile
+POSITIVE_TILE_THRESHOLD = 0.10   # image positive if >=10% of tiles are clear CPE
+EARLY_STRESS_TILE_THRESHOLD = 0.20  # image flagged early stress if >=20% tiles are early_stress and not CPE+
 MAX_RETRIES = 3
 RETRY_DELAY_SECONDS = 2
 IMAGE_EXTENSIONS = (".png", ".jpg", ".jpeg")
 
-# Optional: set to True if you want to skip tiles that are almost blank/background.
+# Optional: skip tiles that are nearly blank/background
 SKIP_LOW_DETAIL_TILES = False
 LOW_DETAIL_STD_THRESHOLD = 4.0
 
@@ -38,15 +39,17 @@ JSON_SCHEMA = {
         "schema": {
             "type": "object",
             "properties": {
+                "culture_state": {
+                    "type": "string",
+                    "enum": ["healthy", "early_stress", "clear_cpe"]
+                },
                 "cpe_detected": {"type": "boolean"},
                 "cpe_types": {
                     "type": ["array", "null"],
                     "items": {"type": "string"}
                 },
                 "viability": {
-                    "type": ["number", "null"],
-                    "minimum": 0,
-                    "maximum": 100
+                    "type": ["number", "null"]
                 },
                 "confidence": {
                     "type": "number",
@@ -56,6 +59,7 @@ JSON_SCHEMA = {
                 "full_response_text": {"type": "string"}
             },
             "required": [
+                "culture_state",
                 "cpe_detected",
                 "cpe_types",
                 "viability",
@@ -76,6 +80,7 @@ The images are taken using bright field or phase contrast microscopy.
 The magnification is either 10x or 20x.
 
 Your primary task is to detect the presence of CPE (cytopathic effect).
+
 Specific CPE morphologies you should be looking for:
 - dying cells
 - rounding
@@ -90,7 +95,6 @@ Other CPE morphologies you should look for:
 - pyknosis
 - karyorrhexis
 
-
 Before determining whether CPE is present, perform a structured visual inspection of the image.
 
 Step 1 — Cell density
@@ -104,6 +108,9 @@ Look for:
 - refractile cells
 - syncytium formation
 - nuclear fragmentation
+- irregular cell borders
+- micro-gaps in the monolayer
+- uneven local cell density
 
 Step 3 — Spatial clustering
 Determine if abnormal cells appear:
@@ -116,31 +123,51 @@ Look for signs of dying or stressed cells such as:
 - refractility
 - irregular cell borders
 - shrinking or swelling
+- partial loss of adherence
+- thinning of the monolayer
 
-Step 5 — Decision
-Using the observations above, determine if cytopathic effect (CPE) is present.
+Step 5 — Early stress assessment
+Before labeling clear CPE, evaluate whether the image instead shows early cytopathic stress patterns.
+Early stress patterns may include:
+- increased refractile cells
+- slight rounding without full detachment
+- irregular cell borders
+- micro-gaps forming in an otherwise confluent monolayer
+- uneven cell density
+- small clusters of abnormal cells
 
-Only after performing these inspection steps should you produce the final JSON result.
+Classify the visible region into one of:
+- "healthy" = no convincing abnormal morphology
+- "early_stress" = abnormal/stressed morphology is present, but not enough for clear CPE
+- "clear_cpe" = convincing cytopathic effect is present
+
+When unsure between healthy and early_stress, choose early_stress if abnormal morphology is present.
+Be conservative and avoid overcalling weak or ambiguous clear CPE.
+
+Step 6 — Final decision
+Only after performing the inspection above should you produce the final JSON result.
 
 Your secondary task is to estimate viability of the visible culture region, i.e. the ratio of live cells divided by total cells.
 These images do not have trypan blue stain, so estimate viability from morphology only.
+If viability cannot be estimated reliably from the visible region, set viability to null.
 
 If image quality or field content prevents confident detection, reflect that in the confidence score and summary.
-Be conservative and avoid overcalling weak or ambiguous CPE.
 
 Return only a JSON object with this structure:
 {
+    "culture_state": "healthy" | "early_stress" | "clear_cpe",
     "cpe_detected": boolean,
     "cpe_types": string[] | null,
-    "viability": number,
+    "viability": number | null,
     "confidence": number,
     "full_response_text": string
 }
 
 Instructions for each key:
-- cpe_detected: true if any form of CPE is detected in the visible region; otherwise false.
+- culture_state: healthy, early_stress, or clear_cpe.
+- cpe_detected: true only if clear CPE is present in the visible region; false otherwise.
 - cpe_types: list of detected morphologies, or null if none are present.
-- viability: numeric estimate from 0 to 100.
+- viability: numeric estimate from 0 to 100, or null if not reliably inferable.
 - confidence: numeric confidence from 0.0 to 1.0 for your own assessment.
 - full_response_text: concise summary of the visible findings.
 """.strip()
@@ -149,6 +176,7 @@ few_shot_examples = [
     {
         "image_path": "converted_pngs/EXP_path1_passage4_401.png",
         "expected_output": {
+            "culture_state": "healthy",
             "cpe_detected": False,
             "cpe_types": None,
             "viability": None,
@@ -159,6 +187,7 @@ few_shot_examples = [
     {
         "image_path": "converted_pngs/EXP_path2_passage4_402.png",
         "expected_output": {
+            "culture_state": "clear_cpe",
             "cpe_detected": True,
             "cpe_types": ["rounding", "vacuolation", "refractile cells", "dying cells"],
             "viability": None,
@@ -290,6 +319,53 @@ def normalize_cpe_types(cpe_types):
     return cleaned
 
 
+def normalize_culture_state(value):
+    if value is None:
+        return "healthy"
+    text = str(value).strip().lower()
+    if text in {"clear_cpe", "cpe", "positive", "clear cpe"}:
+        return "clear_cpe"
+    if text in {"early_stress", "early stress", "stressed", "stress"}:
+        return "early_stress"
+    return "healthy"
+
+
+def sanitize_model_result(result: dict) -> dict:
+    result = dict(result)
+
+    result["culture_state"] = normalize_culture_state(result.get("culture_state"))
+    result["cpe_detected"] = bool(result.get("cpe_detected"))
+    result["cpe_types"] = normalize_cpe_types(result.get("cpe_types"))
+
+    viability = result.get("viability")
+    if viability is None:
+        result["viability"] = None
+    else:
+        try:
+            viability = float(viability)
+            viability = max(0.0, min(100.0, viability))
+            result["viability"] = viability
+        except Exception:
+            result["viability"] = None
+
+    confidence = result.get("confidence", 0.0)
+    try:
+        confidence = float(confidence)
+    except Exception:
+        confidence = 0.0
+    result["confidence"] = max(0.0, min(1.0, confidence))
+
+    result["full_response_text"] = str(result.get("full_response_text", "")).strip()
+
+    if result["culture_state"] != "clear_cpe":
+        result["cpe_detected"] = False
+
+    if result["culture_state"] == "healthy":
+        result["cpe_types"] = []
+
+    return result
+
+
 def call_model_with_retries(messages):
     last_error = None
     for attempt in range(1, MAX_RETRIES + 1):
@@ -300,7 +376,8 @@ def call_model_with_retries(messages):
                 temperature=0,
                 response_format=JSON_SCHEMA,
             )
-            return json.loads(response.choices[0].message.content)
+            parsed = json.loads(response.choices[0].message.content)
+            return sanitize_model_result(parsed)
         except Exception as exc:
             last_error = exc
             if attempt < MAX_RETRIES:
@@ -314,26 +391,35 @@ def analyze_tile(tile_image: Image.Image) -> dict:
 
     for _ in range(CONSENSUS_RUNS):
         result = call_model_with_retries(build_messages(tile_b64))
-        result["cpe_types"] = normalize_cpe_types(result.get("cpe_types"))
         pass_results.append(result)
 
-    positive_votes = sum(1 for r in pass_results if bool(r.get("cpe_detected")))
-    negative_votes = CONSENSUS_RUNS - positive_votes
-    is_positive = positive_votes > negative_votes
-    majority_votes = max(positive_votes, negative_votes)
-    consensus_strength = majority_votes / CONSENSUS_RUNS
+    state_votes = Counter(r["culture_state"] for r in pass_results)
+    majority_state, majority_count = state_votes.most_common(1)[0]
 
-    viability_mean = float(np.mean([float(r["viability"]) for r in pass_results]))
+    positive_votes = sum(1 for r in pass_results if r["culture_state"] == "clear_cpe")
+    early_stress_votes = sum(1 for r in pass_results if r["culture_state"] == "early_stress")
+    healthy_votes = sum(1 for r in pass_results if r["culture_state"] == "healthy")
+
+    consensus_strength = majority_count / CONSENSUS_RUNS
+
+    valid_viabilities = [float(r["viability"]) for r in pass_results if r["viability"] is not None]
+    viability_mean = float(np.mean(valid_viabilities)) if valid_viabilities else None
+
     model_confidence_mean = float(np.mean([float(r["confidence"]) for r in pass_results]))
 
     positive_type_counter = Counter()
-    positive_summaries = []
-    for r in pass_results:
-        if r.get("cpe_detected"):
-            positive_type_counter.update(r.get("cpe_types") or [])
-            positive_summaries.append(r.get("full_response_text", ""))
+    early_stress_type_counter = Counter()
+    summaries = []
 
-    if is_positive and positive_type_counter:
+    for r in pass_results:
+        summaries.append(r.get("full_response_text", ""))
+
+        if r["culture_state"] == "clear_cpe":
+            positive_type_counter.update(r.get("cpe_types") or [])
+        elif r["culture_state"] == "early_stress":
+            early_stress_type_counter.update(r.get("cpe_types") or [])
+
+    if majority_state == "clear_cpe" and positive_type_counter:
         cpe_types = [
             cpe_type
             for cpe_type, count in positive_type_counter.most_common()
@@ -341,21 +427,29 @@ def analyze_tile(tile_image: Image.Image) -> dict:
         ]
         if not cpe_types:
             cpe_types = [positive_type_counter.most_common(1)[0][0]]
+    elif majority_state == "early_stress" and early_stress_type_counter:
+        cpe_types = [
+            cpe_type
+            for cpe_type, count in early_stress_type_counter.most_common()
+            if count >= math.ceil(CONSENSUS_RUNS / 2)
+        ]
+        if not cpe_types:
+            cpe_types = [early_stress_type_counter.most_common(1)[0][0]]
     else:
         cpe_types = []
 
-    if is_positive and positive_summaries:
-        summary = positive_summaries[0]
-    else:
-        summary = pass_results[0].get("full_response_text", "")
+    summary = next((s for s in summaries if s), "")
 
     return {
-        "tile_positive": is_positive,
+        "tile_state": majority_state,
+        "tile_positive": majority_state == "clear_cpe",
+        "tile_early_stress": majority_state == "early_stress",
         "positive_votes": positive_votes,
-        "negative_votes": negative_votes,
+        "early_stress_votes": early_stress_votes,
+        "healthy_votes": healthy_votes,
         "consensus_strength": round(consensus_strength, 4),
         "model_confidence_mean": round(model_confidence_mean, 4),
-        "viability_mean": round(viability_mean, 2),
+        "viability_mean": round(viability_mean, 2) if viability_mean is not None else None,
         "cpe_types": cpe_types,
         "summary": summary,
     }
@@ -364,36 +458,60 @@ def analyze_tile(tile_image: Image.Image) -> dict:
 def aggregate_image_result(tile_results: list[dict]) -> dict:
     if not tile_results:
         return {
+            "culture_state": "healthy",
             "cpe_detected": False,
             "cpe_types": None,
-            "viability": 0,
+            "viability": None,
             "confidence": 0,
             "positive_tiles": 0,
+            "early_stress_tiles": 0,
             "total_tiles": 0,
             "positive_tile_fraction": 0,
+            "early_stress_tile_fraction": 0,
             "full_response_text": "No usable tiles were analyzed.",
             "tile_results": []
         }
 
     total_tiles = len(tile_results)
     positive_tiles = sum(1 for t in tile_results if t["tile_positive"])
+    early_stress_tiles = sum(1 for t in tile_results if t["tile_early_stress"])
+
     positive_fraction = positive_tiles / total_tiles
-    avg_viability = float(np.mean([t["viability_mean"] for t in tile_results]))
+    early_stress_fraction = early_stress_tiles / total_tiles
+
+    valid_tile_viabilities = [t["viability_mean"] for t in tile_results if t["viability_mean"] is not None]
+    avg_viability = float(np.mean(valid_tile_viabilities)) if valid_tile_viabilities else None
+
     avg_model_confidence = float(np.mean([t["model_confidence_mean"] for t in tile_results]))
     avg_consensus_strength = float(np.mean([t["consensus_strength"] for t in tile_results]))
 
     image_positive = positive_fraction >= POSITIVE_TILE_THRESHOLD
+    image_early_stress = (not image_positive) and (early_stress_fraction >= EARLY_STRESS_TILE_THRESHOLD)
 
     positive_type_counter = Counter()
+    early_stress_type_counter = Counter()
     positive_tile_details = []
+    early_stress_tile_details = []
+
     for tile in tile_results:
         if tile["tile_positive"]:
             positive_type_counter.update(tile["cpe_types"])
             positive_tile_details.append(tile)
+        elif tile["tile_early_stress"]:
+            early_stress_type_counter.update(tile["cpe_types"])
+            early_stress_tile_details.append(tile)
 
-    if image_positive and positive_type_counter:
-        cpe_types = [name for name, _ in positive_type_counter.most_common()]
+    if image_positive:
+        culture_state = "clear_cpe"
+        cpe_detected = True
+        cpe_types = [name for name, _ in positive_type_counter.most_common()] if positive_type_counter else None
+    elif image_early_stress:
+        culture_state = "early_stress"
+        cpe_detected = False
+        cpe_types = [name for name, _ in early_stress_type_counter.most_common()] if early_stress_type_counter else None
     else:
+        culture_state = "healthy"
+        cpe_detected = False
         cpe_types = None
 
     positive_consensus = (
@@ -405,12 +523,28 @@ def aggregate_image_result(tile_results: list[dict]) -> dict:
         if positive_tile_details else avg_model_confidence
     )
 
+    early_consensus = (
+        float(np.mean([t["consensus_strength"] for t in early_stress_tile_details]))
+        if early_stress_tile_details else 0.0
+    )
+    early_model_conf = (
+        float(np.mean([t["model_confidence_mean"] for t in early_stress_tile_details]))
+        if early_stress_tile_details else avg_model_confidence
+    )
+
     if image_positive:
         extent_score = min(positive_fraction / 0.25, 1.0)
         confidence = (
             0.45 * extent_score +
             0.30 * positive_consensus +
             0.25 * positive_model_conf
+        )
+    elif image_early_stress:
+        extent_score = min(early_stress_fraction / 0.35, 1.0)
+        confidence = (
+            0.40 * extent_score +
+            0.30 * early_consensus +
+            0.30 * early_model_conf
         )
     else:
         negative_fraction = 1.0 - positive_fraction
@@ -430,23 +564,38 @@ def aggregate_image_result(tile_results: list[dict]) -> dict:
         )[:3]
         strongest_tile_ids = [t["tile_id"] for t in strongest_tiles]
         summary = (
-            f"CPE detected in {positive_tiles}/{total_tiles} tiles "
+            f"Clear CPE detected in {positive_tiles}/{total_tiles} tiles "
             f"({positive_fraction:.1%}). Most supported positive tiles: {', '.join(strongest_tile_ids)}."
+        )
+    elif image_early_stress:
+        strongest_tiles = sorted(
+            early_stress_tile_details,
+            key=lambda t: (t["consensus_strength"], t["model_confidence_mean"]),
+            reverse=True,
+        )[:3]
+        strongest_tile_ids = [t["tile_id"] for t in strongest_tiles]
+        summary = (
+            f"Early stress pattern detected in {early_stress_tiles}/{total_tiles} tiles "
+            f"({early_stress_fraction:.1%}) without enough evidence for clear CPE. "
+            f"Most supported stress tiles: {', '.join(strongest_tile_ids)}."
         )
     else:
         summary = (
             f"No convincing CPE detected across {total_tiles} analyzed tiles. "
-            f"Positive tile fraction was {positive_fraction:.1%}."
+            f"Positive tile fraction was {positive_fraction:.1%} and early-stress tile fraction was {early_stress_fraction:.1%}."
         )
 
     return {
-        "cpe_detected": image_positive,
+        "culture_state": culture_state,
+        "cpe_detected": cpe_detected,
         "cpe_types": cpe_types,
-        "viability": round(avg_viability, 2),
+        "viability": round(avg_viability, 2) if avg_viability is not None else None,
         "confidence": confidence,
         "positive_tiles": positive_tiles,
+        "early_stress_tiles": early_stress_tiles,
         "total_tiles": total_tiles,
         "positive_tile_fraction": round(positive_fraction, 4),
+        "early_stress_tile_fraction": round(early_stress_fraction, 4),
         "full_response_text": summary,
         "tile_results": tile_results,
     }
@@ -461,9 +610,11 @@ def print_summary_table(all_results: dict):
     for image_name, result in all_results.items():
         rows.append({
             "Image Name": image_name,
+            "State": result.get("culture_state"),
             "CPE Detected": result.get("cpe_detected"),
             "Confidence": result.get("confidence"),
             "Positive Tiles": result.get("positive_tiles"),
+            "Stress Tiles": result.get("early_stress_tiles"),
             "Total Tiles": result.get("total_tiles"),
             "Viability": result.get("viability"),
             "CPE Types": ", ".join(result.get("cpe_types") or []) if result.get("cpe_types") else None,
@@ -506,20 +657,23 @@ def main():
                 tile_results.append(tile_result)
 
                 print(
-                    f"  {tile_id}: positive={tile_result['tile_positive']} | "
-                    f"votes={tile_result['positive_votes']}/{CONSENSUS_RUNS} | "
+                    f"  {tile_id}: state={tile_result['tile_state']} | "
+                    f"clear_cpe_votes={tile_result['positive_votes']}/{CONSENSUS_RUNS} | "
+                    f"stress_votes={tile_result['early_stress_votes']}/{CONSENSUS_RUNS} | "
                     f"conf={tile_result['model_confidence_mean']:.2f} | "
-                    f"viability={tile_result['viability_mean']:.1f}"
+                    f"viability={tile_result['viability_mean'] if tile_result['viability_mean'] is not None else 'null'}"
                 )
 
             image_result = aggregate_image_result(tile_results)
             all_results[filename] = image_result
 
             print(
-                f"Finished {filename}. CPE detected: {image_result['cpe_detected']} | "
+                f"Finished {filename}. State: {image_result['culture_state']} | "
+                f"CPE detected: {image_result['cpe_detected']} | "
                 f"confidence={image_result['confidence']:.2f} | "
                 f"positive tiles={image_result['positive_tiles']}/{image_result['total_tiles']} | "
-                f"viability={image_result['viability']:.1f}"
+                f"stress tiles={image_result['early_stress_tiles']}/{image_result['total_tiles']} | "
+                f"viability={image_result['viability'] if image_result['viability'] is not None else 'null'}"
             )
 
             with open(results_filename, "w", encoding="utf-8") as f:
@@ -528,13 +682,16 @@ def main():
         except Exception as exc:
             print(f"An error occurred while processing {filename}: {exc}")
             all_results[filename] = {
+                "culture_state": "healthy",
                 "cpe_detected": False,
                 "cpe_types": None,
-                "viability": 0,
+                "viability": None,
                 "confidence": 0,
                 "positive_tiles": 0,
+                "early_stress_tiles": 0,
                 "total_tiles": 0,
                 "positive_tile_fraction": 0,
+                "early_stress_tile_fraction": 0,
                 "full_response_text": f"Error: {exc}",
                 "tile_results": []
             }
