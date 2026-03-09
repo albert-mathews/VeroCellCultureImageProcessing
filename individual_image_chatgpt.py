@@ -28,31 +28,25 @@ if os.path.exists(results_filename):
 
 # Your common prompt for all images
 common_prompt = """
+You are a virology specialist. Your specialty is analyzing light microscope images of Vero cell cultures.
 Analyze the provided image of a cell culture.
 The images are of Vero E6 cells, cultivated in typical growth medium.
 The images are taken using bright field or phase contrast microscope.
 The magnification is either 10x or 20x. Each image has a scale bar. 400um is 10x, and 200um is 20x.
 Your primary task is to detect the presence of CPE (Cytopathic Effect).
-CPE can be identified by signs such as:
-Cell rounding
-Cell shrinkage
-Cell lysis (cytolysis)
+Specific CPE morphologies you should be looking for:
+Dying cells
+Rounding
+vacuolation
+Detached
+Granularity
+Refractile
+
+Other CPE morphologies you should look for:
+Syncytium formation
+Intranuclear inclusion bodies
 Pyknosis
 Karyorrhexis
-Intranuclear inclusion bodies
-Intracytoplasmic inclusion bodies
-Nuclear and cytoplasmic inclusions
-Syncytium formation (multinucleated giant cells)
-Cytoplasmic vacuolization
-Cytomegaly (cell enlargement)
-Cell detachment
-Plaque formation
-Focus formation (loss of contact inhibition)
-Immortalization
-Malignant transformation
-Hemadsorption
-Chromosomal abnormalities
-Cytoskeletal changes
 
 Your secondary task is to estimate the viability of the culture in the image, i.e. the ratio of live cells divided by total cells.
 Normally this is done using a device like a  Invitrogen Countess 3 Automated Cell Counter with trypan blue staining, live cells remain unstained (translucent), while dead cells take up the dye and appear dark.
