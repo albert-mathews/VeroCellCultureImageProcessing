@@ -1,9 +1,11 @@
 import anthropic
 import os
+import re
 import json
+import time
+import base64
 import pandas as pd
 from dotenv import load_dotenv
-import base64
 
 # --- Configuration ---
 load_dotenv()
@@ -22,12 +24,13 @@ if os.path.exists(results_filename):
     if load_choice == 'yes':
         with open(results_filename, 'r') as f:
             all_results = json.load(f)
-        print("Loaded previous results. Skipping image uploads for existing files.")
+        print("Loaded previous results. Skipping already-processed files.")
     else:
-        print("Starting fresh. All images will be re-uploaded.")
+        print("Starting fresh. All images will be re-processed.")
 
-# Your common prompt for all images
-common_prompt = """
+# --- Common prompt (moved to system role for prompt caching) ---
+# Caching this saves ~90% of input token cost on the prompt for every image after the first.
+SYSTEM_PROMPT = """
 You are a virology specialist. Your specialty is analyzing light microscope images of Vero cell cultures.
 Analyze the provided image of a cell culture.
 The images are of Vero E6 cells, cultivated in typical growth medium.
@@ -78,75 +81,153 @@ Example response for a positive detection:
 }
 """
 
-# --- Processing Loop ---
-print("Starting image processing... 🔬")
-for filename in os.listdir(image_folder):
-    if filename.lower().endswith(('.png', '.jpg', '.jpeg')):
-        if filename in all_results:
-            print(f"Skipping already processed {filename}")
-            continue
-
-        full_path = os.path.join(image_folder, filename)
-
+def call_claude_with_retry(image_b64: str, media_type: str, max_retries: int = 3) -> dict:
+    """
+    Send one image to Claude Opus 4 with the system prompt cached.
+    Retries up to max_retries times on rate-limit or transient API errors.
+    """
+    for attempt in range(max_retries):
         try:
-            # Base64 encode the image and determine media type
-            with open(full_path, "rb") as image_file:
-                base64_image = base64.b64encode(image_file.read()).decode('utf-8')
-            media_type = "image/png" if filename.lower().endswith('.png') else "image/jpeg"
-
-            # Send the prompt and image to the model
             message = client.messages.create(
-                model="claude-4.5-sonnet",  # Update to latest, e.g., 'claude-4.5-sonnet'
-                max_tokens=1024,
-                temperature=0,  # For consistency
+                model="claude-opus-4-6",   # Best vision model; changed from invalid "claude-4.5-sonnet"
+                max_tokens=2048,           # Increased from 1024 to avoid truncated full_response_text
+                temperature=0,             # Keep at 0 for reproducibility
+                system=[
+                    {
+                        "type": "text",
+                        "text": SYSTEM_PROMPT,
+                        "cache_control": {"type": "ephemeral"}  # Cache the long prompt — saves ~90% on repeat calls
+                    }
+                ],
                 messages=[
                     {
                         "role": "user",
                         "content": [
-                            {"type": "image", "source": {"type": "base64", "media_type": media_type, "data": base64_image}},
-                            {"type": "text", "text": common_prompt}
+                            {
+                                "type": "image",
+                                "source": {
+                                    "type": "base64",
+                                    "media_type": media_type,
+                                    "data": image_b64
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "text": "Analyze this cell culture image and return the JSON object as instructed."
+                            }
                         ]
                     }
                 ]
             )
-            
-            # Extract and parse the JSON response (Claude outputs text, so parse)
-            response_json_str = message.content[0].text.strip('`').strip('json').strip()
-            response_dict = json.loads(response_json_str)
+            return message
 
-            # Store the structured response
-            all_results[filename] = [
-                response_dict.get('cpe_detected', False),
-                response_dict.get('cpe_quadrant'),
-                response_dict.get('cpe_types'),
-                response_dict.get('viability'),
-                response_dict.get('full_response_text', '')
-            ]
+        except anthropic.RateLimitError:
+            wait = 60 * (attempt + 1)
+            print(f"  Rate limit hit. Waiting {wait}s before retry {attempt + 1}/{max_retries}...")
+            time.sleep(wait)
 
-            print(f"Processed {filename}. CPE detected: {response_dict.get('cpe_detected')}. Viability: {response_dict.get('viability')}")
+        except anthropic.APIStatusError as e:
+            # Retry on 529 (overloaded) or 500 (server error); re-raise on others
+            if e.status_code in (500, 529) and attempt < max_retries - 1:
+                wait = 30 * (attempt + 1)
+                print(f"  API error {e.status_code}. Waiting {wait}s before retry {attempt + 1}/{max_retries}...")
+                time.sleep(wait)
+            else:
+                raise
 
-        except Exception as e:
-            print(f"An error occurred while processing {filename}: {e}")
-            all_results[filename] = [False, None, None, 0, f"Error: {e}"]
-            
-print("\nProcessing complete! 🎉")
+    raise RuntimeError(f"Failed after {max_retries} attempts.")
 
-# --- Generate and Display the Tabulated Results ---
+
+def parse_json_response(raw_text: str) -> dict:
+    """
+    Robustly extract JSON from the model response.
+    Handles cases where the model accidentally wraps output in markdown fences.
+    """
+    # Strip markdown fences if present
+    cleaned = re.sub(r'```(?:json)?', '', raw_text).strip('` \n')
+    # Find the outermost JSON object
+    match = re.search(r'\{.*\}', cleaned, re.DOTALL)
+    if match:
+        return json.loads(match.group())
+    raise ValueError(f"No JSON object found in response:\n{raw_text}")
+
+
+# --- Processing Loop ---
+print("Starting image processing... 🔬")
+
+image_files = [
+    f for f in os.listdir(image_folder)
+    if f.lower().endswith(('.png', '.jpg', '.jpeg'))
+]
+
+if not image_files:
+    print(f"No images found in '{image_folder}'. Exiting.")
+    exit()
+
+for i, filename in enumerate(image_files, 1):
+    print(f"\n[{i}/{len(image_files)}] {filename}")
+
+    if filename in all_results:
+        print("  Already processed — skipping.")
+        continue
+
+    full_path = os.path.join(image_folder, filename)
+
+    try:
+        # Read and base64-encode the image
+        with open(full_path, "rb") as f:
+            image_b64 = base64.b64encode(f.read()).decode('utf-8')
+
+        media_type = "image/png" if filename.lower().endswith('.png') else "image/jpeg"
+
+        # Call the API
+        message = call_claude_with_retry(image_b64, media_type)
+
+        # Parse the JSON response robustly
+        raw_text = message.content[0].text
+        response_dict = parse_json_response(raw_text)
+
+        # Store as a list to match original format
+        all_results[filename] = [
+            response_dict.get('cpe_detected', False),
+            response_dict.get('cpe_quadrant'),
+            response_dict.get('cpe_types'),
+            response_dict.get('viability'),
+            response_dict.get('full_response_text', '')
+        ]
+
+        print(f"  CPE detected: {response_dict.get('cpe_detected')} | "
+              f"Viability: {response_dict.get('viability')}% | "
+              f"Types: {response_dict.get('cpe_types')}")
+
+        # Save results after every image so progress isn't lost on crash
+        with open(results_filename, 'w') as f:
+            json.dump(all_results, f, indent=4)
+
+        # Polite pause between requests to avoid hitting rate limits
+        if i < len(image_files):
+            time.sleep(2)
+
+    except Exception as e:
+        print(f"  ERROR processing {filename}: {e}")
+        all_results[filename] = [False, None, None, None, f"Error: {e}"]
+        with open(results_filename, 'w') as f:
+            json.dump(all_results, f, indent=4)
+
+print("\n\nProcessing complete! 🎉")
+
+# --- Generate and Display Tabulated Results ---
 print("\n--- Tabulated CPE Detections ---")
 if all_results:
-    data_for_table = {
-        'Image Name': list(all_results.keys()),
+    df = pd.DataFrame({
+        'Image Name':   list(all_results.keys()),
         'CPE Detected': [v[0] for v in all_results.values()],
-        'Quadrant': [v[1] for v in all_results.values()],
-        'CPE Types': [v[2] for v in all_results.values()]
-    }
-    df = pd.DataFrame(data_for_table)
+        'Quadrant':     [v[1] for v in all_results.values()],
+        'CPE Types':    [v[2] for v in all_results.values()],
+        'Viability %':  [v[3] for v in all_results.values()],
+        'Summary':      [v[4] for v in all_results.values()],
+    })
     print(df.to_string(index=False))
-
-    # --- Save the Dictionary to a JSON file ---
-    with open(results_filename, 'w') as f:
-        json.dump(all_results, f, indent=4)
-    
-    print(f"\nDictionary of results saved to '{results_filename}'")
+    print(f"\nResults saved to '{results_filename}'")
 else:
     print("No results to display.")
