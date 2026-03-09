@@ -1,25 +1,24 @@
-import google.generativeai as genai
+import anthropic
 import os
 import json
 import pandas as pd
 from dotenv import load_dotenv
-import time
+import base64
 
 # --- Configuration ---
 load_dotenv()
-os.environ['GOOGLE_API_KEY'] = os.getenv('GOOGLE_API_KEY')
-genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
+client = anthropic.Anthropic(api_key=os.getenv('ANTHROPIC_API_KEY'))
 
 # Path to your image folder
 image_folder = 'converted_pngs'
 
 # The name of the file to save/load results
-results_filename = 'cpe_detection_results_gemini.json'
+results_filename = 'cpe_detection_results_claude.json'
 
-# --- Add this new section to load existing results ---
+# --- Load existing results ---
 all_results = {}
 if os.path.exists(results_filename):
-    load_choice = input(f"'{results_filename}' found. Do you want to load it and use existing file IDs to skip re-uploading images? (yes/no): ").lower()
+    load_choice = input(f"'{results_filename}' found. Do you want to load it? (yes/no): ").lower()
     if load_choice == 'yes':
         with open(results_filename, 'r') as f:
             all_results = json.load(f)
@@ -85,76 +84,62 @@ Example response for a positive detection:
 }
 """
 
-# Initialize the Gemini model
-model = genai.GenerativeModel('gemini-1.5-pro-latest')  # Update to latest if needed, e.g., 'gemini-3-pro'
-
 # --- Processing Loop ---
 print("Starting image processing... 🔬")
 for filename in os.listdir(image_folder):
     if filename.lower().endswith(('.png', '.jpg', '.jpeg')):
-        full_path = os.path.join(image_folder, filename)
-        file_id = None
+        if filename in all_results:
+            print(f"Skipping already processed {filename}")
+            continue
 
-        # Check if the file already has an ID from a previous run
-        if filename in all_results and len(all_results[filename]) > 4:
-            # The fourth element is the file ID (index 3)
-            file_id = all_results[filename][4] 
-            print(f"Using pre-existing file ID for {filename}: {file_id}")
-            uploaded_file = genai.get_file(file_id)
-        else:
-            try:
-                # Upload the image file for processing
-                uploaded_file = genai.upload_file(path=full_path)
-                file_id = uploaded_file.name
-                print(f"Uploaded {filename}. File ID: {file_id}")
-                
-                # Wait for the file to be active before processing
-                while uploaded_file.state.name != 'ACTIVE':
-                    print(f"Waiting for {filename} to be processed...")
-                    time.sleep(5)
-                    uploaded_file = genai.get_file(uploaded_file.name)
-            
-            except Exception as e:
-                print(f"An error occurred while uploading {filename}: {e}")
-                all_results[filename] = [False, None, None, f"Error: {e}", None]
-                continue # Skip to the next image on upload error
+        full_path = os.path.join(image_folder, filename)
 
         try:
-            # Send the prompt and the uploaded file to the model
-            response = model.generate_content([
-                common_prompt, 
-                uploaded_file
-            ])
+            # Base64 encode the image and determine media type
+            with open(full_path, "rb") as image_file:
+                base64_image = base64.b64encode(image_file.read()).decode('utf-8')
+            media_type = "image/png" if filename.lower().endswith('.png') else "image/jpeg"
+
+            # Send the prompt and image to the model
+            message = client.messages.create(
+                model="claude-4.5-sonnet",  # Update to latest, e.g., 'claude-4.5-sonnet'
+                max_tokens=1024,
+                temperature=0,  # For consistency
+                messages=[
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "image", "source": {"type": "base64", "media_type": media_type, "data": base64_image}},
+                            {"type": "text", "text": common_prompt}
+                        ]
+                    }
+                ]
+            )
             
-            # Extract and parse the JSON response from the model
-            response_json_str = response.text.strip('`').strip('json').strip()
+            # Extract and parse the JSON response (Claude outputs text, so parse)
+            response_json_str = message.content[0].text.strip('`').strip('json').strip()
             response_dict = json.loads(response_json_str)
 
-            # Store the structured response in our dictionary, including the file ID
+            # Store the structured response
             all_results[filename] = [
                 response_dict.get('cpe_detected', False),
                 response_dict.get('cpe_quadrant'),
                 response_dict.get('cpe_types'),
                 response_dict.get('viability'),
-                response_dict.get('full_response_text', ''),
-                file_id  # Add the file ID to the list
+                response_dict.get('full_response_text', '')
             ]
 
             print(f"Processed {filename}. CPE detected: {response_dict.get('cpe_detected')}. Viability: {response_dict.get('viability')}")
-            
-            # Clean up the temporary uploaded file
-            genai.delete_file(uploaded_file.name)
 
         except Exception as e:
             print(f"An error occurred while processing {filename}: {e}")
-            all_results[filename] = [False, None, None, f"Error: {e}", file_id]
+            all_results[filename] = [False, None, None, 0, f"Error: {e}"]
             
 print("\nProcessing complete! 🎉")
 
-# --- Step 3: Generate and Display the Tabulated Results ---
+# --- Generate and Display the Tabulated Results ---
 print("\n--- Tabulated CPE Detections ---")
 if all_results:
-    # Convert the dictionary to a pandas DataFrame
     data_for_table = {
         'Image Name': list(all_results.keys()),
         'CPE Detected': [v[0] for v in all_results.values()],
@@ -164,7 +149,7 @@ if all_results:
     df = pd.DataFrame(data_for_table)
     print(df.to_string(index=False))
 
-    # --- Step 4: Save the Dictionary to a JSON file ---
+    # --- Save the Dictionary to a JSON file ---
     with open(results_filename, 'w') as f:
         json.dump(all_results, f, indent=4)
     
