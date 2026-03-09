@@ -29,7 +29,7 @@ RETRY_DELAY_SECONDS = 2
 IMAGE_EXTENSIONS = (".png", ".jpg", ".jpeg")
 
 # Optional: skip tiles that are nearly blank/background
-SKIP_LOW_DETAIL_TILES = False
+SKIP_LOW_DETAIL_TILES = True
 LOW_DETAIL_STD_THRESHOLD = 4.0
 
 JSON_SCHEMA = {
