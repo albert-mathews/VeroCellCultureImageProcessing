@@ -1,0 +1,2030 @@
+Starting image processing... 🔬
+
+Processing EXP_path1_passage4_101.png...
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path1_passage4_101.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=12/16 | stress tiles=4/16 | viability=null
+
+Processing EXP_path1_passage4_102.png...
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=healthy | clear_cpe_votes=0/1 | stress_votes=1/1 | conf=0.70 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.80 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path1_passage4_102.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=10/16 | stress tiles=4/16 | viability=null
+
+Processing EXP_path1_passage4_103.png...
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+Finished EXP_path1_passage4_103.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=13/16 | stress tiles=3/16 | viability=null
+
+Processing EXP_path1_passage4_104.png...
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.78 | viability=null
+Finished EXP_path1_passage4_104.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=11/16 | stress tiles=5/16 | viability=null
+
+Processing EXP_path1_passage4_105.png...
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+Finished EXP_path1_passage4_105.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=11/16 | stress tiles=5/16 | viability=null
+
+Processing EXP_path1_passage4_106.png...
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r1c3 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-NlbVvsuaC6FCoxaMccY0QleT on tokens per min (TPM): Limit 30000, Used 26646, Requested 3416. Please try again in 124ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_106.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=9/15 | stress tiles=6/15 | viability=null
+
+Processing EXP_path1_passage4_107.png...
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_107.png. State: clear_cpe | CPE detected: True | confidence=0.97 | positive tiles=11/16 | stress tiles=5/16 | viability=null
+
+Processing EXP_path1_passage4_108.png...
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r4c2 failed: Connection error.
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path1_passage4_108.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=12/15 | stress tiles=3/15 | viability=null
+
+Processing EXP_path1_passage4_109.png...
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+Finished EXP_path1_passage4_109.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=14/16 | stress tiles=2/16 | viability=null
+
+Processing EXP_path1_passage4_110.png...
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path1_passage4_110.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=10/16 | stress tiles=6/16 | viability=null
+
+Processing EXP_path1_passage4_201.png...
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_201.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=8/16 | stress tiles=8/16 | viability=null
+
+Processing EXP_path1_passage4_202.png...
+  r1c2: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.80 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.70 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r2c1 failed: Connection error.
+  Tile r4c2 failed: Connection error.
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path1_passage4_202.png. State: clear_cpe | CPE detected: True | confidence=0.92 | positive tiles=7/14 | stress tiles=6/14 | viability=null
+
+Processing EXP_path1_passage4_203.png...
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path1_passage4_203.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=4/16 | stress tiles=12/16 | viability=null
+
+Processing EXP_path1_passage4_204.png...
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path1_passage4_204.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=5/16 | stress tiles=11/16 | viability=null
+
+Processing EXP_path1_passage4_205.png...
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r1c4 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-NlbVvsuaC6FCoxaMccY0QleT on tokens per min (TPM): Limit 30000, Used 28480, Requested 3416. Please try again in 3.792s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_205.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=7/15 | stress tiles=8/15 | viability=null
+
+Processing EXP_path1_passage4_206.png...
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path1_passage4_206.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=6/16 | stress tiles=10/16 | viability=null
+
+Processing EXP_path1_passage4_207.png...
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_207.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=6/16 | stress tiles=10/16 | viability=null
+
+Processing EXP_path1_passage4_208.png...
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.70 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path1_passage4_208.png. State: clear_cpe | CPE detected: True | confidence=0.92 | positive tiles=4/16 | stress tiles=12/16 | viability=null
+
+Processing EXP_path1_passage4_209.png...
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r2c1 failed: Connection error.
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+Finished EXP_path1_passage4_209.png. State: clear_cpe | CPE detected: True | confidence=0.93 | positive tiles=5/15 | stress tiles=10/15 | viability=null
+
+Processing EXP_path1_passage4_210.png...
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.81 | viability=null
+Finished EXP_path1_passage4_210.png. State: clear_cpe | CPE detected: True | confidence=0.93 | positive tiles=10/16 | stress tiles=6/16 | viability=null
+
+Processing EXP_path1_passage4_301.png...
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r3c2 failed: Connection error.
+Finished EXP_path1_passage4_301.png. State: early_stress | CPE detected: False | confidence=0.92 | positive tiles=1/15 | stress tiles=14/15 | viability=null
+
+Processing EXP_path1_passage4_302.png...
+  r1c1: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.80 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.70 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_302.png. State: early_stress | CPE detected: False | confidence=0.92 | positive tiles=1/16 | stress tiles=14/16 | viability=null
+
+Processing EXP_path1_passage4_303.png...
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_303.png. State: early_stress | CPE detected: False | confidence=0.93 | positive tiles=1/16 | stress tiles=15/16 | viability=null
+
+Processing EXP_path1_passage4_304.png...
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_304.png. State: clear_cpe | CPE detected: True | confidence=0.80 | positive tiles=3/16 | stress tiles=13/16 | viability=null
+
+Processing EXP_path1_passage4_305.png...
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r3c2 failed: Connection error.
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_305.png. State: clear_cpe | CPE detected: True | confidence=0.68 | positive tiles=2/15 | stress tiles=13/15 | viability=null
+
+Processing EXP_path1_passage4_306.png...
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_306.png. State: clear_cpe | CPE detected: True | confidence=0.85 | positive tiles=3/16 | stress tiles=13/16 | viability=null
+
+Processing EXP_path1_passage4_307.png...
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.81 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_307.png. State: clear_cpe | CPE detected: True | confidence=0.74 | positive tiles=3/16 | stress tiles=13/16 | viability=null
+
+Processing EXP_path1_passage4_308.png...
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_308.png. State: clear_cpe | CPE detected: True | confidence=0.66 | positive tiles=2/16 | stress tiles=14/16 | viability=null
+
+Processing EXP_path1_passage4_309.png...
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_309.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=4/16 | stress tiles=12/16 | viability=null
+
+Processing EXP_path1_passage4_310.png...
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r1c3 failed: Connection error.
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path1_passage4_310.png. State: clear_cpe | CPE detected: True | confidence=0.87 | positive tiles=3/15 | stress tiles=12/15 | viability=null
+
+Processing EXP_path1_passage4_401.png...
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r3c4 failed: Connection error.
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r4c4 failed: Connection error.
+Finished EXP_path1_passage4_401.png. State: early_stress | CPE detected: False | confidence=0.93 | positive tiles=0/14 | stress tiles=14/14 | viability=null
+
+Processing EXP_path1_passage4_402.png...
+  Tile r2c4 failed: Connection error.
+  Tile r1c2 failed: Connection error.
+  Tile r2c3 failed: Connection error.
+  Tile r1c4 failed: Connection error.
+  Tile r1c3 failed: Connection error.
+  Tile r1c1 failed: Connection error.
+  Tile r2c2 failed: Connection error.
+  Tile r2c1 failed: Connection error.
+  Tile r3c3 failed: Connection error.
+  Tile r3c2 failed: Connection error.
+  Tile r3c4 failed: Connection error.
+  Tile r3c1 failed: Connection error.
+  Tile r4c3 failed: Connection error.
+  Tile r4c2 failed: Connection error.
+  Tile r4c1 failed: Connection error.
+  Tile r4c4 failed: Connection error.
+Finished EXP_path1_passage4_402.png. State: healthy | CPE detected: False | confidence=0.00 | positive tiles=0/0 | stress tiles=0/0 | viability=null
+
+Processing EXP_path1_passage4_403.png...
+  Tile r1c2 failed: Connection error.
+  Tile r1c3 failed: Connection error.
+  Tile r2c2 failed: Connection error.
+  Tile r2c3 failed: Connection error.
+  Tile r2c1 failed: Connection error.
+  Tile r2c4 failed: Connection error.
+  Tile r1c1 failed: Connection error.
+  Tile r1c4 failed: Connection error.
+  Tile r3c1 failed: Connection error.
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r4c3 failed: Connection error.
+  Tile r4c4 failed: Connection error.
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r4c1 failed: Connection error.
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_403.png. State: early_stress | CPE detected: False | confidence=0.93 | positive tiles=0/4 |stress tiles=4/4 | viability=null
+
+Processing EXP_path1_passage4_404.png...
+  Tile r2c4 failed: Connection error.
+  Tile r1c3 failed: Connection error.
+  Tile r1c1 failed: Connection error.
+  Tile r2c2 failed: Connection error.
+  Tile r2c1 failed: Connection error.
+  Tile r1c4 failed: Connection error.
+  Tile r2c3 failed: Connection error.
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r3c4 failed: Connection error.
+  Tile r4c3 failed: Connection error.
+  Tile r4c2 failed: Connection error.
+  Tile r3c2 failed: Connection error.
+  Tile r4c1 failed: Connection error.
+  Tile r4c4 failed: Connection error.
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_404.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=1/3 | stress tiles=2/3 | viability=null
+
+Processing EXP_path1_passage4_405.png...
+  Tile r1c3 failed: Connection error.
+  Tile r2c4 failed: Connection error.
+  Tile r1c1 failed: Connection error.
+  Tile r2c3 failed: Connection error.
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r1c2 failed: Connection error.
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.92 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r3c3 failed: Connection error.
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r4c4 failed: Connection error.
+  Tile r3c2 failed: Connection error.
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_405.png. State: early_stress | CPE detected: False | confidence=0.93 | positive tiles=0/8 |stress tiles=7/8 | viability=null
+
+Processing EXP_path1_passage4_406.png...
+  Tile r1c3 failed: Connection error.
+  Tile r2c1 failed: Connection error.
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r3c1 failed: Connection error.
+  Tile r1c2 failed: Connection error.
+  Tile r2c2 failed: Connection error.
+  Tile r2c3 failed: Connection error.
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r4c1 failed: Connection error.
+  Tile r3c2 failed: Connection error.
+  Tile r4c3 failed: Connection error.
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r4c2 failed: Connection error.
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_406.png. State: early_stress | CPE detected: False | confidence=0.93 | positive tiles=0/6 |stress tiles=6/6 | viability=null
+
+Processing EXP_path1_passage4_407.png...
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r1c3 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-NlbVvsuaC6FCoxaMccY0QleT on tokens per min (TPM): Limit 30000, Used 28951, Requested 3416. Please try again in 4.734s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_407.png. State: early_stress | CPE detected: False | confidence=0.93 | positive tiles=1/15 | stress tiles=14/15 | viability=null
+
+Processing EXP_path1_passage4_408.png...
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r2c4 failed: Connection error.
+  Tile r1c2 failed: Connection error.
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r4c1 failed: Connection error.
+  Tile r4c3 failed: Connection error.
+  Tile r3c4 failed: Connection error.
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_408.png. State: early_stress | CPE detected: False | confidence=0.93 | positive tiles=0/11 | stress tiles=11/11 | viability=null
+
+Processing EXP_path1_passage4_409.png...
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r3c4 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-NlbVvsuaC6FCoxaMccY0QleT on tokens per min (TPM): Limit 30000, Used 30000, Requested 3416. Please try again in 6.832s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r4c4 failed: Connection error.
+Finished EXP_path1_passage4_409.png. State: early_stress | CPE detected: False | confidence=0.93 | positive tiles=1/14 | stress tiles=13/14 | viability=null
+
+Processing EXP_path1_passage4_410.png...
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r1c3 failed: Connection error.
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r3c3 failed: Connection error.
+  Tile r4c2 failed: Connection error.
+  Tile r4c1 failed: Connection error.
+  Tile r3c2 failed: Connection error.
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_410.png. State: clear_cpe | CPE detected: True | confidence=0.84 | positive tiles=2/11 | stress tiles=9/11 | viability=null
+
+Processing EXP_path1_passage4_501.png...
+  Tile r1c2 failed: Connection error.
+  Tile r2c1 failed: Connection error.
+  Tile r1c1 failed: Connection error.
+  Tile r1c3 failed: Connection error.
+  Tile r2c3 failed: Connection error.
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_501.png. State: early_stress | CPE detected: False | confidence=0.93 | positive tiles=0/11 | stress tiles=11/11 | viability=null
+
+Processing EXP_path1_passage4_502.png...
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r3c1 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-NlbVvsuaC6FCoxaMccY0QleT on tokens per min (TPM): Limit 30000, Used 30000, Requested 3416. Please try again in 6.832s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_502.png. State: clear_cpe | CPE detected: True | confidence=0.87 | positive tiles=3/15 | stress tiles=12/15 | viability=null
+
+Processing EXP_path1_passage4_503.png...
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_503.png. State: early_stress | CPE detected: False | confidence=0.92 | positive tiles=1/16 | stress tiles=15/16 | viability=null
+
+Processing EXP_path1_passage4_504.png...
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_504.png. State: clear_cpe | CPE detected: True | confidence=0.85 | positive tiles=3/16 | stress tiles=13/16 | viability=null
+
+Processing EXP_path1_passage4_505.png...
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_505.png. State: early_stress | CPE detected: False | confidence=0.93 | positive tiles=0/16 | stress tiles=16/16 | viability=null
+
+Processing EXP_path1_passage4_506.png...
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r1c1 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-NlbVvsuaC6FCoxaMccY0QleT on tokens per min (TPM): Limit 30000, Used 30000, Requested 3416. Please try again in 6.832s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_506.png. State: clear_cpe | CPE detected: True | confidence=0.75 | positive tiles=2/15 | stress tiles=13/15 | viability=null
+
+Processing EXP_path1_passage4_507.png...
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_507.png. State: early_stress | CPE detected: False | confidence=0.93 | positive tiles=1/16 | stress tiles=15/16 | viability=null
+
+Processing EXP_path1_passage4_508.png...
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_508.png. State: early_stress | CPE detected: False | confidence=0.93 | positive tiles=1/16 | stress tiles=15/16 | viability=null
+
+Processing EXP_path1_passage4_509.png...
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r4c4 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-NlbVvsuaC6FCoxaMccY0QleT on tokens per min (TPM): Limit 30000, Used 26675, Requested 3416. Please try again in 182ms. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+Finished EXP_path1_passage4_509.png. State: early_stress | CPE detected: False | confidence=0.93 | positive tiles=1/15 | stress tiles=14/15 | viability=null
+
+Processing EXP_path1_passage4_510.png...
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.70 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path1_passage4_510.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=5/16 | stress tiles=10/16 | viability=null
+
+Processing EXP_path2_passage4_101.png...
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r2c1 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-NlbVvsuaC6FCoxaMccY0QleT on tokens per min (TPM): Limit 30000, Used 30000, Requested 3416. Please try again in 6.832s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_101.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=12/15 | stress tiles=3/15 | viability=null
+
+Processing EXP_path2_passage4_102.png...
+  r1c4: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_102.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=9/16 | stress tiles=7/16 | viability=null
+
+Processing EXP_path2_passage4_103.png...
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path2_passage4_103.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=10/16 | stress tiles=6/16 | viability=null
+
+Processing EXP_path2_passage4_104.png...
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.72 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.70 | viability=null
+Finished EXP_path2_passage4_104.png. State: clear_cpe | CPE detected: True | confidence=0.94 | positive tiles=6/16 | stress tiles=9/16 | viability=null
+
+Processing EXP_path2_passage4_105.png...
+  r2c1: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+Finished EXP_path2_passage4_105.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=13/16 | stress tiles=3/16 | viability=null
+
+Processing EXP_path2_passage4_106.png...
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path2_passage4_106.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=7/16 | stress tiles=9/16 | viability=null
+
+Processing EXP_path2_passage4_107.png...
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=20.0
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_107.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=15/16 | stress tiles=1/16 | viability=20.0
+
+Processing EXP_path2_passage4_108.png...
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c4: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.80 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r1c4: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.80 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path2_passage4_108.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=9/16 | stress tiles=5/16 | viability=null
+
+Processing EXP_path2_passage4_109.png...
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_109.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=9/16 | stress tiles=7/16 | viability=null
+
+Processing EXP_path2_passage4_110.png...
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r4c1: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.70 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.70 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_110.png. State: clear_cpe | CPE detected: True | confidence=0.93 | positive tiles=5/16 | stress tiles=9/16 | viability=null
+
+Processing EXP_path2_passage4_201.png...
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_201.png. State: clear_cpe | CPE detected: True | confidence=0.97 | positive tiles=14/16 | stress tiles=2/16 | viability=null
+
+Processing EXP_path2_passage4_202.png...
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.80 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_202.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=9/16 | stress tiles=7/16 | viability=null
+
+Processing EXP_path2_passage4_203.png...
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_203.png. State: clear_cpe | CPE detected: True | confidence=0.97 | positive tiles=15/16 | stress tiles=1/16 | viability=null
+
+Processing EXP_path2_passage4_204.png...
+  r1c3: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_204.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=11/16 | stress tiles=5/16 | viability=null
+
+Processing EXP_path2_passage4_205.png...
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r4c3 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-NlbVvsuaC6FCoxaMccY0QleT on tokens per min (TPM): Limit 30000, Used 30000, Requested 3416. Please try again in 6.832s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_205.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=15/15 | stress tiles=0/15 | viability=null
+
+Processing EXP_path2_passage4_206.png...
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.82 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=1/1 | conf=0.72 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.80 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path2_passage4_206.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=10/16 | stress tiles=5/16 | viability=null
+
+Processing EXP_path2_passage4_207.png...
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_207.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=15/16 | stress tiles=1/16 | viability=null
+
+Processing EXP_path2_passage4_208.png...
+  r2c4: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.70 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  Tile r4c1 failed: Connection error.
+  Tile r4c2 failed: Connection error.
+  Tile r3c4 failed: Connection error.
+  Tile r3c2 failed: Connection error.
+  Tile r4c3 failed: Connection error.
+  Tile r3c1 failed: Connection error.
+  r3c3: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_208.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=7/10 | stress tiles=1/10 | viability=null
+
+Processing EXP_path2_passage4_209.png...
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r2c4 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-NlbVvsuaC6FCoxaMccY0QleT on tokens per min (TPM): Limit 30000, Used 30000, Requested 3416. Please try again in 6.832s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  Tile r4c1 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-NlbVvsuaC6FCoxaMccY0QleT on tokens per min (TPM): Limit 30000, Used 28273, Requested 3416. Please try again in 3.378s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=20.0
+Finished EXP_path2_passage4_209.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=11/14 | stress tiles=3/14 | viability=20.0
+
+Processing EXP_path2_passage4_210.png...
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r2c2 failed: Connection error.
+  Tile r3c3 failed: Connection error.
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r4c1 failed: Connection error.
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path2_passage4_210.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=9/13 | stress tiles=4/13 | viability=null
+
+Processing EXP_path2_passage4_212.png...
+  Tile r1c2 failed: Connection error.
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r2c3 failed: Connection error.
+  r1c1: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.80 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.70 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_212.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=6/14 | stress tiles=6/14 | viability=null
+
+Processing EXP_path2_passage4_213.png...
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r2c1 failed: Connection error.
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r3c1 failed: Connection error.
+  r4c3: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_213.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=10/14 | stress tiles=4/14 | viability=null
+
+Processing EXP_path2_passage4_301.png...
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+Finished EXP_path2_passage4_301.png. State: clear_cpe | CPE detected: True | confidence=0.97 | positive tiles=15/16 | stress tiles=1/16 | viability=null
+
+Processing EXP_path2_passage4_302.png...
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r2c3 failed: Connection error.
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_302.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=13/15 | stress tiles=2/15 | viability=null
+
+Processing EXP_path2_passage4_303.png...
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_303.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=13/16 | stress tiles=3/16 | viability=null
+
+Processing EXP_path2_passage4_304.png...
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_304.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=10/16 | stress tiles=6/16 | viability=null
+
+Processing EXP_path2_passage4_306.png...
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_306.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=13/16 | stress tiles=3/16 | viability=null
+
+Processing EXP_path2_passage4_307.png...
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r2c4 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-NlbVvsuaC6FCoxaMccY0QleT on tokens per min (TPM): Limit 30000, Used 30000, Requested 3416. Please try again in 6.832s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_307.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=13/15 | stress tiles=2/15 | viability=null
+
+Processing EXP_path2_passage4_308.png...
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=healthy | clear_cpe_votes=0/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.72 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c3: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.72 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  Tile r4c4 failed: Connection error.
+Finished EXP_path2_passage4_308.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=11/15 | stress tiles=2/15 | viability=null
+
+Processing EXP_path2_passage4_309.png...
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r2c4 failed: Connection error.
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  Tile r1c1 failed: Connection error.
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path2_passage4_309.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=12/14 | stress tiles=2/14 | viability=null
+
+Processing EXP_path2_passage4_310.png...
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.70 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_310.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=10/16 | stress tiles=6/16 | viability=null
+
+Processing EXP_path2_passage4_401.png...
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_401.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=16/16 | stress tiles=0/16 | viability=null
+
+Processing EXP_path2_passage4_402.png...
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.70 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r3c2 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-NlbVvsuaC6FCoxaMccY0QleT on tokens per min (TPM): Limit 30000, Used 29848, Requested 3416. Please try again in 6.528s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_402.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=11/15 | stress tiles=4/15 | viability=null
+
+Processing EXP_path2_passage4_403.png...
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_403.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=16/16 | stress tiles=0/16 | viability=null
+
+Processing EXP_path2_passage4_404.png...
+  r2c2: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.80 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_404.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=11/16 | stress tiles=4/16 | viability=null
+
+Processing EXP_path2_passage4_405.png...
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_405.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=16/16 | stress tiles=0/16 | viability=null
+
+Processing EXP_path2_passage4_406.png...
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c1: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.70 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.70 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.70 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+Finished EXP_path2_passage4_406.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=10/16 | stress tiles=4/16 | viability=null
+
+Processing EXP_path2_passage4_407.png...
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_407.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=13/16 | stress tiles=3/16 | viability=null
+
+Processing EXP_path2_passage4_408.png...
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r2c1 failed: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4o in organization org-NlbVvsuaC6FCoxaMccY0QleT on tokens per min (TPM): Limit 30000, Used 30000, Requested 3416. Please try again in 6.832s. Visit https://platform.openai.com/account/rate-limits to learn more.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path2_passage4_408.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=12/15 | stress tiles=3/15 | viability=null
+
+Processing EXP_path2_passage4_409.png...
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_409.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=15/16 | stress tiles=1/16 | viability=null
+
+Processing EXP_path2_passage4_410.png...
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path2_passage4_410.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=5/16 | stress tiles=11/16 | viability=null
+
+Processing EXP_path2_passage4_501.png...
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r1c1 failed: Connection error.
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_501.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=14/15 | stress tiles=1/15 | viability=null
+
+Processing EXP_path2_passage4_502.png...
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.72 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+Finished EXP_path2_passage4_502.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=7/16 | stress tiles=9/16 | viability=null
+
+Processing EXP_path2_passage4_503.png...
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.88 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_503.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=14/16 | stress tiles=2/16 | viability=null
+
+Processing EXP_path2_passage4_504.png...
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=healthy | clear_cpe_votes=0/1 | stress_votes=0/1 | conf=0.80 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path2_passage4_504.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=6/16 | stress tiles=9/16 | viability=null
+
+Processing EXP_path2_passage4_505.png...
+  r1c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_505.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=13/16 | stress tiles=3/16 | viability=null
+
+Processing EXP_path2_passage4_506.png...
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+Finished EXP_path2_passage4_506.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=10/16 | stress tiles=6/16 | viability=null
+
+Processing EXP_path2_passage4_507.png...
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r3c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+Finished EXP_path2_passage4_507.png. State: clear_cpe | CPE detected: True | confidence=0.95 | positive tiles=16/16 | stress tiles=0/16 | viability=null
+
+Processing EXP_path2_passage4_508.png...
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=1/1 | conf=0.70 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.80 | viability=null
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path2_passage4_508.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=7/16 | stress tiles=9/16 | viability=null
+
+Processing EXP_path2_passage4_509.png...
+  r1c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r1c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  Tile r4c2 failed: Connection error.
+  r3c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.86 | viability=null
+Finished EXP_path2_passage4_509.png. State: clear_cpe | CPE detected: True | confidence=0.96 | positive tiles=14/15 | stress tiles=1/15 | viability=null
+
+Processing EXP_path2_passage4_510.png...
+  r1c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.70 | viability=null
+  r2c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r2c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r2c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c3: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c4: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r1c1: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c4: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c2: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r3c2: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+  r3c3: state=clear_cpe | clear_cpe_votes=1/1 | stress_votes=1/1 | conf=0.80 | viability=null
+  r4c3: state=clear_cpe | clear_cpe_votes=2/1 | stress_votes=0/1 | conf=0.85 | viability=null
+  r4c1: state=early_stress | clear_cpe_votes=0/1 | stress_votes=2/1 | conf=0.75 | viability=null
+Finished EXP_path2_passage4_510.png. State: clear_cpe | CPE detected: True | confidence=0.94 | positive tiles=6/16 | stress tiles=10/16 | viability=null
+
+Processing complete! 🎉
+
+--- Tabulated CPE Detections ---
+                Image Name        State  CPE Detected  Confidence  Positive Tiles  Stress Tiles  Total Tiles  Viability                                                                                                                 CPE Types
+EXP_path1_passage4_101.png    clear_cpe          True      0.9631              12             4           16        NaN                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path1_passage4_102.png    clear_cpe          True      0.9625              10             4           16        NaN                                                          refractile cells, dying cells, rounding, vacuolation, detachment
+EXP_path1_passage4_103.png    clear_cpe          True      0.9514              13             3           16        NaN                                                          refractile cells, rounding, detachment, vacuolation, dying cells
+EXP_path1_passage4_104.png    clear_cpe          True      0.9481              11             5           16        NaN                        refractile cells, dying cells, rounding, granularity, vacuolation, syncytium formation, detachment
+EXP_path1_passage4_105.png    clear_cpe          True      0.9635              11             5           16        NaN                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path1_passage4_106.png    clear_cpe          True      0.9625               9             6           15        NaN                                             refractile cells, rounding, vacuolation, dying cells, detachment, granularity
+EXP_path1_passage4_107.png    clear_cpe          True      0.9659              11             5           16        NaN                                                          rounding, refractile cells, detachment, dying cells, vacuolation
+EXP_path1_passage4_108.png    clear_cpe          True      0.9502              12             3           15        NaN                        refractile cells, dying cells, rounding, vacuolation, detachment, granularity, syncytium formation
+EXP_path1_passage4_109.png    clear_cpe          True      0.9525              14             2           16        NaN                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path1_passage4_110.png    clear_cpe          True      0.9629              10             6           16        NaN                                             refractile cells, dying cells, vacuolation, rounding, granularity, detachment
+EXP_path1_passage4_201.png    clear_cpe          True      0.9634               8             8           16        NaN                                                                       rounding, refractile cells, vacuolation, detachment
+EXP_path1_passage4_202.png    clear_cpe          True      0.9161               7             6           14        NaNrefractile cells, rounding, detachment, granularity, vacuolation, irregular cell borders, syncytium formation, dying cells
+EXP_path1_passage4_203.png    clear_cpe          True      0.9644               4            12           16        NaN                                                                       rounding, refractile cells, detachment, vacuolation
+EXP_path1_passage4_204.png    clear_cpe          True      0.9647               5            11           16        NaN                                             refractile cells, vacuolation, dying cells, rounding, granularity, detachment
+EXP_path1_passage4_205.png    clear_cpe          True      0.9630               7             8           15        NaN                                                                       rounding, refractile cells, vacuolation, detachment
+EXP_path1_passage4_206.png    clear_cpe          True      0.9625               6            10           16        NaN                                                          refractile cells, vacuolation, dying cells, rounding, detachment
+EXP_path1_passage4_207.png    clear_cpe          True      0.9637               6            10           16        NaN                                                                       rounding, refractile cells, vacuolation, detachment
+EXP_path1_passage4_208.png    clear_cpe          True      0.9219               4            12           16        NaN                                                         refractile cells, dying cells, vacuolation, rounding, granularity
+EXP_path1_passage4_209.png    clear_cpe          True      0.9323               5            10           15        NaN                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path1_passage4_210.png    clear_cpe          True      0.9304              10             6           16        NaN                     refractile cells, vacuolation, detachment, granularity, rounding, dying cells, irregular cell borders
+EXP_path1_passage4_301.png early_stress         False      0.9154               1            14           15        NaN                                                            irregular cell borders, refractile cells, micro-gaps, rounding
+EXP_path1_passage4_302.png early_stress         False      0.9239               1            14           16        NaN                                    irregular cell borders, refractile cells, micro-gaps, vacuolation, uneven cell density
+EXP_path1_passage4_303.png early_stress         False      0.9250               1            15           16        NaN                                                            refractile cells, irregular cell borders, rounding, micro-gaps
+EXP_path1_passage4_304.png    clear_cpe          True      0.7971               3            13           16        NaN                                  vacuolation, refractile cells, irregular cell borders, dying cells, detachment, rounding
+EXP_path1_passage4_305.png    clear_cpe          True      0.6750               2            13           15        NaN                                                                       rounding, vacuolation, refractile cells, detachment
+EXP_path1_passage4_306.png    clear_cpe          True      0.8500               3            13           16        NaN                                              detachment, refractile cells, dying cells, micro-gaps, rounding, vacuolation
+EXP_path1_passage4_307.png    clear_cpe          True      0.7429               3            13           16        NaN                                                          rounding, vacuolation, refractile cells, detachment, dying cells
+EXP_path1_passage4_308.png    clear_cpe          True      0.6562               2            14           16        NaN                                                          refractile cells, vacuolation, dying cells, rounding, detachment
+EXP_path1_passage4_309.png    clear_cpe          True      0.9625               4            12           16        NaN                                                                       rounding, refractile cells, detachment, vacuolation
+EXP_path1_passage4_310.png    clear_cpe          True      0.8738               3            12           15        NaN                                                          refractile cells, dying cells, vacuolation, rounding, detachment
+EXP_path1_passage4_401.png early_stress         False      0.9250               0            14           14        NaN                                               irregular cell borders, micro-gaps, refractile cells, vacuolation, rounding
+EXP_path1_passage4_402.png      healthy         False      0.0000               0             0            0        NaN                                                                                                                      None
+EXP_path1_passage4_403.png early_stress         False      0.9250               0             4            4        NaN                                                                      irregular cell borders, micro-gaps, refractile cells
+EXP_path1_passage4_404.png    clear_cpe          True      0.9625               1             2            3        NaN                                                                                 detachment, vacuolation, refractile cells
+EXP_path1_passage4_405.png early_stress         False      0.9250               0             7            8        NaN                                                            irregular cell borders, micro-gaps, refractile cells, rounding
+EXP_path1_passage4_406.png early_stress         False      0.9250               0             6            6        NaN                                                         irregular cell borders, refractile cells, micro-gaps, vacuolation
+EXP_path1_passage4_407.png early_stress         False      0.9250               1            14           15        NaN                                                            irregular cell borders, micro-gaps, refractile cells, rounding
+EXP_path1_passage4_408.png early_stress         False      0.9250               0            11           11        NaN                                    irregular cell borders, refractile cells, micro-gaps, uneven cell density, vacuolation
+EXP_path1_passage4_409.png early_stress         False      0.9250               1            13           14        NaN                                                         irregular cell borders, micro-gaps, refractile cells, vacuolation
+EXP_path1_passage4_410.png    clear_cpe          True      0.8398               2             9           11        NaN                                                                       detachment, refractile cells, rounding, vacuolation
+EXP_path1_passage4_501.png early_stress         False      0.9250               0            11           11        NaN                                       irregular cell borders, micro-gaps, refractile cells, uneven cell density, rounding
+EXP_path1_passage4_502.png    clear_cpe          True      0.8725               3            12           15        NaNrefractile cells, rounding, detachment, syncytium formation, irregular cell borders, vacuolation, dying cells, granularity
+EXP_path1_passage4_503.png early_stress         False      0.9160               1            15           16        NaN                                       irregular cell borders, micro-gaps, refractile cells, rounding, uneven cell density
+EXP_path1_passage4_504.png    clear_cpe          True      0.8500               3            13           16        NaN                                                       refractile cells, vacuolation, dying cells, granularity, detachment
+EXP_path1_passage4_505.png early_stress         False      0.9250               0            16           16        NaN                                                            irregular cell borders, micro-gaps, refractile cells, rounding
+EXP_path1_passage4_506.png    clear_cpe          True      0.7525               2            13           15        NaN                                                                       vacuolation, refractile cells, detachment, rounding
+EXP_path1_passage4_507.png early_stress         False      0.9250               1            15           16        NaN                                                            irregular cell borders, refractile cells, micro-gaps, rounding
+EXP_path1_passage4_508.png early_stress         False      0.9250               1            15           16        NaN                                   irregular cell borders, refractile cells, micro-gaps, vacuolation, rounding, detachment
+EXP_path1_passage4_509.png early_stress         False      0.9250               1            14           15        NaN                                                                      irregular cell borders, micro-gaps, refractile cells
+EXP_path1_passage4_510.png    clear_cpe          True      0.9625               5            10           16        NaN                                              vacuolation, refractile cells, detachment, granularity, rounding, micro-gaps
+EXP_path2_passage4_101.png    clear_cpe          True      0.9647              12             3           15        NaN                                                                       rounding, refractile cells, detachment, vacuolation
+EXP_path2_passage4_102.png    clear_cpe          True      0.9457               9             7           16        NaN                                                          refractile cells, rounding, vacuolation, dying cells, detachment
+EXP_path2_passage4_103.png    clear_cpe          True      0.9632              10             6           16        NaN                                                                       rounding, refractile cells, detachment, vacuolation
+EXP_path2_passage4_104.png    clear_cpe          True      0.9354               6             9           16        NaN                                                          refractile cells, rounding, dying cells, vacuolation, detachment
+EXP_path2_passage4_105.png    clear_cpe          True      0.9523              13             3           16        NaN                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path2_passage4_106.png    clear_cpe          True      0.9636               7             9           16        NaN                                                          refractile cells, rounding, vacuolation, detachment, dying cells
+EXP_path2_passage4_107.png    clear_cpe          True      0.9647              15             1           16       20.0                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path2_passage4_108.png    clear_cpe          True      0.9469               9             5           16        NaN                                                          rounding, refractile cells, dying cells, detachment, vacuolation
+EXP_path2_passage4_109.png    clear_cpe          True      0.9637               9             7           16        NaN                                                                       refractile cells, rounding, detachment, dying cells
+EXP_path2_passage4_110.png    clear_cpe          True      0.9307               5             9           16        NaN                                                                      rounding, refractile cells, dying cells, vacuolation
+EXP_path2_passage4_201.png    clear_cpe          True      0.9660              14             2           16        NaN                                                          refractile cells, rounding, detachment, vacuolation, dying cells
+EXP_path2_passage4_202.png    clear_cpe          True      0.9615               9             7           16        NaN                                  refractile cells, rounding, dying cells, detachment, vacuolation, irregular cell borders
+EXP_path2_passage4_203.png    clear_cpe          True      0.9660              15             1           16        NaN                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path2_passage4_204.png    clear_cpe          True      0.9477              11             5           16        NaN                                                          refractile cells, rounding, dying cells, vacuolation, detachment
+EXP_path2_passage4_205.png    clear_cpe          True      0.9645              15             0           15        NaN                                                          detachment, refractile cells, rounding, dying cells, vacuolation
+EXP_path2_passage4_206.png    clear_cpe          True      0.9623              10             5           16        NaN                                                          refractile cells, rounding, dying cells, vacuolation, detachment
+EXP_path2_passage4_207.png    clear_cpe          True      0.9635              15             1           16        NaN                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path2_passage4_208.png    clear_cpe          True      0.9636               7             1           10        NaN                                                                      refractile cells, rounding, dying cells, vacuolation
+EXP_path2_passage4_209.png    clear_cpe          True      0.9642              11             3           14       20.0                                                          rounding, detachment, refractile cells, vacuolation, dying cells
+EXP_path2_passage4_210.png    clear_cpe          True      0.9625               9             4           13        NaN                                                          refractile cells, rounding, dying cells, vacuolation, detachment
+EXP_path2_passage4_212.png    clear_cpe          True      0.9625               6             6           14        NaN                                                          refractile cells, rounding, dying cells, vacuolation, detachment
+EXP_path2_passage4_213.png    clear_cpe          True      0.9470              10             4           14        NaN                                                          refractile cells, rounding, dying cells, detachment, vacuolation
+EXP_path2_passage4_301.png    clear_cpe          True      0.9660              15             1           16        NaN                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path2_passage4_302.png    clear_cpe          True      0.9631              13             2           15        NaN                                             refractile cells, rounding, dying cells, vacuolation, detachment, granularity
+EXP_path2_passage4_303.png    clear_cpe          True      0.9645              13             3           16        NaN                                                          rounding, refractile cells, vacuolation, detachment, dying cells
+EXP_path2_passage4_304.png    clear_cpe          True      0.9466              10             6           16        NaN                                                          refractile cells, rounding, dying cells, vacuolation, detachment
+EXP_path2_passage4_306.png    clear_cpe          True      0.9506              13             3           16        NaN                                                         refractile cells, rounding, dying cells, vacuolation, granularity
+EXP_path2_passage4_307.png    clear_cpe          True      0.9639              13             2           15        NaN                                                                       rounding, refractile cells, detachment, dying cells
+EXP_path2_passage4_308.png    clear_cpe          True      0.9481              11             2           15        NaN                                                                       refractile cells, detachment, dying cells, rounding
+EXP_path2_passage4_309.png    clear_cpe          True      0.9641              12             2           14        NaN                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path2_passage4_310.png    clear_cpe          True      0.9463              10             6           16        NaN                                                                      refractile cells, rounding, vacuolation, dying cells
+EXP_path2_passage4_401.png    clear_cpe          True      0.9632              16             0           16        NaN                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path2_passage4_402.png    clear_cpe          True      0.9477              11             4           15        NaN                                                          refractile cells, rounding, dying cells, vacuolation, detachment
+EXP_path2_passage4_403.png    clear_cpe          True      0.9545              16             0           16        NaN                                                          rounding, refractile cells, vacuolation, detachment, dying cells
+EXP_path2_passage4_404.png    clear_cpe          True      0.9477              11             4           16        NaN                                                                      rounding, refractile cells, dying cells, vacuolation
+EXP_path2_passage4_405.png    clear_cpe          True      0.9641              16             0           16        NaN                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path2_passage4_406.png    clear_cpe          True      0.9636              10             4           16        NaN                                                          refractile cells, dying cells, rounding, vacuolation, detachment
+EXP_path2_passage4_407.png    clear_cpe          True      0.9645              13             3           16        NaN                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path2_passage4_408.png    clear_cpe          True      0.9644              12             3           15        NaN                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path2_passage4_409.png    clear_cpe          True      0.9635              15             1           16        NaN                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path2_passage4_410.png    clear_cpe          True      0.9625               5            11           16        NaN                                                                       refractile cells, rounding, dying cells, detachment
+EXP_path2_passage4_501.png    clear_cpe          True      0.9636              14             1           15        NaN                                                          rounding, refractile cells, vacuolation, detachment, dying cells
+EXP_path2_passage4_502.png    clear_cpe          True      0.9625               7             9           16        NaN                                                                      rounding, refractile cells, vacuolation, dying cells
+EXP_path2_passage4_503.png    clear_cpe          True      0.9633              14             2           16        NaN                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path2_passage4_504.png    clear_cpe          True      0.9625               6             9           16        NaN                                                                      refractile cells, rounding, dying cells, vacuolation
+EXP_path2_passage4_505.png    clear_cpe          True      0.9506              13             3           16        NaN                                                          rounding, refractile cells, vacuolation, detachment, dying cells
+EXP_path2_passage4_506.png    clear_cpe          True      0.9625              10             6           16        NaN                                                                      refractile cells, rounding, dying cells, vacuolation
+EXP_path2_passage4_507.png    clear_cpe          True      0.9526              16             0           16        NaN                                                                       rounding, detachment, refractile cells, vacuolation
+EXP_path2_passage4_508.png    clear_cpe          True      0.9607               7             9           16        NaN                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path2_passage4_509.png    clear_cpe          True      0.9628              14             1           15        NaN                                                          rounding, refractile cells, detachment, vacuolation, dying cells
+EXP_path2_passage4_510.png    clear_cpe          True      0.9354               6            10           16        NaN                                                          refractile cells, rounding, vacuolation, dying cells, detachment
+
+Dictionary of results saved to 'cpe_detection_results_grok.json'
+
+(venv) C:\git\VeroCellCultureImageProcessing>
