@@ -68,7 +68,7 @@
     "cpe_quadrant": null,
     "cpe_types": null,
     "confluency": 30,
-    "full_response_text": "```json\n{\n    \"cpe_detected\": false,\n    \"cpe_quadrant\": null,\n    \"cpe_types\": null,\n    \"confluency\": 30,\n    \"full_response_text\": \"No significant cytopathic effects detected. The confluency is approximately 30%.\"\n}\n```",
+    "full_response_text": "",
     "image_id": null
   },
   "EXP_path2_passage4_504.png": {
