@@ -2,8 +2,8 @@ import subprocess
 import sys
 
 # Default LaTeX file (change if needed)
-LATEX_FILE = 'doc.tex'  # Your LaTeX source file
-PDF_OUTPUT = 'doc.pdf'  # Compiled PDF
+LATEX_FILE = 'paper/paper.tex'  # Your LaTeX source file
+PDF_OUTPUT = 'paper/Vero Cell Culture Morphology Detection Benchmarking.pdf'  # Compiled PDF
 
 def compile_latex(tex_file=LATEX_FILE):
     """Compile LaTeX to PDF using pdflatex (non-interactive)."""
