@@ -26,8 +26,9 @@ XAI_API_KEY=xai-<rest of your key>
 
 # Next steps.
 
-1. fix the prompt individual_image_gmini.py and re-run. the prompt is too lean. gemini changed it and i did not notice.
-2. remove the isolation_historgrams.py and google sheets key. move to other repo.
+1-improve the accuracy bar charts, and limit them to the updated cro results
+2-do same for confusion matrix.
+3-remove the isolation_historgrams.py and google sheets key. move to other repo.
 
 # Scraps
 
