@@ -175,17 +175,6 @@ def prog():
     style_html(df_grouped.reset_index()).to_html(detailed_html)
     print(f"Saved detailed HTML: {detailed_html}")
     
-    # <Grok here> New 1.1: let's make a very dense image like this:
-    # "" means put that string exactly.
-    # |...,X| means this cell span X cells below: e.g.
-    # |...,2|..............,6 |       
-    # |..|..|..|..|..|..|..|..|
-    #
-    # |.r.| this means put the 6 data values for the result group for the row
-    #
-    # |"Images",2 |"CRO",6|"ChatGPT",6|"Claude",6|"Gemini",6|"Grok",6|
-    # |<path>|<id>|.r.    | .r.       |   .r.    |   .r.    |  .r.   |
-
     # LaTeX with coloring (using colortbl package)
     latex_code = df_grouped.to_latex(
         escape=False,
@@ -199,6 +188,57 @@ def prog():
     with open(detailed_latex, 'w', encoding='utf-8') as f:
         f.write(latex_code)
     print(f"Saved detailed LaTeX: {detailed_latex}")
+    
+    
+    # <Grok here> New 1.1: let's make a very dense image like this:
+    # "" means put that string exactly.
+    # |...,X| means this cell span X cells below: e.g.
+    # |...,2|..............,6 |       
+    # |..|..|..|..|..|..|..|..|
+    #
+    # |.r.| this means put the 6 data values for the result group for the row
+    #
+    # |"Images",2 |"CRO",6|"ChatGPT",6|"Claude",6|"Gemini",6|"Grok",6|
+    # |<path>|<id>|.r.    | .r.       |   .r.    |   .r.    |  .r.   |
+    ai_short = {'ChatGPT': 'GPT', 'Claude': 'CLD', 'Gemini': 'Gem', 'Grok': 'GRK'}
+    cpe_shorts = ['Dy', 'Ro', 'V', 'D', 'G', 'Re']  # Dying, Rounding, Vacuolation, Detached, Granularity, Refractile
+    
+    confusion_rows = []
+    for image in sorted_images:
+        path_num, img_id = parse_image_name(image)
+        row = {'path': path_num, 'id': img_id}
+        
+        cro_data = all_data.get('CRO', {}).get(image, {})
+        cro_presence = get_cpe_presence(cro_data.get('cpe_types', []))
+        
+        # CRO columns: 1 if asserted, 0 else
+        for short, typ in zip(cpe_shorts, CPE_TYPES):
+            row[f'CRO_{short}'] = 1 if cro_presence.get(typ, False) else 0
+        
+        # AI columns
+        for ai in ['ChatGPT', 'Claude', 'Gemini', 'Grok']:
+            ai_data = all_data.get(ai, {}).get(image, {})
+            ai_presence = get_cpe_presence(ai_data.get('cpe_types', []))
+            
+            for short, typ in zip(cpe_shorts, CPE_TYPES):
+                if ai_presence.get(typ, False) and cro_presence.get(typ, False):
+                    val = 1  # TP
+                elif ai_presence.get(typ, False) and not cro_presence.get(typ, False):
+                    val = -2  # FP
+                elif not ai_presence.get(typ, False) and cro_presence.get(typ, False):
+                    val = -1  # FN
+                else:
+                    val = 0  # TN
+                row[f'{ai_short[ai]}_{short}'] = val
+        
+        confusion_rows.append(row)
+    
+    df_confusion = pd.DataFrame(confusion_rows)
+    df_confusion.sort_values(by=['path', 'id'], key=lambda col: col.astype(int) if col.name == 'id' else col, inplace=True)
+    
+    confusion_csv = "compare-results/cpe_confusion_table.csv"
+    df_confusion.to_csv(confusion_csv, index=False)
+    print(f"Saved confusion CSV: {confusion_csv}")
 
     # Prepare accuracy data for plots
     # Compute accuracy per AI per CPE type (using Jaccard or simple match vs CRO)
