@@ -132,22 +132,22 @@ for row in rows:
 html += """
         </tbody>
     </table>
-    <table style="border: none; margin-top: 20px; margin-left: 0; border-collapse: collapse;">
+    <table style="border: 2px solid #333; margin-top: 20px; margin-left: 0; border-collapse: collapse;">
         <tr>
-            <td style="width: 15px; height: 15px; background-color: #98FB98; border: none;"></td>
-            <td style="border: none; text-align: left; padding-left: 10px;">CRO asserted or AI True Positive</td>
+            <td style="width: 15px; height: 15px; background-color: #98FB98; border: 1px solid #ccc;"></td>
+            <td style="border: 1px solid #ccc; text-align: left; padding-left: 10px;">CRO asserted or AI True Positive</td>
         </tr>
         <tr>
-            <td style="width: 15px; height: 15px; background-color: #FFFFFF; border: none;"></td>
-            <td style="border: none; text-align: left; padding-left: 10px;">AI True Negative</td>
+            <td style="width: 15px; height: 15px; background-color: #FFFFFF; border: 1px solid #ccc;"></td>
+            <td style="border: 1px solid #ccc; text-align: left; padding-left: 10px;">AI True Negative</td>
         </tr>
         <tr>
-            <td style="width: 15px; height: 15px; background-color: #FFFACD; border: none;"></td>
-            <td style="border: none; text-align: left; padding-left: 10px;">AI False Negative</td>
+            <td style="width: 15px; height: 15px; background-color: #FFFACD; border: 1px solid #ccc;"></td>
+            <td style="border: 1px solid #ccc; text-align: left; padding-left: 10px;">AI False Negative</td>
         </tr>
         <tr>
-            <td style="width: 15px; height: 15px; background-color: #FFB6C1; border: none;"></td>
-            <td style="border: none; text-align: left; padding-left: 10px;">AI False Positive</td>
+            <td style="width: 15px; height: 15px; background-color: #FFB6C1; border: 1px solid #ccc;"></td>
+            <td style="border: 1px solid #ccc; text-align: left; padding-left: 10px;">AI False Positive</td>
         </tr>
     </table>
     </div>
