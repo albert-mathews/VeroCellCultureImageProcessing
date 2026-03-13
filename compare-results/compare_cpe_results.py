@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from math import pi
 import seaborn as sns
+from mpl_toolkits.mplot3d import Axes3D
 
 JSON_FILES = {
     "Claude": "ai-results/cpe_detection_results_claude.json",
@@ -121,7 +122,7 @@ def prog():
     df_summary.to_html(html_path, index=False)
     print(f"\nSaved: {csv_path}, {html_path}")
 
-    # 1: Tabular plot of CPE type per image
+    # New 1: Tabular plot of CPE type per image
     # Prepare data with parsed path and ID
     detailed_rows = []
     for image in sorted_images:
@@ -174,7 +175,6 @@ def prog():
     style_html(df_grouped.reset_index()).to_html(detailed_html)
     print(f"Saved detailed HTML: {detailed_html}")
     
-    
     # <Grok here> New 1.1: let's make a very dense image like this:
     # "" means put that string exactly.
     # |...,X| means this cell span X cells below: e.g.
@@ -195,7 +195,7 @@ def prog():
     )
     # Add colors manually (requires \usepackage{colortbl} in preamble)
     # For simplicity, print raw LaTeX; user can add \cellcolor{blue!20} for BCM, \cellcolor{red} for X
-    detailed_latex = "paper/cpe_type_tabular.tex"
+    detailed_latex = "compare-results/cpe_type_tabular.tex"
     with open(detailed_latex, 'w', encoding='utf-8') as f:
         f.write(latex_code)
     print(f"Saved detailed LaTeX: {detailed_latex}")
@@ -227,7 +227,7 @@ def prog():
             else:
                 accuracy_data[ai][typ] = 0
 
-    # 2: AI accuracy bar chart
+    # New 2: AI accuracy bar chart
     ai_order = sorted(accuracy_data.keys())  # Alpha: ChatGPT, Claude, Gemini, Grok
     x = np.arange(len(CPE_TYPES))  # the label locations
     width = 0.2  # the width of the bars
@@ -247,36 +247,96 @@ def prog():
     plt.savefig(bar_chart_path)
     print(f"Saved bar chart: {bar_chart_path}")
     plt.close()
-    
-    # <Grok here> New 2.1: AI accuracy bar chart for path1 images
-    # <Grok here> New 2.2: AI accuracy bar chart for path2 images
+
+    # New 2.1: AI accuracy bar chart for path1 images
+    # Filter images for path1
+    path1_images = [img for img in sorted_images if parse_image_name(img)[0] == 1]
+    accuracy_data_path1 = {ai: {typ: 0 for typ in CPE_TYPES} for ai in JSON_FILES if ai != "CRO"}
+    counts_path1 = {typ: 0 for typ in CPE_TYPES}
+
+    for image in path1_images:
+        cro_data = all_data.get("CRO", {}).get(image, {})
+        cro_presence = get_cpe_presence(cro_data.get("cpe_types", []))
+
+        for ai in accuracy_data_path1:
+            ai_data = all_data.get(ai, {}).get(image, {})
+            ai_presence = get_cpe_presence(ai_data.get("cpe_types", []))
+            
+            for typ in CPE_TYPES:
+                if cro_presence[typ] or ai_presence[typ]:
+                    counts_path1[typ] += 1
+                    if cro_presence[typ] == ai_presence[typ]:
+                        accuracy_data_path1[ai][typ] += 1
+
+    for ai in accuracy_data_path1:
+        for typ in CPE_TYPES:
+            if counts_path1[typ] > 0:
+                accuracy_data_path1[ai][typ] = (accuracy_data_path1[ai][typ] / counts_path1[typ]) * 100
+            else:
+                accuracy_data_path1[ai][typ] = 0
+
+    fig, ax = plt.subplots(figsize=(12, 6))
+    for i, ai in enumerate(ai_order):
+        vals = [accuracy_data_path1[ai][typ] for typ in CPE_TYPES]
+        ax.bar(x + i*width, vals, width, label=ai, color=AI_COLORS[ai])
+
+    ax.set_ylabel('Accuracy (%)')
+    ax.set_title('AI Accuracy by CPE Type (Path 1 Images)')
+    ax.set_xticks(x + width * 1.5)
+    ax.set_xticklabels(CPE_TYPES, rotation=45)
+    ax.legend()
+    plt.tight_layout()
+    bar_chart_path1 = "compare-results/path1_ai_accuracy_bar.png"
+    plt.savefig(bar_chart_path1)
+    print(f"Saved Path 1 bar chart: {bar_chart_path1}")
+    plt.close()
+
+    # New 2.2: AI accuracy bar chart for path2 images
+    # Filter images for path2
+    path2_images = [img for img in sorted_images if parse_image_name(img)[0] == 2]
+    accuracy_data_path2 = {ai: {typ: 0 for typ in CPE_TYPES} for ai in JSON_FILES if ai != "CRO"}
+    counts_path2 = {typ: 0 for typ in CPE_TYPES}
+
+    for image in path2_images:
+        cro_data = all_data.get("CRO", {}).get(image, {})
+        cro_presence = get_cpe_presence(cro_data.get("cpe_types", []))
+
+        for ai in accuracy_data_path2:
+            ai_data = all_data.get(ai, {}).get(image, {})
+            ai_presence = get_cpe_presence(ai_data.get("cpe_types", []))
+            
+            for typ in CPE_TYPES:
+                if cro_presence[typ] or ai_presence[typ]:
+                    counts_path2[typ] += 1
+                    if cro_presence[typ] == ai_presence[typ]:
+                        accuracy_data_path2[ai][typ] += 1
+
+    for ai in accuracy_data_path2:
+        for typ in CPE_TYPES:
+            if counts_path2[typ] > 0:
+                accuracy_data_path2[ai][typ] = (accuracy_data_path2[ai][typ] / counts_path2[typ]) * 100
+            else:
+                accuracy_data_path2[ai][typ] = 0
+
+    fig, ax = plt.subplots(figsize=(12, 6))
+    for i, ai in enumerate(ai_order):
+        vals = [accuracy_data_path2[ai][typ] for typ in CPE_TYPES]
+        ax.bar(x + i*width, vals, width, label=ai, color=AI_COLORS[ai])
+
+    ax.set_ylabel('Accuracy (%)')
+    ax.set_title('AI Accuracy by CPE Type (Path 2 Images)')
+    ax.set_xticks(x + width * 1.5)
+    ax.set_xticklabels(CPE_TYPES, rotation=45)
+    ax.legend()
+    plt.tight_layout()
+    bar_chart_path2 = "compare-results/path2_ai_accuracy_bar.png"
+    plt.savefig(bar_chart_path2)
+    print(f"Saved Path 2 bar chart: {bar_chart_path2}")
+    plt.close()
 
     # the spider chart did not look good. skip it. 
     # 3: AI accuracy spider chart
-    # categories = CPE_TYPES
-    # N = len(categories)
-    # angles = [n / float(N) * 2 * pi for n in range(N)]
-    # angles += angles[:1]  # Close the plot
-
-    # fig, ax = plt.subplots(figsize=(8, 8), subplot_kw=dict(polar=True))
-    # ax.set_theta_offset(pi / 2)
-    # ax.set_theta_direction(-1)
-    # ax.set_rlabel_position(0)
-    # plt.xticks(angles[:-1], categories, color='grey', size=8)
-    # plt.yticks([20,40,60,80,100], ["20","40","60","80","100"], color="grey", size=7)
-    # plt.ylim(0,100)
-
-    # for ai in ai_order:
-        # values = [accuracy_data[ai][typ] for typ in categories]
-        # values += values[:1]  # Close
-        # ax.plot(angles, values, linewidth=1, linestyle='solid', label=ai, color=AI_COLORS[ai])
-        # ax.fill(angles, values, alpha=0.1, color=AI_COLORS[ai])
-
-    # plt.legend(loc='upper right', bbox_to_anchor=(0.1, 0.1))
-    # spider_path = "ai_accuracy_spider.png"
-    # plt.savefig(spider_path)
-    # print(f"Saved spider chart: {spider_path}")
-    # plt.close()
+    # ...
 
     # 4: Confusion matrix graphics (proposals)
     # For each AI, create a heatmap confusion matrix for binary CPE detection (Yes/No vs CRO)
@@ -309,9 +369,117 @@ def prog():
     # repeat for all four main quads.
     
     # <Grok here>: New 4.2: simmilar to 4.1, but instead of numerical value and heat map, make a 3D bar chart with same main-quad->sub-quad layout.
-    
-    
+    # New 4.1: Combined 2D confusion matrix heatmap
+    # Create a 4x4 grid where each main 2x2 quadrant is subdivided into 2x2 for AIs
+    # But since CM is 2x2 main, overall grid is 4x4 (2 main rows/cols x 2 sub per AI row/col)
+    # Actually for 4 AIs, sub is 2x2 per main quadrant
+    fig, ax = plt.subplots(figsize=(12, 12))
+    cm_combined = np.zeros((4, 4))  # 2 main rows x 2 sub-rows, etc.
+    ai_sub_order = ['ChatGPT', 'Claude', 'Gemini', 'Grok']  # 2x2: top-left ChatGPT, top-right Claude, etc.
 
+    # Compute individual CMs again for placement
+    cms = {}
+    for ai in ai_sub_order:
+        cm = np.zeros((2, 2))
+        for image in sorted_images:
+            cro_detected = extract_cpe_summary(all_data.get("CRO", {}).get(image, {}))[0] == "Yes"
+            ai_detected = extract_cpe_summary(all_data.get(ai, {}).get(image, {}))[0] == "Yes"
+            cm[int(not cro_detected), int(ai_detected)] += 1
+        cms[ai] = cm
+
+    # Fill the large grid
+    for main_row in range(2):  # Actual No/Yes
+        for main_col in range(2):  # Predicted No/Yes
+            for sub_row in range(2):  # AI sub-grid rows
+                for sub_col in range(2):  # AI sub-grid cols
+                    ai_idx = sub_row * 2 + sub_col
+                    ai = ai_sub_order[ai_idx]
+                    val = cms[ai][main_row, main_col]
+                    row_idx = main_row * 2 + sub_row
+                    col_idx = main_col * 2 + sub_col
+                    cm_combined[row_idx, col_idx] = val
+
+    # Heatmap with custom annotations (add AI labels inside sub-quads)
+    sns.heatmap(cm_combined, annot=False, cmap="RdYlGn", ax=ax)  # Base heatmap without annot
+
+    # Add annotations manually
+    for main_row in range(2):
+        for main_col in range(2):
+            for sub_row in range(2):
+                for sub_col in range(2):
+                    ai_idx = sub_row * 2 + sub_col
+                    ai = ai_sub_order[ai_idx]
+                    val = cms[ai][main_row, main_col]
+                    row_idx = main_row * 2 + sub_row + 0.5
+                    col_idx = main_col * 2 + sub_col + 0.5
+                    ax.text(col_idx, row_idx, f"{int(val)}\n{ai[:3]}", ha="center", va="center", color="black", fontsize=8)
+
+    # Labels for main quadrants
+    ax.set_xticks([1, 3])
+    ax.set_xticklabels(["Predicted No", "Predicted Yes"], fontsize=12)
+    ax.set_yticks([1, 3])
+    ax.set_yticklabels(["Actual No", "Actual Yes"], fontsize=12)
+
+    # Draw lines for sub-quads
+    for i in range(0, 5, 2):
+        ax.axhline(i, color='white', lw=2)
+        ax.axvline(i, color='white', lw=2)
+
+    ax.set_title("Combined Confusion Matrix (Subdivided by AI)")
+    plt.tight_layout()
+    combined_cm_path = "compare-results/combined_confusion_heatmap.png"
+    plt.savefig(combined_cm_path)
+    print(f"Saved combined confusion heatmap: {combined_cm_path}")
+    plt.close()
+
+    # New 4.2: Combined 3D bar chart
+    fig = plt.figure(figsize=(12, 12))
+    ax = fig.add_subplot(111, projection='3d')
+
+    # Positions for bars
+    _x = np.arange(4)  # X for sub-cols (AIs horizontal)
+    _y = np.arange(4)  # Y for sub-rows (AIs vertical, but flipped for layout)
+    _xx, _yy = np.meshgrid(_x, _y)
+    x, y = _xx.ravel(), _yy.ravel()
+
+    # Heights (z) from CM values, grouped by main quad
+    z = np.zeros(16)
+    colors = np.empty(16, dtype=object)
+    ai_labels = ['ChatGPT', 'Claude', 'Gemini', 'Grok']
+
+    idx = 0
+    for main_row in range(2):
+        for main_col in range(2):
+            base_x = main_col * 2
+            base_y = main_row * 2
+            for sub_row in range(2):
+                for sub_col in range(2):
+                    ai_idx = sub_row * 2 + sub_col
+                    ai = ai_sub_order[ai_idx]
+                    val = cms[ai][main_row, main_col]
+                    z[idx] = val
+                    colors[idx] = AI_COLORS[ai]
+                    idx += 1
+
+    # 3D bars
+    ax.bar3d(x, y, np.zeros_like(z), 0.8, 0.8, z, color=colors)
+
+    # Labels
+    ax.set_xticks([1, 3])
+    ax.set_xticklabels(["Predicted No", "Predicted Yes"])
+    ax.set_yticks([1, 3])
+    ax.set_yticklabels(["Actual No", "Actual Yes"])
+    ax.set_zlabel('Count')
+    ax.set_title("Combined 3D Confusion Matrix (Subdivided by AI)")
+
+    # Add AI labels on bars or legend
+    ax.legend([plt.Rectangle((0,0),1,1,fc=AI_COLORS[ai]) for ai in ai_sub_order], ai_sub_order, loc='upper right')
+
+    plt.tight_layout()
+    combined_3d_path = "compare-results/combined_confusion_3d.png"
+    plt.savefig(combined_3d_path)
+    print(f"Saved combined 3D confusion bar chart: {combined_3d_path}")
+    plt.close()
 
 if __name__ == "__main__":
     print(JSON_FILES)
