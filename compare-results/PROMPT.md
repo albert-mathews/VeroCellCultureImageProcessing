@@ -72,7 +72,7 @@ JSON_FILES = {
     "ChatGPT": "ai-results/cpe_detection_results_chatgpt.json",
     "Gemini": "ai-results/cpe_detection_results_gemini.json",
     "Grok": "ai-results/cpe_detection_results_grok.json",
-    "CRO": "cro-results/cpe_detection_results_cro_gk.json",
+    "CRO": "cro-results/cpe_detection_results_cro.json",
 }
 ```
 these are the color schemes you use when making graphics and tables so readers can easily visually identify whihc AI results they're looking at:
@@ -84,3 +84,6 @@ AI_COLORS = {
     "Gemini": "#4285F4",   # Google blue
     "Grok": "#FF6F00",     # xAI orange (vibrant, inspired by branding)
 ```
+
+you must note that in the CRO json results, only some images are present. this is because it is these images which the CRO provided text descriptions of, and it is those text decriptions where we get our ground truth.
+Therefore, if an image does not appear in the CRO json, we ignore the result from the AI json.
