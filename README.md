@@ -7,10 +7,10 @@ The original source images and image descriptions are from:
 https://zenodo.org/records/16619228
 
 ## to reproduce the results
-1. download the dataset from zenodo
-2. create the converted_pngs dir from the source images. use <script>.py
-3. run each individual_image_<ai>.py, you'll need subscriptions to each, and API keys in a .ev file for this. you can skip this step and use the cpe_detection_results_<ai>.json files.
-4. run compare-results.py
+1. download the dataset from zenodo. extract all and copy the 'EXP stage' folder to the root of this repo clone.
+2. create the converted_pngs dir from the source images. use convert_images_to_png.py
+3. run each individual_image_<ai>.py, you'll need subscriptions to each, and API keys in a .env file for this. you can skip this step and use the cpe_detection_results_<ai>.json files.
+4. run compare-results.py FIXME, this is stale instructions
 
 ## .env file example
 In order to execute step 3 above, you'll need API keys for each of the AI models. your keys are stored in a .env file that is not comitted to git.
