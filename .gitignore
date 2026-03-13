@@ -1,5 +1,6 @@
 converted_pngs/
 venv/
+scraps/
 *.env
 gen-lang-client-*.json
 __pycache__/
