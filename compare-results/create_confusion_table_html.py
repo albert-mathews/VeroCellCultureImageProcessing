@@ -56,10 +56,16 @@ html = """
             text-align: center;
             font-size: 12px;
         }
+        th.data-header, td.data-cell {
+            width: 15px;
+        }
         th {
             background-color: #f4f4f4;
             font-weight: bold;
             color: #333;
+        }
+        thead tr:last-child th {
+            border-bottom: 2px solid #333 !important;
         }
         tr:nth-child(even) {
             background-color: #fafafa;
@@ -92,7 +98,7 @@ for group_idx in range(len(group_names)):
             style += "border-left: 2px solid #333; "
         if col_index in group_ends:
             style += "border-right: 2px solid #333; "
-        html += f'<th style="{style}">{label}</th>\n'
+        html += f'<th style="{style}" class="data-header">{label}</th>\n'
         col_index += 1
 html += """
             </tr>
@@ -120,7 +126,7 @@ for row in rows:
                 style += " border-left: 2px solid #333;"
             if i in group_ends:
                 style += " border-right: 2px solid #333;"
-            html += f'                <td style="{style}"></td>\n'
+            html += f'                <td style="{style}" class="data-cell"></td>\n'
     html += "            </tr>\n"
 html += """
         </tbody>
