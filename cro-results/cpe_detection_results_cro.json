@@ -1,107 +1,136 @@
 {
+  "EXP_path1_passage4_101.png": {
+    "cpe_detected": false,
+    "cpe_types": null,
+  },
+  "EXP_path1_passage4_103.png": {
+    "cpe_detected": false,
+    "cpe_types": null,
+  },
+  "EXP_path1_passage4_104.png": {
+    "cpe_detected": false,
+    "cpe_types": null,
+  },
+  "EXP_path1_passage4_201.png": {
+    "cpe_detected": false,
+    "cpe_types": null,
+  },
+  "EXP_path1_passage4_202.png": {
+    "cpe_detected": false,
+    "cpe_types": null,
+  },
+  "EXP_path1_passage4_305.png": {
+    "cpe_detected": false,
+    "cpe_types": null,
+  },
+  "EXP_path1_passage4_401.png": {
+    "cpe_detected": false,
+    "cpe_types": null,
+  },
+  "EXP_path1_passage4_406.png": {
+    "cpe_detected": true,
+    "cpe_types": [
+            "vacuoles"
+        ],
+  },
+  "EXP_path1_passage4_501.png": {
+    "cpe_detected": false,
+    "cpe_types": null,
+  },
   "EXP_path2_passage4_101.png": {
     "cpe_detected": true,
-    "cpe_quadrant": null,
+
     "cpe_types": [
             "rounded"
         ],
-    "confluency": null,
-    "full_response_text": null,
-    "image_id": null
   },
   "EXP_path2_passage4_201.png": {
+    "cpe_detected": false,
+    "cpe_types": null,
+  },
+  "EXP_path2_passage4_202.png": {
     "cpe_detected": true,
-    "cpe_quadrant": null,
+
     "cpe_types": [
-            "rounded"
+            "rounded",
+			"refractile"
         ],
-    "confluency": null,
-    "full_response_text": null,
-    "image_id": null
   },
   "EXP_path2_passage4_303.png": {
     "cpe_detected": true,
-    "cpe_quadrant": null,
     "cpe_types": [
 			"rounded",
             "vacuoles"
         ],
-    "confluency": null,
-    "full_response_text": null,
-    "image_id": null
+  },
+  "EXP_path2_passage4_307.png": {
+    "cpe_detected": false,
+    "cpe_types": null,
+  },
+  "EXP_path2_passage4_308.png": {
+    "cpe_detected": false,
+    "cpe_types": null,
   },
   "EXP_path2_passage4_402.png": {
     "cpe_detected": true,
-    "cpe_quadrant": null,
+
     "cpe_types": [
+			"dying cells",
 			"rounded",
-            "vacuoles"
+            "vacuoles",
+			"refractile"
         ],
-    "confluency": null,
-    "full_response_text": null,
-    "image_id": null
   },
   "EXP_path2_passage4_405.png": {
     "cpe_detected": true,
-    "cpe_quadrant": null,
     "cpe_types": [
+			"dying cells",
 			"rounded",
-            "granular and irregular shape"
+            "granular"
         ],
-    "confluency": null,
-    "full_response_text": null,
-    "image_id": null
   },
   "EXP_path2_passage4_406.png": {
     "cpe_detected": true,
-    "cpe_quadrant": null,
     "cpe_types": [
+			"dying cells",
 			"rounded",
-            "granular and irregular shape"
+            "granular"
         ],
-    "confluency": null,
-    "full_response_text": null,
-    "image_id": null
   },
   "EXP_path2_passage4_503.png": {
-    "cpe_detected": null,
-    "cpe_quadrant": null,
-    "cpe_types": null,
-    "confluency": 30,
-    "full_response_text": "",
-    "image_id": null
+    "cpe_detected": true,
+	"cpe_types": [
+			"dying cells",
+			"vacuoles",
+			"detached",
+            "granular",
+			"refractile"
+        ],
   },
   "EXP_path2_passage4_504.png": {
     "cpe_detected": true,
-    "cpe_quadrant": null,
-    "cpe_types": [
-            "vacuoles",
-			"granular cytoplasm"
+	"cpe_types": [
+			"dying cells",
+			"vacuoles",
+			"detached",
+            "granular",
+			"refractile"
         ],
-    "confluency": null,
-    "full_response_text": null,
-    "image_id": null
   },
   "EXP_path2_passage4_507.png": {
     "cpe_detected": true,
-    "cpe_quadrant": null,
-    "cpe_types": [
-            "rounded",
-			"granular and irregular shape"
+	"cpe_types": [
+			"dying cells",
+			"rounded",
+            "granular"
         ],
-    "confluency": null,
-    "full_response_text": null,
-    "image_id": null
   },
   "EXP_path2_passage4_508.png": {
     "cpe_detected": true,
-    "cpe_quadrant": null,
-    "cpe_types": [
-            "rounded",
-			"granular and irregular shape"
+	"cpe_types": [
+			"dying cells",
+			"rounded",
+            "granular"
         ],
-    "confluency": null,
-    "full_response_text": null,
-    "image_id": null
   },
 }
