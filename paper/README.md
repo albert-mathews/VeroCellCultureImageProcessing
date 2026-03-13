@@ -26,5 +26,16 @@ methods
 results
 1-html table
 2-accuracy bar charts
-3-
+3-confusion matrix
+
+
+discussion
+1-the AI tools appear to produce many false positive or many false negatives. 
+2-the accuracy is too low to consider the tools acceptable as an objective second assement of CPE in the culture images.
+3-future work. expand to large dataset with more ground truth. expand AI tool set.
+
+references
+1-source zenodo dataset
+2-each AI tool. 
+3-grok for paper drafting and post processing python code
 
