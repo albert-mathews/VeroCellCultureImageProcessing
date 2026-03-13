@@ -26,7 +26,7 @@ AI_COLORS = {
 
 CPE_TYPES = ["Dying Cells", "Rounding", "Vacuolation", "Detached", "Granularity", "Refractile"]
 CPE_MATCH_TYPES = ["Dying", "Rounding", "Vacuo", "Detached", "Granu", "Refrac"]
-CPE_SHORT = ["C", "Ro", "V", "D", "G", "Re"]
+CPE_SHORT = ["Dy", "Ro", "V", "D", "G", "Re"]
 
 def load_json(filename: str) -> Dict[str, Any]:
     """Load JSON file, return dict of image → results."""
@@ -184,7 +184,8 @@ def prog():
     # |.r.| this means put the 6 data values for the result group for the row
     #
     # |"Images",2|"CRO",6|"ChatGPT",6|"Claude",6|"Gemini",6|"Grok",6|
-    # |<path>|<id>|.r.   | .r.       |   .r.    |   .r.    |  .r.   |
+    # |"Images",2 |"CRO",6|"ChatGPT",6|"Claude",6|"Gemini",6|"Grok",6|
+    # |<path>|<id>|.r.    | .r.       |   .r.    |   .r.    |  .r.   |
 
     # LaTeX with coloring (using colortbl package)
     latex_code = df_grouped.to_latex(

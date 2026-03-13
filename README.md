@@ -86,6 +86,45 @@ i also want to show the AI-per-CPE-type-accuracy as a superimposed spider plot, 
 
 
 
+## next attempt at the tablular overview
+i want a csv with following column names
+path,id,CRO_Dy,CRO_Ro,CRO_V,CRO_D,CRO_G,CRO_Re,GPT_Dy,GPT_Ro,GPT_V,GPT_D,GPT_G,GPT_Re,CLD_Dy,CLD_Ro,CLD_V,CLD_D,CLD_G,CLD_Re,Gem_Dy,Gem_Ro,Gem_V,Gem_D,Gem_G,Gem_Re,GRK_Dy,GRK_Ro,GRK_V,GRK_D,GRK_G,GRK_Re
+
+each row is for image path (1,2) and id. e.g.
+path,id,...
+1,201,...
+1,503,...
+2,101,...
+2,405,...
+...
+etc.
+
+columns: CRO_Dy,CRO_Ro,CRO_V,CRO_D,CRO_G,CRO_Re
+if CRO json asserted Dying cells for an image, then column CRO_Dy is 1, else 0
+if CRO json asserted Rounding for an image, then column CRO_Ro is 0, else 0
+etc
+CRO_V for vacuolation
+CRO_D for Detached
+CRO_G for Granularity, or Granular
+CRO_Re for Refractile
+
+then we have columsn for the AI results. <ai>_Dy,<ai>_Ro,<ai>_V,<ai>_D,<ai>_G,<ai>_Re
+this is more complicated because we're sort of trying to encode the confusion martix in large table
+if <ai> json asserted Dying cells for an image AND CRO did as well, then column <ai>_Dy is 1
+if <ai> json asserted Dying cells for an image AND CRO did NOT, then column <ai>_Dy is -2
+if <ai> json did NOT assert Dying cells for an image BUT CRO did assert, then column <ai>_Dy is -1
+if <ai> json did NOT assert Dying cells for an image AND CRO did NOT, then column <ai>_Dy is 0
+
+and so on for:
+<ai>_V for vacuolation
+<ai>_D for Detached
+<ai>_G for Granularity, or Granular
+<ai>_Re for Refractile
+
+name the csv: cpe_confusion_table.csv
+
+
+
 
 
 
