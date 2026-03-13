@@ -1,43 +1,37 @@
-## code for automating the processing of images from https://zenodo.org/records/16619228
+# Description
+This repo has code and partial results used to produce the research paper:
+<enter zenodo link>
+Note: /paper/ contains the source latex file for the paper.
 
-## Gemini Results
-individual_images_gemini.py does the following for each image sequentially. there is no memory retained between images.
-upload image
-process image alone with prompt
-assess image for CPE and confluency
-store results in dict
+The original source images and image descriptions are from:
+https://zenodo.org/records/16619228
 
-once done for all images, store dict in json file.
+## to reproduce the results
+1. download the dataset from zenodo
+2. create the converted_pngs dir from the source images. use <script>.py
+3. run each individual_image_<ai>.py, you'll need subscriptions to each, and API keys in a .ev file for this. you can skip this step and use the cpe_detection_results_<ai>.json files.
+4. run compare-results.py
 
-### Trials
-trial 1. the first time i ran it, it detected much more CPE for path2 relative to path 1.
-see the gemini_results.png, which shows the screenshot of the output.
-the version of the json file can be found at 7518b9fb0fa33ebebccb76b16aa4e590979189b5
+## .env file example
+In order to execute step 3 above, you'll need API keys for each of the AI models. your keys are stored in a .env file that is not comitted to git.
 
-trial 2. I added the confluency request. that was it. this time it detected very little CPE, maybe 1 in path 1, and 3 in path2.
-see 05450ebecc1d93d8cbe7b567e77a479879ae490f
+Make a file named ".env", place it in the root of the repo clone. 
+Copy code below, and add your API keys.
+```
+GOOGLE_API_KEY=<your key>
+OPENAI_API_KEY=sk-proj-<rest of your key>
+ANTHROPIC_API_KEY=sk-ant-<rest of your key>
+XAI_API_KEY=xai-<rest of your key>
+```
 
-trial 3. i changed the script to save the google AI studio uploaded image file ID to the json, so that if i want to re-run, i dont need to re-upload the image files.
-like trial 2. this detected very little CPE.
-see 5a3bb3e262af8c99ec96f8dac7a6a96d4d7122ea
+# Next steps.
 
-Gemini did not seem to be very consistent. graphical review of the json output should better express this.
+1. fix the prompt individual_image_gmini.py and re-run. the prompt is too lean. gemini changed it and i did not notice.
+2. remove the isolation_historgrams.py and google sheets key. move to other repo.
 
+# Scraps
 
-## ChatGPT Results
-<need to extract the actualy results form the "full_response_text" fields since only that field and confluency were populated in the dict.
-
-
-
-## Next steps.
-
-1. try chat gpt a few more times. but have it correct populate the dict.
-2. try other LLMs
-3. write up results comparing to CRO results. 
-4. repeat but request searching for VLPs in the TEM images.
-
-
-# result presentation prompt
+## result presentation prompt
 i want to expand compare_cpe_results.py to also produce the four following results presentations. do not undo anything the script does presently. 
 
 first, we'll need to pick a plotting color for each AI. it would be best if we can pick a color that somewhat aligns with their company logos or color scheme. we'll use this color repeated in visuals for consistency for the reader. 
