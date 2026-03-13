@@ -183,7 +183,6 @@ def prog():
     #
     # |.r.| this means put the 6 data values for the result group for the row
     #
-    # |"Images",2|"CRO",6|"ChatGPT",6|"Claude",6|"Gemini",6|"Grok",6|
     # |"Images",2 |"CRO",6|"ChatGPT",6|"Claude",6|"Gemini",6|"Grok",6|
     # |<path>|<id>|.r.    | .r.       |   .r.    |   .r.    |  .r.   |
 
