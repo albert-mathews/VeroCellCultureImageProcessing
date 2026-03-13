@@ -24,6 +24,7 @@ AI_COLORS = {
 }
 
 CPE_TYPES = ["Dying Cells", "Rounding", "Vacuolation", "Detached", "Granularity", "Refractile"]
+CPE_MATCH_TYPES = ["Dying", "Rounding", "Vacuo", "Detached", "Granu", "Refrac"]
 CPE_SHORT = ["C", "Ro", "V", "D", "G", "Re"]
 
 def load_json(filename: str) -> Dict[str, Any]:
@@ -72,12 +73,12 @@ def parse_image_name(image_name: str) -> tuple[int, str]:
 
 def get_cpe_presence(types_list: list) -> Dict[str, bool]:
     """Map CPE types to presence dict for tabular."""
-    presence = {typ: False for typ in CPE_TYPES}
+    presence = {typ: False for typ in CPE_MATCH_TYPES}
     if types_list is None:
         types_list = []  # Handle None
     for t in types_list:
-        for full_typ in CPE_TYPES:
-            if t.lower() in full_typ.lower() or full_typ.lower() in t.lower():  # Fuzzy match
+        for full_typ in CPE_MATCH_TYPES:
+            if full_typ.lower() in t.lower():  # Fuzzy match
                 presence[full_typ] = True
     return presence
 
@@ -120,7 +121,7 @@ def prog():
     df_summary.to_html(html_path, index=False)
     print(f"\nSaved: {csv_path}, {html_path}")
 
-    # New 1: Tabular plot of CPE type per image
+    # 1: Tabular plot of CPE type per image
     # Prepare data with parsed path and ID
     detailed_rows = []
     for image in sorted_images:
@@ -172,6 +173,18 @@ def prog():
     detailed_html = "compare-results/cpe_type_tabular.html"
     style_html(df_grouped.reset_index()).to_html(detailed_html)
     print(f"Saved detailed HTML: {detailed_html}")
+    
+    
+    # <Grok here> New 1.1: let's make a very dense image like this:
+    # "" means put that string exactly.
+    # |...,X| means this cell span X cells below: e.g.
+    # |...,2|..............,6 |       
+    # |..|..|..|..|..|..|..|..|
+    #
+    # |.r.| this means put the 6 data values for the result group for the row
+    #
+    # |"Images",2|"CRO",6|"ChatGPT",6|"Claude",6|"Gemini",6|"Grok",6|
+    # |<path>|<id>|.r.   | .r.       |   .r.    |   .r.    |  .r.   |
 
     # LaTeX with coloring (using colortbl package)
     latex_code = df_grouped.to_latex(
@@ -214,7 +227,7 @@ def prog():
             else:
                 accuracy_data[ai][typ] = 0
 
-    # New 2: AI accuracy bar chart
+    # 2: AI accuracy bar chart
     ai_order = sorted(accuracy_data.keys())  # Alpha: ChatGPT, Claude, Gemini, Grok
     x = np.arange(len(CPE_TYPES))  # the label locations
     width = 0.2  # the width of the bars
@@ -234,8 +247,12 @@ def prog():
     plt.savefig(bar_chart_path)
     print(f"Saved bar chart: {bar_chart_path}")
     plt.close()
+    
+    # <Grok here> New 2.1: AI accuracy bar chart for path1 images
+    # <Grok here> New 2.2: AI accuracy bar chart for path2 images
 
-    # New 3: AI accuracy spider chart
+    # the spider chart did not look good. skip it. 
+    # 3: AI accuracy spider chart
     # categories = CPE_TYPES
     # N = len(categories)
     # angles = [n / float(N) * 2 * pi for n in range(N)]
@@ -261,7 +278,7 @@ def prog():
     # print(f"Saved spider chart: {spider_path}")
     # plt.close()
 
-    # New 4: Confusion matrix graphics (proposals)
+    # 4: Confusion matrix graphics (proposals)
     # For each AI, create a heatmap confusion matrix for binary CPE detection (Yes/No vs CRO)
     # Assuming binary for simplicity; extend to multi-label if needed
     for ai in ai_order:
@@ -282,6 +299,19 @@ def prog():
         plt.savefig(cm_path)
         print(f"Saved confusion matrix for {ai}: {cm_path}")
         plt.close()
+
+    # <Grok here>: New 4.1: combine the 4 confusion matrices into a single plot
+    # in each quadrant of the confusion matrix, break it up into 4 quadrants, e.g
+    # so the main quad for Actual NO,Predicted NO, will have four sub-quads like
+    # |ChatGPT| Claude|
+    # |Gemini | Grok  |
+    # and each sub-quad has the score for that AI model, and the heat map color.
+    # repeat for all four main quads.
+    
+    # <Grok here>: New 4.2: simmilar to 4.1, but instead of numerical value and heat map, make a 3D bar chart with same main-quad->sub-quad layout.
+    
+    
+
 
 if __name__ == "__main__":
     print(JSON_FILES)
