@@ -74,12 +74,12 @@ def parse_image_name(image_name: str) -> tuple[int, str]:
 
 def get_cpe_presence(types_list: list) -> Dict[str, bool]:
     """Map CPE types to presence dict for tabular."""
-    presence = {typ: False for typ in CPE_MATCH_TYPES}
+    presence = {typ: False for typ in CPE_TYPES}  # Use full CPE_TYPES as keys
     if types_list is None:
         types_list = []  # Handle None
     for t in types_list:
-        for full_typ in CPE_MATCH_TYPES:
-            if full_typ.lower() in t.lower():  # Fuzzy match
+        for full_typ in CPE_TYPES:
+            if full_typ.lower() in t.lower() or any(match.lower() in t.lower() for match in CPE_MATCH_TYPES if match in full_typ):  # Enhanced fuzzy match
                 presence[full_typ] = True
     return presence
 
