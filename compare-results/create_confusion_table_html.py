@@ -73,7 +73,7 @@ html = """
     <table>
         <thead>
             <tr>
-                <th colspan="2" style="border-left: 2px solid #333; border-right: 1px solid #ccc;">Image</th>
+                <th colspan="2" style="border-left: 2px solid #333; border-right: 2px solid #333;">Image</th>
 """
 for i, group in enumerate(group_names):
     border_left = "border-left: 2px solid #333;" if i > 0 else ""
@@ -82,7 +82,7 @@ html += """
             </tr>
             <tr>
                 <th style="border-left: 2px solid #333;">path</th>
-                <th style="border-right: 1px solid #ccc;">id</th>
+                <th style="border-right: 2px solid #333;">id</th>
 """
 col_index = 2
 for group_idx in range(len(group_names)):
@@ -106,6 +106,8 @@ for row in rows:
             style = ""
             if i == 0:
                 style = "border-left: 2px solid #333;"
+            if i == 1:
+                style = "border-right: 2px solid #333;"
             html += f'                <td style="{style}">{val}</td>\n'
         else:  # data cells
             try:
@@ -118,7 +120,7 @@ for row in rows:
                 style += " border-left: 2px solid #333;"
             if i in group_ends:
                 style += " border-right: 2px solid #333;"
-            html += f'                <td style="{style}">{val}</td>\n'
+            html += f'                <td style="{style}"></td>\n'
     html += "            </tr>\n"
 html += """
         </tbody>
