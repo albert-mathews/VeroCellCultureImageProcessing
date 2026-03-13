@@ -13,7 +13,7 @@ JSON_FILES = {
     "ChatGPT": "ai-results/cpe_detection_results_chatgpt.json",
     "Gemini": "ai-results/cpe_detection_results_gemini.json",
     "Grok": "ai-results/cpe_detection_results_grok.json",
-    "CRO": "cro-results/cpe_detection_results_cro_gk.json",
+    "CRO": "cro-results/cpe_detection_results_cro.json",
 }
 
 # AI color scheme based on company logos
