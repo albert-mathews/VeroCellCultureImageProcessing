@@ -76,6 +76,7 @@ html = """
     </style>
 </head>
 <body>
+    <div style="width: fit-content; margin: 20px auto;">
     <table>
         <thead>
             <tr>
@@ -83,7 +84,7 @@ html = """
 """
 for i, group in enumerate(group_names):
     border_left = "border-left: 2px solid #333;" if i > 0 else ""
-    html += f'<th colspan="6" style="{border_left} border-right: 2px solid #333;">{group}</th>\n'
+    html += '<th colspan="6" style="{0} border-right: 2px solid #333;">{1}</th>\n'.format(border_left, group)
 html += """
             </tr>
             <tr>
@@ -98,7 +99,7 @@ for group_idx in range(len(group_names)):
             style += "border-left: 2px solid #333; "
         if col_index in group_ends:
             style += "border-right: 2px solid #333; "
-        html += f'<th style="{style}" class="data-header">{label}</th>\n'
+        html += '<th style="{0}" class="data-header">{1}</th>\n'.format(style, label)
         col_index += 1
 html += """
             </tr>
@@ -114,23 +115,42 @@ for row in rows:
                 style = "border-left: 2px solid #333;"
             if i == 1:
                 style = "border-right: 2px solid #333;"
-            html += f'                <td style="{style}">{val}</td>\n'
+            html += '                <td style="{0}">{1}</td>\n'.format(style, val)
         else:  # data cells
             try:
                 v = int(val)
             except ValueError:
                 v = 0
             bg = COLOR_MAP.get(v, "#FFFFFF")
-            style = f"background-color: {bg};"
+            style = "background-color: {0};".format(bg)
             if i in group_starts:
                 style += " border-left: 2px solid #333;"
             if i in group_ends:
                 style += " border-right: 2px solid #333;"
-            html += f'                <td style="{style}" class="data-cell"></td>\n'
+            html += '                <td style="{0}" class="data-cell"></td>\n'.format(style)
     html += "            </tr>\n"
 html += """
         </tbody>
     </table>
+    <table style="border: none; margin-top: 20px; margin-left: 0; border-collapse: collapse;">
+        <tr>
+            <td style="width: 15px; height: 15px; background-color: #98FB98; border: none;"></td>
+            <td style="border: none; text-align: left; padding-left: 10px;">CRO asserted or AI True Positive</td>
+        </tr>
+        <tr>
+            <td style="width: 15px; height: 15px; background-color: #FFFFFF; border: none;"></td>
+            <td style="border: none; text-align: left; padding-left: 10px;">AI True Negative</td>
+        </tr>
+        <tr>
+            <td style="width: 15px; height: 15px; background-color: #FFFACD; border: none;"></td>
+            <td style="border: none; text-align: left; padding-left: 10px;">AI False Negative</td>
+        </tr>
+        <tr>
+            <td style="width: 15px; height: 15px; background-color: #FFB6C1; border: none;"></td>
+            <td style="border: none; text-align: left; padding-left: 10px;">AI False Positive</td>
+        </tr>
+    </table>
+    </div>
 </body>
 </html>
 """
