@@ -73,6 +73,8 @@ def parse_image_name(image_name: str) -> tuple[int, str]:
 def get_cpe_presence(types_list: list) -> Dict[str, bool]:
     """Map CPE types to presence dict for tabular."""
     presence = {typ: False for typ in CPE_TYPES}
+    if types_list is None:
+        types_list = []  # Handle None
     for t in types_list:
         for full_typ in CPE_TYPES:
             if t.lower() in full_typ.lower() or full_typ.lower() in t.lower():  # Fuzzy match
@@ -112,8 +114,8 @@ def prog():
     print(df_summary.to_string(index=False))
 
     # Save outputs
-    csv_path = "cpe_comparison_table.csv"
-    html_path = "cpe_comparison_table.html"
+    csv_path = "compare-results/cpe_comparison_table.csv"
+    html_path = "compare-results/cpe_comparison_table.html"
     df_summary.to_csv(csv_path, index=False)
     df_summary.to_html(html_path, index=False)
     print(f"\nSaved: {csv_path}, {html_path}")
@@ -142,7 +144,7 @@ def prog():
     df_grouped = df_detailed.set_index(['Path', 'ID'])
 
     # CSV without coloring
-    detailed_csv = "cpe_type_tabular.csv"
+    detailed_csv = "compare-results/cpe_type_tabular.csv"
     df_grouped.to_csv(detailed_csv)
     print(f"Saved detailed CSV: {detailed_csv}")
 
@@ -162,12 +164,12 @@ def prog():
             for short in CPE_SHORT:
                 col = f"{model}_{short}"
                 if model != 'CRO' and model in AI_COLORS:
-                    styled = styled.applymap(lambda v: f'background-color: {AI_COLORS[model]};' if v else '', subset=[col])
+                    styled = styled.map(lambda v: f'background-color: {AI_COLORS[model]};' if v else '', subset=[col])
                 else:
-                    styled = styled.applymap(lambda v: apply_style(v), subset=[col])
+                    styled = styled.map(lambda v: apply_style(v), subset=[col])
         return styled
 
-    detailed_html = "cpe_type_tabular.html"
+    detailed_html = "compare-results/cpe_type_tabular.html"
     style_html(df_grouped.reset_index()).to_html(detailed_html)
     print(f"Saved detailed HTML: {detailed_html}")
 
@@ -180,8 +182,8 @@ def prog():
     )
     # Add colors manually (requires \usepackage{colortbl} in preamble)
     # For simplicity, print raw LaTeX; user can add \cellcolor{blue!20} for BCM, \cellcolor{red} for X
-    detailed_latex = "cpe_type_tabular.tex"
-    with open(detailed_latex, 'w') as f:
+    detailed_latex = "paper/cpe_type_tabular.tex"
+    with open(detailed_latex, 'w', encoding='utf-8') as f:
         f.write(latex_code)
     print(f"Saved detailed LaTeX: {detailed_latex}")
 
@@ -228,36 +230,36 @@ def prog():
     ax.set_xticklabels(CPE_TYPES, rotation=45)
     ax.legend()
     plt.tight_layout()
-    bar_chart_path = "ai_accuracy_bar.png"
+    bar_chart_path = "compare-results/ai_accuracy_bar.png"
     plt.savefig(bar_chart_path)
     print(f"Saved bar chart: {bar_chart_path}")
     plt.close()
 
     # New 3: AI accuracy spider chart
-    categories = CPE_TYPES
-    N = len(categories)
-    angles = [n / float(N) * 2 * pi for n in range(N)]
-    angles += angles[:1]  # Close the plot
+    # categories = CPE_TYPES
+    # N = len(categories)
+    # angles = [n / float(N) * 2 * pi for n in range(N)]
+    # angles += angles[:1]  # Close the plot
 
-    fig, ax = plt.subplots(figsize=(8, 8), subplot_kw=dict(polar=True))
-    ax.set_theta_offset(pi / 2)
-    ax.set_theta_direction(-1)
-    ax.set_rlabel_position(0)
-    plt.xticks(angles[:-1], categories, color='grey', size=8)
-    plt.yticks([20,40,60,80,100], ["20","40","60","80","100"], color="grey", size=7)
-    plt.ylim(0,100)
+    # fig, ax = plt.subplots(figsize=(8, 8), subplot_kw=dict(polar=True))
+    # ax.set_theta_offset(pi / 2)
+    # ax.set_theta_direction(-1)
+    # ax.set_rlabel_position(0)
+    # plt.xticks(angles[:-1], categories, color='grey', size=8)
+    # plt.yticks([20,40,60,80,100], ["20","40","60","80","100"], color="grey", size=7)
+    # plt.ylim(0,100)
 
-    for ai in ai_order:
-        values = [accuracy_data[ai][typ] for typ in categories]
-        values += values[:1]  # Close
-        ax.plot(angles, values, linewidth=1, linestyle='solid', label=ai, color=AI_COLORS[ai])
-        ax.fill(angles, values, alpha=0.1, color=AI_COLORS[ai])
+    # for ai in ai_order:
+        # values = [accuracy_data[ai][typ] for typ in categories]
+        # values += values[:1]  # Close
+        # ax.plot(angles, values, linewidth=1, linestyle='solid', label=ai, color=AI_COLORS[ai])
+        # ax.fill(angles, values, alpha=0.1, color=AI_COLORS[ai])
 
-    plt.legend(loc='upper right', bbox_to_anchor=(0.1, 0.1))
-    spider_path = "ai_accuracy_spider.png"
-    plt.savefig(spider_path)
-    print(f"Saved spider chart: {spider_path}")
-    plt.close()
+    # plt.legend(loc='upper right', bbox_to_anchor=(0.1, 0.1))
+    # spider_path = "ai_accuracy_spider.png"
+    # plt.savefig(spider_path)
+    # print(f"Saved spider chart: {spider_path}")
+    # plt.close()
 
     # New 4: Confusion matrix graphics (proposals)
     # For each AI, create a heatmap confusion matrix for binary CPE detection (Yes/No vs CRO)
@@ -276,7 +278,7 @@ def prog():
         ax.set_title(f"Confusion Matrix for {ai} (CPE Detection)")
         # Use AI color for accents if desired
         plt.tight_layout()
-        cm_path = f"{ai}_confusion_matrix.png"
+        cm_path = f"compare-results/{ai}_confusion_matrix.png"
         plt.savefig(cm_path)
         print(f"Saved confusion matrix for {ai}: {cm_path}")
         plt.close()
