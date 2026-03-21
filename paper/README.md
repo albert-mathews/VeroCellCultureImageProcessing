@@ -18,13 +18,13 @@ introduction
 methods
 1-use python to preprocess the image set to PNG format of specific size.
 2-encode CRO ground truth in json format.
-3-use Ai to co-author the python script that executes the iimage analysis process
+3-use AI tools to co-author the python script that executes the image analysis process by calling the AI tool API
 4-execute AI image analysis process
-5-post process AI image analysisn results to produce benchmarking visualizations
+5-post process AI image analysis results to produce benchmarking visualizations
 
 
 results
-1-html table
+1-cpe comparison table
 2-accuracy bar charts
 3-confusion matrix
 

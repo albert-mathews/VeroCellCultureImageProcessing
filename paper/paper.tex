@@ -13,10 +13,11 @@
 my abstract here
 \end{abstract}
 \section{Introduction}
-The study benchmarks the performance of four AI models---ChatGPT, Grok, Gemini, and Claude---in detecting cytopathic effects (CPE) in Vero cell culture images. Each model is implemented in individual Python scripts (\texttt{individual_image_chatgpt.py}, \texttt{individual_image_grok.py}, \texttt{individual_image_gemini.py}, \texttt{individual_image_claude.py}) that process microscope images to identify CPE presence and types. These scripts use multimodal AI capabilities to analyze image features such as cell rounding, vacuolation, and detachment, comparing results against ground truth from a Contract Research Organization (CRO).
+The study benchmarks the performance of four AI models ChatGPT, Grok, Gemini, and Claude in detecting cytopathic effects (CPE) in Vero cell culture images. Python scripts for each model process microscope images to identify CPE presence and types. These scripts use multimodal AI capabilities to analyze image features such as cell rounding, vacuolation, and detachment, comparing results against ground truth from a Contract Research Organization (CRO). Specific types of CPE of interest are those mentioned in CLSI M41 Table 7. This work relies on the images and CRO image decriptions from Mathews, A. (2025). Vero Cell Culture Image Dataset [Data set]. Zenodo. https://doi.org/10.5281/zenodo.17928456.
 \section{Methods}
 The methodology involves the following steps:
 \begin{itemize}
+\item Identify a target set of CPE types by cross-referencing CRO images descriptions with CLSI M41 table 7 descriptions.
 \item Convert raw dataset images to PNGs of the same size for uniform input to AI models.
 \item Run inference on each AI model using the respective Python scripts to generate JSON outputs with CPE detection results.
 \item Compare the AI results against CRO ground truth to compute accuracies for CPE detection and type identification.
