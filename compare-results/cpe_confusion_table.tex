@@ -1,19 +1,3 @@
-\documentclass{article}
-\usepackage{pdflscape}
-\usepackage[table]{xcolor}
-\usepackage{booktabs}
-\usepackage{multirow}
-\usepackage{array}
-\usepackage{caption}
-
-% Define the exact colors
-\definecolor{TPgreen}{HTML}{98FB98}
-\definecolor{TNwhite}{HTML}{FFFFFF}
-\definecolor{FNyellow}{HTML}{FFFACD}
-\definecolor{FPred}{HTML}{FFB6C1}
-
-\begin{document}
-
 \clearpage
 \begin{landscape}
 
@@ -40,33 +24,21 @@
 & Dy & Ro & V & D & G & Re \\
 \midrule
 
-% ==================== YOUR DATA ROWS GO HERE ====================
-% Example rows (replace these with your real data from the CSV)
+% ←←← YOUR REAL DATA ROWS GO HERE (from CSV) ←←←
+% Example (replace with your actual rows):
 1 & 101 & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
-                  & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
-                  & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
-                  & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
-                  & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} \\
+& \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} \\
 
-1 & 406 & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
-                  & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
-                  & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{FNyellow} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
-                  & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
-                  & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} \\
-
-2 & 101 & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
-                  & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
-                  & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
-                  & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
-                  & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} \\
-
-% Add the rest of your rows here (copy-paste from CSV, keep the same format)
+% ... add all other rows here ...
 
 \bottomrule
 \end{tabular}
 \end{table}
 
-% ====================== LEGEND ======================
+% Legend
 \begin{table}[p]
 \centering
 \caption*{Legend}
@@ -82,5 +54,3 @@
 
 \end{landscape}
 \clearpage
-
-\end{document}
