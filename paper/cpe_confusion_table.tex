@@ -1,11 +1,14 @@
 \clearpage
 \begin{landscape}
 
+% Reduce margins for this page only
+%\newgeometry{top=0.8cm, bottom=0.8cm, left=1cm, right=1cm}
+
 \begin{table}[p]
 \centering
 \small
 \setlength{\tabcolsep}{2pt}
-\caption{CPE Detection Confusion Table: AI Models vs CRO Ground Truth (Short version)}
+\caption{CPE Detection Confusion Table: AI Models vs CRO Ground Truth}
 \label{tab:cpe_confusion}
 
 \begin{tabular}{cc *{30}{>{\centering\arraybackslash}p{0.58cm}}}
@@ -160,19 +163,20 @@
 \end{tabular}
 \end{table}
 
-% ====================== LEGEND ======================
+% ====================== HORIZONTAL LEGEND (single row) ======================
 \begin{table}[p]
 \centering
-\caption*{Legend}
-\begin{tabular}{>{\centering\arraybackslash}p{18pt} l}
+\caption{Legend}
+\begin{tabular}{>{\centering\arraybackslash}p{18pt} l >{\centering\arraybackslash}p{18pt} l >{\centering\arraybackslash}p{18pt} l >{\centering\arraybackslash}p{18pt} l}
 \toprule
-\cellcolor{TPgreen}   & CRO asserted or AI True Positive (1) \\
-\cellcolor{TNwhite}   & AI True Negative (0) \\
-\cellcolor{FNyellow}  & AI False Negative (−1) \\
-\cellcolor{FPred}     & AI False Positive (−2) \\
+\cellcolor{TPgreen} & CRO asserted or AI True Positive 
+& \cellcolor{TNwhite} & AI True Negative 
+& \cellcolor{FNyellow} & AI False Negative 
+& \cellcolor{FPred} & AI False Positive \\
 \bottomrule
 \end{tabular}
 \end{table}
 
+\restoregeometry
 \end{landscape}
 \clearpage
