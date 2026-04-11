@@ -5,7 +5,7 @@
 \centering
 \small
 \setlength{\tabcolsep}{2pt}
-\caption{CPE Detection Confusion Table: AI Models vs CRO Ground Truth}
+\caption{CPE Detection Confusion Table: AI Models vs CRO Ground Truth (Short version)}
 \label{tab:cpe_confusion}
 
 \begin{tabular}{cc *{30}{>{\centering\arraybackslash}p{0.58cm}}}
@@ -24,21 +24,143 @@
 & Dy & Ro & V & D & G & Re \\
 \midrule
 
-% ←←← YOUR REAL DATA ROWS GO HERE (from CSV) ←←←
-% Example (replace with your actual rows):
 1 & 101 & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} 
 & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
-& \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
-& \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
-& \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} \\
+& \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} \\
 
-% ... add all other rows here ...
+1 & 103 & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} \\
+
+1 & 104 & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} \\
+
+1 & 201 & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} \\
+
+1 & 202 & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{FPred} 
+& \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} \\
+
+1 & 305 & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} \\
+
+1 & 401 & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{FPred} \\
+
+1 & 406 & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{FNyellow} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{FNyellow} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{FPred} \\
+
+1 & 501 & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{FPred} \\
+
+2 & 101 & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{FNyellow} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} \\
+
+2 & 201 & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} \\
+
+2 & 202 & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TPgreen} 
+& \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{TPgreen} 
+& \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TPgreen} 
+& \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{TPgreen} 
+& \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{TPgreen} \\
+
+2 & 303 & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} 
+& \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{FNyellow} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{FNyellow} & \cellcolor{FNyellow} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} \\
+
+2 & 307 & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} \\
+
+2 & 308 & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TNwhite} 
+& \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} 
+& \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{FPred} 
+& \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{FPred} \\
+
+2 & 402 & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TPgreen} 
+& \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{TPgreen} 
+& \cellcolor{FNyellow} & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TPgreen} 
+& \cellcolor{FNyellow} & \cellcolor{FNyellow} & \cellcolor{FNyellow} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{FNyellow} 
+& \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{TNwhite} & \cellcolor{TPgreen} \\
+
+2 & 405 & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} 
+& \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FNyellow} & \cellcolor{FPred} 
+& \cellcolor{FNyellow} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{FPred} 
+& \cellcolor{FNyellow} & \cellcolor{FNyellow} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{FNyellow} & \cellcolor{TNwhite} 
+& \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FNyellow} & \cellcolor{FPred} \\
+
+2 & 406 & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} 
+& \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FNyellow} & \cellcolor{FPred} 
+& \cellcolor{FNyellow} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{FPred} 
+& \cellcolor{FNyellow} & \cellcolor{FNyellow} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{FNyellow} & \cellcolor{TNwhite} 
+& \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FNyellow} & \cellcolor{FPred} \\
+
+2 & 503 & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{TPgreen} 
+& \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{FNyellow} & \cellcolor{TPgreen} 
+& \cellcolor{FNyellow} & \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{TPgreen} 
+& \cellcolor{FNyellow} & \cellcolor{TNwhite} & \cellcolor{FNyellow} & \cellcolor{FNyellow} & \cellcolor{FNyellow} & \cellcolor{FNyellow} 
+& \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{FNyellow} & \cellcolor{TPgreen} \\
+
+2 & 504 & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{TPgreen} 
+& \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{FNyellow} & \cellcolor{FNyellow} & \cellcolor{TPgreen} 
+& \cellcolor{FNyellow} & \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{TPgreen} 
+& \cellcolor{FNyellow} & \cellcolor{TNwhite} & \cellcolor{FNyellow} & \cellcolor{FNyellow} & \cellcolor{FNyellow} & \cellcolor{FNyellow} 
+& \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{FNyellow} & \cellcolor{FNyellow} & \cellcolor{TPgreen} \\
+
+2 & 507 & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} 
+& \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FNyellow} & \cellcolor{FPred} 
+& \cellcolor{FNyellow} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{FPred} 
+& \cellcolor{FNyellow} & \cellcolor{FNyellow} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{FNyellow} & \cellcolor{TNwhite} 
+& \cellcolor{FNyellow} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FNyellow} & \cellcolor{FPred} \\
+
+2 & 508 & \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{TPgreen} & \cellcolor{TNwhite} 
+& \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FNyellow} & \cellcolor{FPred} 
+& \cellcolor{FNyellow} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{TPgreen} & \cellcolor{FPred} 
+& \cellcolor{FNyellow} & \cellcolor{FNyellow} & \cellcolor{TNwhite} & \cellcolor{TNwhite} & \cellcolor{FNyellow} & \cellcolor{TNwhite} 
+& \cellcolor{TPgreen} & \cellcolor{TPgreen} & \cellcolor{FPred} & \cellcolor{FPred} & \cellcolor{FNyellow} & \cellcolor{FPred} \\
 
 \bottomrule
 \end{tabular}
 \end{table}
 
-% Legend
+% ====================== LEGEND ======================
 \begin{table}[p]
 \centering
 \caption*{Legend}
