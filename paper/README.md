@@ -3,9 +3,13 @@ I tried using python to call MitTex to compile the latex paper.
 this kept failing, and was not as easy to use as https://www.overleaf.com/.
 So I chose to edit the latex paper in overleaf, but store versions of it here, along with a scraps file that i use to add/remove content from paper.tex.
 
+# TODO
+1-rework paper to be about searchf or objective analysis fo cell culture images
+2-draft section for FIJI, ImageJ, image processing tools. explain that these apply basic filtering functions, and extracting features means tuing the filters to find what yo're looking for. Unless this has been configured previously, then it cannot be objective since I would be calibrating the process based on the CRO data, whihc is cricular reasonsing. 
+3-draft section for AIRVIC attempt: https://www.nature.com/articles/s41598-025-89639-0
+4-section for multi-modal AI attempt, see details for this below.
 
-
-# Draft text for AI prompt to draft paper
+# Draft paper outline
 
 introduction
 1-The study benchmarks the performance of four AI models on the task of detecting cytopathic effects (CPE) in Vero cell culture images. In alphabetical order, the AI tools are: ChatGPT, Claude, Gemini, Grok.
