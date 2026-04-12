@@ -1,0 +1,49 @@
+\clearpage
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{6pt}
+\caption{AIRVIC automated CPE detection and virus prediction results compared to manual CRO ground truth.}
+\label{tab:airvic-results}
+
+\begin{tabular}{ccccc}
+\toprule
+\multicolumn{2}{c}{\textbf{Image}} 
+& \multicolumn{2}{c}{\textbf{CPE Detection}} 
+& \textbf{Virus Prediction} \\
+\cmidrule(lr){1-2}\cmidrule(lr){3-4}\cmidrule(lr){5-5}
+\textbf{path} & \textbf{id} 
+& \textbf{CRO} & \textbf{AIRVIC} 
+& \textbf{AIRVIC} \\
+\midrule
+
+\multicolumn{5}{l}{\textit{Path 1}} \\
+1 & 101 & — & ✓ & SARS-CoV-2 \\
+1 & 103 & — & ✓ & SARS-CoV-2 \\
+1 & 104 & — & ✓ & SARS-CoV-2 \\
+1 & 201 & — & — & none \\
+1 & 202 & — & ✓ & SARS-CoV-2 \\
+1 & 305 & — & ✓ & SARS-CoV-2 \\
+1 & 401 & — & ✓ & SARS-CoV-2 \\
+1 & 406 & ✓ & ✓ & SARS-CoV-2 \\
+1 & 501 & — & ✓ & BoAHV-1 \\
+
+\midrule
+\multicolumn{5}{l}{\textit{Path 2}} \\
+2 & 101 & ✓ & ✓ & SARS-CoV-2 \\
+2 & 201 & — & ✓ & SARS-CoV-2 \\
+2 & 202 & ✓ & ✓ & SARS-CoV-2 \\
+2 & 303 & ✓ & ✓ & SARS-CoV-2 \\
+2 & 307 & — & ✓ & BoAHV-1 \\
+2 & 308 & — & ✓ & SARS-CoV-2 \\
+2 & 402 & ✓ & ✓ & SARS-CoV-2 \\
+2 & 405 & ✓ & ✓ & BoAHV-1 \\
+2 & 406 & ✓ & ✓ & SARS-CoV-2 \\
+2 & 503 & ✓ & ✓ & SARS-CoV-2 \\
+2 & 504 & ✓ & ✓ & SARS-CoV-2 \\
+2 & 507 & ✓ & ✓ & BoAHV-1 \\
+2 & 508 & ✓ & ✓ & SARS-CoV-2 \\
+
+\bottomrule
+\end{tabular}
+\end{table}
