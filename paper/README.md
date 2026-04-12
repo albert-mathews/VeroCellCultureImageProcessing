@@ -7,6 +7,9 @@ So I chose to edit the latex paper in overleaf, but store versions of it here, a
 1-rework paper to be about searchf or objective analysis fo cell culture images
 2-draft section for FIJI, ImageJ, image processing tools. explain that these apply basic filtering functions, and extracting features means tuing the filters to find what yo're looking for. Unless this has been configured previously, then it cannot be objective since I would be calibrating the process based on the CRO data, whihc is cricular reasonsing. 
 3-draft section for AIRVIC attempt: https://www.nature.com/articles/s41598-025-89639-0
+	https://airvic.turkai.com/
+	images uploaded in batches of 10 (max)
+	input provided: cell: Vero, Virus: unknown (because there are none)
 4-section for multi-modal AI attempt, see details for this below.
 
 # Draft paper outline
@@ -22,7 +25,7 @@ introduction
 methods
 1-use python to preprocess the image set to PNG format of specific size.
 2-encode CRO ground truth in json format.
-3-use AI tools to co-author the python script that executes the image analysis process by calling the AI tool API
+3-use AI tools to co-author the python script that executes the image analysis process by calling the AI tool API. some reuest a few zero shot learning exmaples.
 4-execute AI image analysis process
 5-post process AI image analysis results to produce benchmarking visualizations
 
