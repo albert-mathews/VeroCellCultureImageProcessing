@@ -1,26 +1,25 @@
-\begin{table}[htbp]
+\clearpage
+\begin{landscape}
+\begin{table}[p]
 \centering
 \small
-\setlength{\tabcolsep}{6pt}
-\caption{Comparison of image acquisition and processing parameters between AIRVIC training dataset and the current Vero cell culture dataset.}
+\setlength{\tabcolsep}{4.5pt}
+\caption{Comparison of image acquisition and processing parameters between the AIRVIC training dataset (Nature Sci Rep 2025) and the current Vero cell culture dataset.}
 \label{tab:airvic-image-comparison}
 
-\begin{tabular}{p{4.2cm} p{5.2cm} p{5.2cm}}
+\begin{tabular}{p{3.6cm} p{4.4cm} p{4.4cm} p{6.2cm}}
 \toprule
-\textbf{Aspect} & \textbf{AIRVIC expectation (training data)} & \textbf{Current dataset (this study)} \\
+\textbf{Aspect} & \textbf{AIRVIC expectation (training data)} & \textbf{Current dataset (this study)} & \textbf{Potential impact on AIRVIC accuracy} \\
 \midrule
-Microscope system & ZEISS Axio Observer 5 widefield microscope & EVOS\textsuperscript{\textregistered} FL Auto system (Life Technologies, Cat. no. AMAFD1000) \\
-Objective magnification & 5×, 10×, 20×, 40× (Zeiss LD A-Plan Ph1/Ph2 phase objectives) & 10× and 20× (AMG LPlan FL PH objectives) \\
-Contrast / Illumination & Phase contrast (Ph1 for low mag., Ph2 for high mag.) & Bright field \textbf{or} phase contrast \\
-Camera & ZEISS Axiocam 506 color CMOS & Life Technologies high-sensitivity CMOS \\
-Scale (field of view) & Not explicitly stated (standard for Zeiss 10×/20×) & 10× = 400 µm scale bar; 20× = 200 µm scale bar \\
-Original file format & JPEG (24-bit color, 2752 × 2208 px, 96 dpi) & TIFF \\
-Final format submitted to AIRVIC & JPEG (model internally converts to grayscale) & PNG (converted from TIFF via PIL; color preserved) \\
-Color processing & Converted to grayscale before model training & Color PNG (no explicit grayscale conversion) \\
-Lighting source & White LED (integrated in ZEISS system) & EVOS FL illumination (type not specified) \\
-Acquisition software & ZEISS ZEN lite 2.3 & DIBImage v1.0.0 (rev. 462) / Evos 31201 \\
-\midrule
-\textbf{Key difference} & Highly standardized phase-contrast setup on single microscope model & Mixed illumination on different microscope platform \\
+Microscope system & ZEISS Axio Observer 5 widefield microscope & EVOS\textsuperscript{\textregistered} FL Auto system (Thermo Fisher, Cat. no. AMAFD1000) & Moderate — model trained exclusively on a single microscope brand and optical path; cross-platform generalization has not been validated \\
+Objective magnification & 5×, 10×, 20×, 40× (phase contrast) & 10× and 20× (AMG LPlan FL PH objectives) & Low — strong overlap with the optimal training magnifications \\
+Contrast / Illumination & Phase contrast only (Ph1/Ph2 phase rings) & Bright field \textbf{or} phase contrast & \textbf{High} for bright-field images (never seen during training); Low–Moderate for phase-contrast images \\
+Camera & ZEISS Axiocam 506 color CMOS (2752 × 2208 px) & High-sensitivity CMOS (EVOS) & Moderate — differences in sensor response, color balance, and pixel characteristics possible \\
+Original file format & JPEG (24-bit color) & TIFF & Negligible \\
+Final format submitted to AIRVIC & JPEG (internally converted to grayscale) & PNG (converted from TIFF, color preserved) & Low–Moderate — model expects grayscale-like input; absence of explicit grayscale conversion may introduce minor color-related bias \\
+Acquisition software & ZEISS ZEN lite 2.3 & DIBImage v1.0.0 (rev. 462) / Evos software & Low \\
 \bottomrule
 \end{tabular}
 \end{table}
+\end{landscape}
+\clearpage
