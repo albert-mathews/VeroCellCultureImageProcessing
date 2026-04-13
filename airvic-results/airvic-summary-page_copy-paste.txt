@@ -1,3 +1,8 @@
+# Below is a copy/paste from the https://airvic.turkai.com/analysis-history once all images are uplaoded.
+# This is the easiest way to get the results in a form thta can be processed automatically.
+# Note: the copy/paste does not capture the CPE 'check' or 'X', so this was extracted visually, and added to this data. 
+# AIRVIC detected CPE in all images except one: EXP_path1_passage4_201.png
+
 File
 Status
 Result
