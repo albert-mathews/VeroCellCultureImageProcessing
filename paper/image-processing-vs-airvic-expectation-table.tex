@@ -13,7 +13,7 @@
 \midrule
 Microscope system & ZEISS Axio Observer 5 widefield microscope & EVOS\textsuperscript{\textregistered} FL Auto system (Thermo Fisher, Cat. no. AMAFD1000) & Moderate — model trained exclusively on a single microscope brand and optical path; cross-platform generalization has not been validated \\
 Objective magnification & 5×, 10×, 20×, 40× (phase contrast) & 10× and 20× (AMG LPlan FL PH objectives) & Low — strong overlap with the optimal training magnifications \\
-Contrast / Illumination & Phase contrast only (Ph1/Ph2 phase rings) & Bright field \textbf{or} phase contrast & \textbf{High} for bright-field images (never seen during training); Low–Moderate for phase-contrast images \\
+Contrast / Illumination & Phase contrast only (Ph1/Ph2 phase rings) & Phase contrast only & Low — excellent match with training conditions \\
 Camera & ZEISS Axiocam 506 color CMOS (2752 × 2208 px) & High-sensitivity CMOS (EVOS) & Moderate — differences in sensor response, color balance, and pixel characteristics possible \\
 Original file format & JPEG (24-bit color) & TIFF & Negligible \\
 Final format submitted to AIRVIC & JPEG (internally converted to grayscale) & PNG (converted from TIFF, color preserved) & Low–Moderate — model expects grayscale-like input; absence of explicit grayscale conversion may introduce minor color-related bias \\
