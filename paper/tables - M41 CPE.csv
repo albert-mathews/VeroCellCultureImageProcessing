@@ -1,11 +1,11 @@
 ,,,,,,,,,,,
 ,,CLSI M41 Table 7. Characteristic CPE in [Inoculated] Tube Cultures,,,,,,,,,
-,Virus,Rounded,Balooned/Enlarged,Syncythia,Vacuolation,Detached,Granularity,Refractile,cytoplasmic strands,Non specific degeneration,"No CPE
-(i.e. CLSI mentions no CPE in inocluted culture)"
+,Virus,Rounded,Ballooned/Enlarged,Syncytia,Vacuolation,Detached,Granularity,Refractile,"Cytoplasmic strands","Nonspecific degeneration","No CPE
+(i.e. CLSI mentions no CPE in inoculated culture)"
 ,Adenovirus,x,x,,,,,,,,
-,Cytomegalovirus,x,,,,,,,,,
+,Cytomegalovirus,x,x,,,,,,,,
 ,Enterovirus,x,,,,,,x,,,
-,Herpes Simplex,x,x,x,,,,,,,
+,Herpes simplex,x,x,x,,,,,,,
 ,Influenza,,,,x,,x,,,x,x
 ,Measles,,x,x,x,,x,,,,
 ,Metapneumovirus,x,,x,,x,,x,,,
@@ -14,6 +14,6 @@
 ,Reoviruses,,,,,x,,,,x,
 ,Respiratory Syncytial Virus,,,x,,,x,,,x,
 ,Rhinoviruses,x,,,,,,x,,,
-,SARS-CoV,x,,,,,,x,,,
+,SARS-CoV,x,,,,x,,x,,,
 ,Vaccinia,x,x,x,,,,x,x,,
 ,Varicella-zoster virus,x,x,x,,,x,x,x,,
