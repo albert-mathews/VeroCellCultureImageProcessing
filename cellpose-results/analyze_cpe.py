@@ -8,20 +8,19 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # ====================== SETTINGS ======================
-IMAGE_DIR = "../converted_pngs"          # folder with your 101 PNGs
-OUTPUT_DIR = "results"             # will be created if missing
-MODEL_TYPE = "cyto"               # stable model for Vero brightfield/phase
+IMAGE_DIR = "../converted_pngs"
+OUTPUT_DIR = "results"
+MODEL_TYPE = "cyto"                # classic U-Net model (works on your GPU)
 DIAMETER = 30                      # Vero cell diameter in pixels (None = auto)
-GPU = True                         # set False if no GPU
-SAVE_MASKS = True                  # set False to skip saving mask images
+GPU = True
+SAVE_MASKS = True
 # ====================================================
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# Load model (Cellpose 4.x)
-model = models.CellposeModel(gpu=GPU, pretrained_model=MODEL_TYPE)
+# v3 API (Cellpose class)
+model = models.Cellpose(gpu=GPU, model_type=MODEL_TYPE)
 
-# Get list of PNG files
 image_files = [f for f in os.listdir(IMAGE_DIR) if f.lower().endswith('.png')]
 image_files.sort()
 
@@ -33,16 +32,17 @@ for idx, filename in enumerate(image_files):
     print(f"Processing {idx+1}/{len(image_files)}: {filename}")
     img_path = os.path.join(IMAGE_DIR, filename)
     
-    # Load as 2D grayscale (no 3-channel stacking needed in v4+)
+    # Load as grayscale
     img = skio.imread(img_path, as_gray=True)
     if img.ndim == 3:
         img = np.mean(img, axis=2)
     img = img.astype(np.float32)
     
-    # Segment (channels parameter removed - deprecated in v4+)
+    # v3 eval call (channels=[0,0] for grayscale)
     masks, flows, styles, diams = model.eval(
-        img,                    # now 2D grayscale
+        img,
         diameter=DIAMETER,
+        channels=[0, 0],      # required for v3 grayscale
         normalize=True,
         resample=True,
         batch_size=8,
