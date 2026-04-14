@@ -89,7 +89,7 @@ for idx, filename in enumerate(image_files):
 
 # Save master CSV
 df = pd.DataFrame(results)
-csv_path = os.path.join(OUTPUT_DIR, "cpe_metrics.csv")
+csv_path = "cpe_metrics.csv"
 df.to_csv(csv_path, index=False)
 
 print(f"\nDone! Results saved to {csv_path}")
