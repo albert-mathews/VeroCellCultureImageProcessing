@@ -2,7 +2,7 @@ import os
 import numpy as np
 import pandas as pd
 from cellpose import models
-from skimage import measure, io as skio
+from skimage import io as skio
 from skimage.measure import regionprops_table
 import warnings
 warnings.filterwarnings("ignore")
@@ -10,15 +10,15 @@ warnings.filterwarnings("ignore")
 # ====================== SETTINGS ======================
 IMAGE_DIR = "../converted_pngs"          # folder with your 101 PNGs
 OUTPUT_DIR = "results"             # will be created if missing
-MODEL_TYPE = "cyto"                # or "cyto3" for better brightfield/phase
-DIAMETER = 30                      # approximate Vero cell diameter in pixels (None = auto)
+MODEL_TYPE = "cyto"               # stable model for Vero brightfield/phase
+DIAMETER = 30                      # Vero cell diameter in pixels (None = auto)
 GPU = True                         # set False if no GPU
 SAVE_MASKS = True                  # set False to skip saving mask images
 # ====================================================
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# Load model (UPDATED for Cellpose 4.x)
+# Load model (Cellpose 4.x)
 model = models.CellposeModel(gpu=GPU, pretrained_model=MODEL_TYPE)
 
 # Get list of PNG files
@@ -33,20 +33,16 @@ for idx, filename in enumerate(image_files):
     print(f"Processing {idx+1}/{len(image_files)}: {filename}")
     img_path = os.path.join(IMAGE_DIR, filename)
     
-    # Load as grayscale
+    # Load as 2D grayscale (no 3-channel stacking needed in v4+)
     img = skio.imread(img_path, as_gray=True)
     if img.ndim == 3:
         img = np.mean(img, axis=2)
     img = img.astype(np.float32)
     
-    # Convert to 3-channel for Cellpose
-    img_3ch = np.stack([img, img, img], axis=0)
-    
-    # Segment
+    # Segment (channels parameter removed - deprecated in v4+)
     masks, flows, styles, diams = model.eval(
-        img_3ch,
+        img,                    # now 2D grayscale
         diameter=DIAMETER,
-        channels=[0, 0],
         normalize=True,
         resample=True,
         batch_size=8,
