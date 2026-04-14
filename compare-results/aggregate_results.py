@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 
 # ====================== LOAD DATA ======================
-# Update paths if your files are in different locations
 cpe_df = pd.read_csv('cpe_confusion_table.csv')
 airvic_df = pd.read_csv('../airvic-results/airvic-results.csv')
 cellpose_df = pd.read_csv('../cellpose-results/cellpose-results.csv')
@@ -19,9 +18,7 @@ model_map = {
 
 # ====================== HELPER FUNCTIONS ======================
 def compute_rates_from_confusion(col, df):
-    """For LLMs: compute TP/FP/FN/TN + accuracy PER CPE TYPE
-       Accuracy per type = (num_TP + num_TN) / num_predictions
-       where num_predictions = number of rows in cpe_df (62)"""
+    """LLM per-CPE-type rates (unchanged)"""
     values = df[col].values
     tp = np.sum(values == 1)
     fn = np.sum(values == -1)
@@ -30,7 +27,7 @@ def compute_rates_from_confusion(col, df):
     
     total_pos = tp + fn
     total_neg = fp + tn
-    total = len(values)          # this is the num_predictions for this CPE type
+    total = len(values)
     
     return {
         'FP_rate': fp / total_neg if total_neg > 0 else np.nan,
@@ -42,9 +39,7 @@ def compute_rates_from_confusion(col, df):
 
 
 def compute_binary_rates(gt, pred):
-    """For AIRVIC, CellPose, Always True, Always False:
-       Accuracy = (num_TP + num_TN) / num_predictions
-       where num_predictions = 22 (number of images)"""
+    """Binary rates + accuracy = (TP + TN) / total_predictions"""
     tp = ((gt == 1) & (pred == 1)).sum()
     fn = ((gt == 1) & (pred == 0)).sum()
     fp = ((gt == 0) & (pred == 1)).sum()
@@ -52,7 +47,7 @@ def compute_binary_rates(gt, pred):
     
     total_pos = tp + fn
     total_neg = fp + tn
-    total = len(gt)              # this is 22 for the binary data
+    total = len(gt)
     
     return {
         'FP_rate': fp / total_neg if total_neg > 0 else np.nan,
@@ -63,7 +58,7 @@ def compute_binary_rates(gt, pred):
     }
 
 
-# ====================== COMPUTE FOR LLMs (macro-average) ======================
+# ====================== COMPUTE FOR LLMs (macro-average per CPE type) ======================
 results = {}
 for model_name, prefix in model_map.items():
     type_rates = []
@@ -72,7 +67,6 @@ for model_name, prefix in model_map.items():
         rates = compute_rates_from_confusion(col, cpe_df)
         type_rates.append(rates)
     
-    # Macro-average across the 6 CPE types (as requested)
     avg_rates = {}
     for key in ['FP_rate', 'FN_rate', 'TP_rate', 'TN_rate', 'Accuracy']:
         vals = [r[key] for r in type_rates if not pd.isna(r[key])]
@@ -88,24 +82,22 @@ results['AIRVIC'] = compute_binary_rates(
 
 
 # ====================== COMPUTE FOR CELLPOSE ======================
-# CellPose returns a probability; we binarize with the standard threshold of 0.5
 gt_cell = cellpose_df['CRO_CPE']
-prob_cell = cellpose_df['CellPose CPE Probability']
-pred_cell = (prob_cell >= 0.5).astype(int)
-
+pred_cell = (cellpose_df['CellPose CPE Probability'] >= 0.5).astype(int)
 results['Cellpose'] = compute_binary_rates(gt_cell, pred_cell)
 
 
-# ====================== COMPUTE TRIVIAL BASELINES (on the 22-image binary task) ======================
-gt_binary = airvic_df['CRO_CPE']
+# ====================== COMPUTE TRIVIAL BASELINES ON LLM SCALE (612 predictions) ======================
+# Flatten ALL 102 samples × 6 CPE types = 612 ground-truth labels
+all_gt = pd.concat([cpe_df[f'CRO_{t}'] for t in cpe_types], ignore_index=True).values
 
-# Always True = predicts CPE detected in EVERY image
-pred_always_true = pd.Series(1, index=gt_binary.index)
-results['Always True'] = compute_binary_rates(gt_binary, pred_always_true)
+# Always True = predict 1 for every single cell
+pred_always_true = np.ones(len(all_gt), dtype=int)
+results['Always True'] = compute_binary_rates(all_gt, pred_always_true)
 
-# Always False = predicts no CPE in EVERY image
-pred_always_false = pd.Series(0, index=gt_binary.index)
-results['Always False'] = compute_binary_rates(gt_binary, pred_always_false)
+# Always False = predict 0 for every single cell
+pred_always_false = np.zeros(len(all_gt), dtype=int)
+results['Always False'] = compute_binary_rates(all_gt, pred_always_false)
 
 
 # ====================== BUILD FINAL TABLE ======================
@@ -131,3 +123,5 @@ final_df.to_csv(csv_path, index=False)
 
 print(f"✅ Table saved to {csv_path}")
 print(final_df.to_string(index=False))
+print(f"\nAlways False accuracy (612 predictions): {results['Always False']['Accuracy']:.4f}")
+print(f"Always True  accuracy (612 predictions): {results['Always True']['Accuracy']:.4f}")
