@@ -1,29 +1,29 @@
 import os
 import numpy as np
 import pandas as pd
-from cellpose import models, io
+from cellpose import models
 from skimage import measure, io as skio
 from skimage.measure import regionprops_table
 import warnings
 warnings.filterwarnings("ignore")
 
 # ====================== SETTINGS ======================
-IMAGE_DIR = ".../converted_pngs"          # folder with your 101 PNGs
+IMAGE_DIR = "../converted_pngs"          # folder with your 101 PNGs
 OUTPUT_DIR = "results"             # will be created if missing
 MODEL_TYPE = "cyto"                # or "cyto3" for better brightfield/phase
-DIAMETER = 30                      # approximate Vero cell diameter in pixels at your magnification; adjust once on a test image if needed (None = auto)
+DIAMETER = 30                      # approximate Vero cell diameter in pixels (None = auto)
 GPU = True                         # set False if no GPU
 SAVE_MASKS = True                  # set False to skip saving mask images
 # ====================================================
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# Load model once (efficient for batch)
-model = models.Cellpose(gpu=GPU, model_type=MODEL_TYPE)
+# Load model (UPDATED for Cellpose 4.x)
+model = models.CellposeModel(gpu=GPU, pretrained_model=MODEL_TYPE)
 
 # Get list of PNG files
 image_files = [f for f in os.listdir(IMAGE_DIR) if f.lower().endswith('.png')]
-image_files.sort()  # optional: process in filename order
+image_files.sort()
 
 print(f"Found {len(image_files)} images. Starting batch analysis...")
 
@@ -33,23 +33,23 @@ for idx, filename in enumerate(image_files):
     print(f"Processing {idx+1}/{len(image_files)}: {filename}")
     img_path = os.path.join(IMAGE_DIR, filename)
     
-    # Load as grayscale (shape: H x W)
+    # Load as grayscale
     img = skio.imread(img_path, as_gray=True)
-    if img.ndim == 3:  # if accidentally RGB
+    if img.ndim == 3:
         img = np.mean(img, axis=2)
     img = img.astype(np.float32)
     
-    # Convert to 3-channel for Cellpose (required for grayscale input)
-    img_3ch = np.stack([img, img, img], axis=0)  # shape (3, H, W)
+    # Convert to 3-channel for Cellpose
+    img_3ch = np.stack([img, img, img], axis=0)
     
     # Segment
     masks, flows, styles, diams = model.eval(
         img_3ch,
         diameter=DIAMETER,
-        channels=[0, 0],      # grayscale mode
+        channels=[0, 0],
         normalize=True,
         resample=True,
-        batch_size=8,         # adjust if GPU memory issues
+        batch_size=8,
         min_size=15
     )
     
@@ -58,8 +58,8 @@ for idx, filename in enumerate(image_files):
         mask_path = os.path.join(OUTPUT_DIR, filename.replace('.png', '_mask.png'))
         skio.imsave(mask_path, masks.astype(np.uint16))
     
-    # Compute CPE proxy metrics using regionprops
-    if np.max(masks) == 0:  # no cells detected
+    # Compute CPE proxy metrics
+    if np.max(masks) == 0:
         metrics = {
             'image': filename,
             'cell_count': 0,
@@ -70,11 +70,11 @@ for idx, filename in enumerate(image_files):
             'mean_perimeter_px': 0.0
         }
     else:
-        props = regionprops_table(masks, properties=('area', 'perimeter', 'eccentricity', 'circularities'))
+        props = regionprops_table(masks, properties=('area', 'perimeter', 'eccentricity'))
         areas = props['area']
         perimeters = props['perimeter']
         eccentricities = props['eccentricity']
-        circularities = 4 * np.pi * areas / (perimeters ** 2)  # standard formula
+        circularities = 4 * np.pi * areas / (perimeters ** 2)
         
         total_area = np.sum(areas)
         image_area = img.shape[0] * img.shape[1]
@@ -83,10 +83,10 @@ for idx, filename in enumerate(image_files):
             'image': filename,
             'cell_count': len(areas),
             'confluency_percent': (total_area / image_area) * 100,
-            'mean_area_px': np.mean(areas),
-            'mean_circularity': np.mean(circularities),
-            'mean_eccentricity': np.mean(eccentricities),
-            'mean_perimeter_px': np.mean(perimeters)
+            'mean_area_px': float(np.mean(areas)),
+            'mean_circularity': float(np.mean(circularities)),
+            'mean_eccentricity': float(np.mean(eccentricities)),
+            'mean_perimeter_px': float(np.mean(perimeters))
         }
     
     results.append(metrics)
