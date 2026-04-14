@@ -8,36 +8,36 @@ METRICS_CSV = "cpe_metrics.csv"
 OUTPUT_CSV = "cpe_probability_report.csv"
 # ====================================================
 
-# Step 1: Load airvic-results.csv and generate exact filenames
+# Step 1: Generate exact filenames from airvic-results.csv
 airvic = pd.read_csv(AIRVIC_CSV)
 filenames = [f"EXP_path{int(row['path'])}_passage4_{int(row['id'])}.png" 
              for _, row in airvic.iterrows()]
 
-print(f"Generated {len(filenames)} target filenames from airvic-results.csv")
+print(f"Generated {len(filenames)} target filenames")
 
-# Step 2: Load cpe_metrics.csv and filter to the images of interest
+# Step 2: Load metrics and filter to the 22 images of interest
 metrics = pd.read_csv(METRICS_CSV)
 filtered = metrics[metrics['image'].isin(filenames)].copy()
 
 if len(filtered) == 0:
-    print("No matching images found in cpe_metrics.csv.")
+    print("No matching images found.")
     exit()
 
 print(f"Found {len(filtered)} matching images.")
 
-# Step 3: Compute CPE detection probability (0–1) for each image
+# Step 3: Compute CPE probability using ONLY circularity + eccentricity
 def cpe_probability(row):
     circ = row['mean_circularity']
     ecc = row['mean_eccentricity']
-    confl = row['confluency_percent'] / 100.0
-    count = row['cell_count']
     
+    # Normalised scores (1.0 = strongest CPE-like rounding)
     circ_score = max(0, min(1, (circ - 0.40) / 0.60))
     ecc_score = ecc
-    confl_score = max(0, min(1, (0.80 - confl) / 0.60))
-    count_score = max(0, min(1, (500 - count) / 400))
     
-    score = 0.40 * circ_score + 0.30 * ecc_score + 0.20 * confl_score + 0.10 * count_score
+    # Weighted score (only morphology metrics)
+    score = 0.57 * circ_score + 0.43 * ecc_score
+    
+    # Sigmoid → smooth probability 0–1
     prob = 1 / (1 + np.exp(-8 * (score - 0.55)))
     return round(prob, 4)
 
