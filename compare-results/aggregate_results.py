@@ -4,7 +4,7 @@ import numpy as np
 # ====================== LOAD DATA ======================
 # Update paths if your files are in different locations
 cpe_df = pd.read_csv('cpe_confusion_table.csv')
-airvic_df = pd.read_csv('../airvic-results/airvic-results.csv')   # keep your original path
+airvic_df = pd.read_csv('../airvic-results/airvic-results.csv')
 cellpose_df = pd.read_csv('../cellpose-results/cellpose-results.csv')
 
 # CPE types for macro-averaging (LLMs only)
@@ -41,7 +41,7 @@ def compute_rates_from_confusion(col, df):
 
 
 def compute_binary_rates(gt, pred):
-    """Compute rates for AIRVIC and Cellpose (binary ground truth vs binary prediction)"""
+    """Compute rates for AIRVIC, Cellpose, and the two trivial baselines"""
     tp = ((gt == 1) & (pred == 1)).sum()
     fn = ((gt == 1) & (pred == 0)).sum()
     fp = ((gt == 0) & (pred == 1)).sum()
@@ -93,8 +93,24 @@ pred_cell = (prob_cell >= 0.5).astype(int)
 results['Cellpose'] = compute_binary_rates(gt_cell, pred_cell)
 
 
+# ====================== COMPUTE TRIVIAL BASELINES ======================
+# Always True  = predicts CPE detected in EVERY image
+# Always False = predicts no CPE in EVERY image
+# Both are computed on the same binary ground truth as AIRVIC/CellPose
+gt = airvic_df['CRO_CPE']
+
+# Always True
+pred_always_true = pd.Series(1, index=gt.index)
+results['Always True'] = compute_binary_rates(gt, pred_always_true)
+
+# Always False
+pred_always_false = pd.Series(0, index=gt.index)
+results['Always False'] = compute_binary_rates(gt, pred_always_false)
+
+
 # ====================== BUILD FINAL TABLE (exact format you asked for) ======================
-model_order = ['AIRVIC', 'Cellpose', 'ChatGPT', 'Claude', 'Gemini', 'Grok']
+model_order = ['AIRVIC', 'Cellpose', 'ChatGPT', 'Claude', 'Gemini', 'Grok', 
+               'Always True', 'Always False']
 
 final_data = []
 for model in model_order:
@@ -111,4 +127,7 @@ for model in model_order:
 final_df = pd.DataFrame(final_data)
 
 csv_path = "aggregate-results.csv"
-final_df.to_csv(csv_path,index=False)
+final_df.to_csv(csv_path, index=False)
+
+print(f"✅ Table saved to {csv_path}")
+print(final_df.to_string(index=False))
