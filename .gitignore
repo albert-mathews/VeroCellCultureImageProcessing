@@ -7,3 +7,5 @@ gen-lang-client-*.json
 __pycache__/
 .aider*
 *.bat
+clsi-table7-raw-text.txt
+/cellpose-results/results/
