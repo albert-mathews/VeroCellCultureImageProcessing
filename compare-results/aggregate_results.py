@@ -18,7 +18,7 @@ model_map = {
 
 # ====================== HELPER FUNCTIONS ======================
 def compute_rates_from_confusion(col, df):
-    """LLM per-CPE-type rates (unchanged)"""
+    """LLM per-CPE-type rates (macro-averaged later)"""
     values = df[col].values
     tp = np.sum(values == 1)
     fn = np.sum(values == -1)
@@ -58,7 +58,7 @@ def compute_binary_rates(gt, pred):
     }
 
 
-# ====================== COMPUTE FOR LLMs (macro-average per CPE type) ======================
+# ====================== COMPUTE FOR LLMs (macro-average) ======================
 results = {}
 for model_name, prefix in model_map.items():
     type_rates = []
@@ -87,22 +87,44 @@ pred_cell = (cellpose_df['CellPose CPE Probability'] >= 0.5).astype(int)
 results['Cellpose'] = compute_binary_rates(gt_cell, pred_cell)
 
 
-# ====================== COMPUTE TRIVIAL BASELINES ON LLM SCALE (612 predictions) ======================
-# Flatten ALL 102 samples × 6 CPE types = 612 ground-truth labels
+# ====================== COMPUTE BINARY BASELINES (22-image scale) ======================
+gt_binary = airvic_df['CRO_CPE']
+
+# Always_true_binary = predict CPE in EVERY image (22 predictions)
+pred_true_bin = pd.Series(1, index=gt_binary.index)
+results['Always_true_binary'] = compute_binary_rates(gt_binary, pred_true_bin)
+
+# Always_false_binary = predict no CPE in EVERY image (22 predictions)
+pred_false_bin = pd.Series(0, index=gt_binary.index)
+results['Always_false_binary'] = compute_binary_rates(gt_binary, pred_false_bin)
+
+
+# ====================== COMPUTE LLM-SCALE BASELINES (612 predictions) ======================
+# Flatten all 102 samples × 6 CPE types = 612 ground-truth labels
 all_gt = pd.concat([cpe_df[f'CRO_{t}'] for t in cpe_types], ignore_index=True).values
 
-# Always True = predict 1 for every single cell
+# Always_true = predict 1 for every single cell (612 predictions)
 pred_always_true = np.ones(len(all_gt), dtype=int)
-results['Always True'] = compute_binary_rates(all_gt, pred_always_true)
+results['Always_true'] = compute_binary_rates(all_gt, pred_always_true)
 
-# Always False = predict 0 for every single cell
+# Always_false = predict 0 for every single cell (612 predictions)
 pred_always_false = np.zeros(len(all_gt), dtype=int)
-results['Always False'] = compute_binary_rates(all_gt, pred_always_false)
+results['Always_false'] = compute_binary_rates(all_gt, pred_always_false)
 
 
-# ====================== BUILD FINAL TABLE ======================
-model_order = ['AIRVIC', 'Cellpose', 'ChatGPT', 'Claude', 'Gemini', 'Grok', 
-               'Always True', 'Always False']
+# ====================== BUILD FINAL TABLE (exact order requested) ======================
+model_order = [
+    'AIRVIC',
+    'Cellpose',
+    'Always_true_binary',
+    'Always_false_binary',
+    'ChatGPT',
+    'Claude',
+    'Gemini',
+    'Grok',
+    'Always_true',
+    'Always_false'
+]
 
 final_data = []
 for model in model_order:
@@ -123,5 +145,3 @@ final_df.to_csv(csv_path, index=False)
 
 print(f"✅ Table saved to {csv_path}")
 print(final_df.to_string(index=False))
-print(f"\nAlways False accuracy (612 predictions): {results['Always False']['Accuracy']:.4f}")
-print(f"Always True  accuracy (612 predictions): {results['Always True']['Accuracy']:.4f}")
