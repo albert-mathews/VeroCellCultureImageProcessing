@@ -19,8 +19,9 @@ model_map = {
 
 # ====================== HELPER FUNCTIONS ======================
 def compute_rates_from_confusion(col, df):
-    """Compute TP/FP/FN/TN + accuracy from LLM confusion columns
-       (1 = TP, 0 = TN, -1 = FN, -2 = FP)"""
+    """For LLMs: compute TP/FP/FN/TN + accuracy PER CPE TYPE
+       Accuracy per type = (num_TP + num_TN) / num_predictions
+       where num_predictions = number of rows in cpe_df (62)"""
     values = df[col].values
     tp = np.sum(values == 1)
     fn = np.sum(values == -1)
@@ -29,7 +30,7 @@ def compute_rates_from_confusion(col, df):
     
     total_pos = tp + fn
     total_neg = fp + tn
-    total = len(values)
+    total = len(values)          # this is the num_predictions for this CPE type
     
     return {
         'FP_rate': fp / total_neg if total_neg > 0 else np.nan,
@@ -41,7 +42,9 @@ def compute_rates_from_confusion(col, df):
 
 
 def compute_binary_rates(gt, pred):
-    """Compute rates for AIRVIC, Cellpose, and the two trivial baselines"""
+    """For AIRVIC, CellPose, Always True, Always False:
+       Accuracy = (num_TP + num_TN) / num_predictions
+       where num_predictions = 22 (number of images)"""
     tp = ((gt == 1) & (pred == 1)).sum()
     fn = ((gt == 1) & (pred == 0)).sum()
     fp = ((gt == 0) & (pred == 1)).sum()
@@ -49,7 +52,7 @@ def compute_binary_rates(gt, pred):
     
     total_pos = tp + fn
     total_neg = fp + tn
-    total = len(gt)
+    total = len(gt)              # this is 22 for the binary data
     
     return {
         'FP_rate': fp / total_neg if total_neg > 0 else np.nan,
@@ -69,7 +72,7 @@ for model_name, prefix in model_map.items():
         rates = compute_rates_from_confusion(col, cpe_df)
         type_rates.append(rates)
     
-    # Macro-average across the 6 CPE types (standard technique you requested)
+    # Macro-average across the 6 CPE types (as requested)
     avg_rates = {}
     for key in ['FP_rate', 'FN_rate', 'TP_rate', 'TN_rate', 'Accuracy']:
         vals = [r[key] for r in type_rates if not pd.isna(r[key])]
@@ -93,22 +96,19 @@ pred_cell = (prob_cell >= 0.5).astype(int)
 results['Cellpose'] = compute_binary_rates(gt_cell, pred_cell)
 
 
-# ====================== COMPUTE TRIVIAL BASELINES ======================
-# Always True  = predicts CPE detected in EVERY image
+# ====================== COMPUTE TRIVIAL BASELINES (on the 22-image binary task) ======================
+gt_binary = airvic_df['CRO_CPE']
+
+# Always True = predicts CPE detected in EVERY image
+pred_always_true = pd.Series(1, index=gt_binary.index)
+results['Always True'] = compute_binary_rates(gt_binary, pred_always_true)
+
 # Always False = predicts no CPE in EVERY image
-# Both are computed on the same binary ground truth as AIRVIC/CellPose
-gt = airvic_df['CRO_CPE']
-
-# Always True
-pred_always_true = pd.Series(1, index=gt.index)
-results['Always True'] = compute_binary_rates(gt, pred_always_true)
-
-# Always False
-pred_always_false = pd.Series(0, index=gt.index)
-results['Always False'] = compute_binary_rates(gt, pred_always_false)
+pred_always_false = pd.Series(0, index=gt_binary.index)
+results['Always False'] = compute_binary_rates(gt_binary, pred_always_false)
 
 
-# ====================== BUILD FINAL TABLE (exact format you asked for) ======================
+# ====================== BUILD FINAL TABLE ======================
 model_order = ['AIRVIC', 'Cellpose', 'ChatGPT', 'Claude', 'Gemini', 'Grok', 
                'Always True', 'Always False']
 
