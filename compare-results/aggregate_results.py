@@ -1,14 +1,15 @@
 import pandas as pd
 import numpy as np
 
-# Load the CSV files (assumes they are in the current working directory)
+# ====================== LOAD DATA ======================
+# Update paths if your files are in different locations
 cpe_df = pd.read_csv('cpe_confusion_table.csv')
-airvic_df = pd.read_csv('../airvic-results/airvic-results.csv')
+airvic_df = pd.read_csv('../airvic-results/airvic-results.csv')   # keep your original path
+cellpose_df = pd.read_csv('../cellpose-results/cellpose-results.csv')
 
-# CPE types / categories from the confusion table
+# CPE types for macro-averaging (LLMs only)
 cpe_types = ['Dy', 'Ro', 'V', 'D', 'G', 'Re']
 
-# Model name to column prefix mapping
 model_map = {
     'ChatGPT': 'GPT',
     'Grok': 'GRK',
@@ -16,13 +17,10 @@ model_map = {
     'Claude': 'CLD'
 }
 
+# ====================== HELPER FUNCTIONS ======================
 def compute_rates_from_confusion(col, df):
-    """Compute TP/FP/FN/TN rates from a column where:
-       1 = True Positive
-       0 = True Negative
-      -1 = False Negative
-      -2 = False Positive
-    """
+    """Compute TP/FP/FN/TN + accuracy from LLM confusion columns
+       (1 = TP, 0 = TN, -1 = FN, -2 = FP)"""
     values = df[col].values
     tp = np.sum(values == 1)
     fn = np.sum(values == -1)
@@ -31,16 +29,38 @@ def compute_rates_from_confusion(col, df):
     
     total_pos = tp + fn
     total_neg = fp + tn
+    total = len(values)
     
-    tp_rate = tp / total_pos if total_pos > 0 else np.nan
-    fn_rate = fn / total_pos if total_pos > 0 else np.nan
-    fp_rate = fp / total_neg if total_neg > 0 else np.nan
-    tn_rate = tn / total_neg if total_neg > 0 else np.nan
-    
-    return {'FP_rate': fp_rate, 'FN_rate': fn_rate, 
-            'TP_rate': tp_rate, 'TN_rate': tn_rate}
+    return {
+        'FP_rate': fp / total_neg if total_neg > 0 else np.nan,
+        'FN_rate': fn / total_pos if total_pos > 0 else np.nan,
+        'TP_rate': tp / total_pos if total_pos > 0 else np.nan,
+        'TN_rate': tn / total_neg if total_neg > 0 else np.nan,
+        'Accuracy': (tp + tn) / total if total > 0 else np.nan
+    }
 
-# Compute macro-averaged rates for each LLM (per CPE type → macro-average)
+
+def compute_binary_rates(gt, pred):
+    """Compute rates for AIRVIC and Cellpose (binary ground truth vs binary prediction)"""
+    tp = ((gt == 1) & (pred == 1)).sum()
+    fn = ((gt == 1) & (pred == 0)).sum()
+    fp = ((gt == 0) & (pred == 1)).sum()
+    tn = ((gt == 0) & (pred == 0)).sum()
+    
+    total_pos = tp + fn
+    total_neg = fp + tn
+    total = len(gt)
+    
+    return {
+        'FP_rate': fp / total_neg if total_neg > 0 else np.nan,
+        'FN_rate': fn / total_pos if total_pos > 0 else np.nan,
+        'TP_rate': tp / total_pos if total_pos > 0 else np.nan,
+        'TN_rate': tn / total_neg if total_neg > 0 else np.nan,
+        'Accuracy': (tp + tn) / total if total > 0 else np.nan
+    }
+
+
+# ====================== COMPUTE FOR LLMs (macro-average) ======================
 results = {}
 for model_name, prefix in model_map.items():
     type_rates = []
@@ -49,66 +69,46 @@ for model_name, prefix in model_map.items():
         rates = compute_rates_from_confusion(col, cpe_df)
         type_rates.append(rates)
     
-    # Macro-average across the 6 CPE types (standard technique for combining per-category results)
+    # Macro-average across the 6 CPE types (standard technique you requested)
     avg_rates = {}
-    for key in ['FP_rate', 'FN_rate', 'TP_rate', 'TN_rate']:
+    for key in ['FP_rate', 'FN_rate', 'TP_rate', 'TN_rate', 'Accuracy']:
         vals = [r[key] for r in type_rates if not pd.isna(r[key])]
         avg_rates[key] = np.mean(vals) if vals else np.nan
     results[model_name] = avg_rates
 
-# AIRVIC: still uses ground truth (CRO_CPE) vs prediction (Airvic_CPE)
-def compute_airvic_rates():
-    gt = airvic_df['CRO_CPE']
-    pred = airvic_df['Airvic_CPE']
-    tp = ((gt == 1) & (pred == 1)).sum()
-    fn = ((gt == 1) & (pred == 0)).sum()
-    fp = ((gt == 0) & (pred == 1)).sum()
-    tn = ((gt == 0) & (pred == 0)).sum()
-    
-    total_pos = tp + fn
-    total_neg = fp + tn
-    
-    return {
-        'FP_rate': fp / total_neg if total_neg > 0 else np.nan,
-        'FN_rate': fn / total_pos if total_pos > 0 else np.nan,
-        'TP_rate': tp / total_pos if total_pos > 0 else np.nan,
-        'TN_rate': tn / total_neg if total_neg > 0 else np.nan
-    }
 
-results['AIRVIC'] = compute_airvic_rates()
+# ====================== COMPUTE FOR AIRVIC ======================
+results['AIRVIC'] = compute_binary_rates(
+    airvic_df['CRO_CPE'], 
+    airvic_df['Airvic_CPE']
+)
 
-# Build the exact output DataFrame and print as CSV
-out_df = pd.DataFrame({
-    'ChatGPT': [
-        results['ChatGPT']['FP_rate'],
-        results['ChatGPT']['FN_rate'],
-        results['ChatGPT']['TP_rate'],
-        results['ChatGPT']['TN_rate']
-    ],
-    'Grok': [
-        results['Grok']['FP_rate'],
-        results['Grok']['FN_rate'],
-        results['Grok']['TP_rate'],
-        results['Grok']['TN_rate']
-    ],
-    'Gemini': [
-        results['Gemini']['FP_rate'],
-        results['Gemini']['FN_rate'],
-        results['Gemini']['TP_rate'],
-        results['Gemini']['TN_rate']
-    ],
-    'Claude': [
-        results['Claude']['FP_rate'],
-        results['Claude']['FN_rate'],
-        results['Claude']['TP_rate'],
-        results['Claude']['TN_rate']
-    ],
-    'AIRVIC': [
-        results['AIRVIC']['FP_rate'],
-        results['AIRVIC']['FN_rate'],
-        results['AIRVIC']['TP_rate'],
-        results['AIRVIC']['TN_rate']
-    ]
-}, index=['FP rate', 'FN rate', 'TP rate', 'TN rate'])
 
-print(out_df.to_csv(index_label='-'))
+# ====================== COMPUTE FOR CELLPOSE ======================
+# CellPose returns a probability; we binarize with the standard threshold of 0.5
+gt_cell = cellpose_df['CRO_CPE']
+prob_cell = cellpose_df['CellPose CPE Probability']
+pred_cell = (prob_cell >= 0.5).astype(int)
+
+results['Cellpose'] = compute_binary_rates(gt_cell, pred_cell)
+
+
+# ====================== BUILD FINAL TABLE (exact format you asked for) ======================
+model_order = ['AIRVIC', 'Cellpose', 'ChatGPT', 'Claude', 'Gemini', 'Grok']
+
+final_data = []
+for model in model_order:
+    r = results[model]
+    final_data.append({
+        'model': model,
+        'FP rate': round(r['FP_rate'], 4),
+        'FN rate': round(r['FN_rate'], 4),
+        'TP rate': round(r['TP_rate'], 4),
+        'TN rate': round(r['TN_rate'], 4),
+        'Overall Accuracy': round(r['Accuracy'], 4)
+    })
+
+final_df = pd.DataFrame(final_data)
+
+csv_path = "aggregate-results.csv"
+final_df.to_csv(csv_path,index=False)
