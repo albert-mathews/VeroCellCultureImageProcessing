@@ -37,12 +37,16 @@ https://www.nature.com/articles/s41598-025-89639-0
 https://airvic.turkai.com/
 1-upload all images 'Cell line" set to "Vero", and "Virus" set to "Unknown"
 2-Due to limitations of the web based tool, results data were extracted manually. extract results manually, and store in csv for automatic processing.
-3-The description set results are tabulated against the CRO ground truth. 
+3-AIRVIC produces binary yes/no for CPE detection. No granularity w.r.t. to CPE descriptors.
 
 ### Cellpose methods
 1-Grok drafted a script that automatically processed the 101 images with Cellpose as the first layer. 
 2-Cellpose is used to produce the mask images, and Groks script was used to post process the mask images to detect features suggestive of CPE presence
 3-<insert cellpose-cpe-proxy-metric>
+4-Cellpose  produces binary yes/no for CPE detection. No granularity w.r.t. to CPE descriptors.
+References to justify metics:
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11180103/ (Vero-cell CPE quantification confirming circularity and eccentricity as independent of growth-rate effects).
+https://www.revvity.com/ask/cytopathic-effects (label-free CPE analysis in Vero cultures highlighting rounding morphology as the key proxy).
 
 ### multi-model AI methods
 1-To process the images, the AI tools are called via API. Processing instructions are captured in a python script which includes a prompt that details how the AI should approach the processing task. The scripts and prompts were iterated on by each AI tool as part of a circular process to mold the processing instructions and prompt to the unique capabilities of each. Put another way, each AI tool was a co-author of the script and prompt used to guide and execute the image processing task. All AIs were offered two images with ground truth for zero-shot learning assistance, not all chose to use that infdormation.
@@ -50,21 +54,19 @@ https://airvic.turkai.com/
 3-post process the results to compute False Positive, False Negative, True Positive, True Negative results for each image in the description set.
 
 ## results
-Results for eahc tool or group of tools are presented in tabular form below.
+Results for each tool or group of tools are presented in tabular form below.
 
 ### AIRVIC
 <insert airvic-results.tex>
 
 ### Cellpose
-TODO: compile results
-<no results tex table>
+<no cellpose-results.tex>
 
 ### Multi-modeal AI
 <insert cpe_confusion_table.tex>
 
 ### Accuracy Summary
-Macro-averaged performance metrics
-TODO: need to use the grok chat "Rates Comparison: AI Model Confusion matrix" to update compute_confusion_results.py to include cellpose results. 
+<insert aggregate-result.tex>
 
 ## discussion
 
@@ -75,11 +77,12 @@ TODO: need to use the grok chat "Rates Comparison: AI Model Confusion matrix" to
 4-From this we can conclude that AIRVIC is not a useful tool for objectively assessing the presence of CPE in this image set. Given the images are of Vero cell cultures, and images captured almost ideally; it is dissapointing that AIRVIC performed so poorly.
 
 ### Cellpose
-
+The process leveraging Cellpose performed similarly to AIRVIC, predicting CPE in almost all images. 
 
 ### Multi-model AI tools
 1-the AI tools appear to produce many false positive or many false negatives. 
 2-the accuracy is too low to consider the them useful as objective CPE detection/classification tools for this image set.
+3-noting that Gemini overall accuracy was >70%, this is because gemini often predicted no CPE. Take the extreme case of never predicting CPE, and since the ground truth 
 
 ### Other tools considered
 1-the author also considered standard image processing tools: Fiji/ImageJ, CellProfiler
