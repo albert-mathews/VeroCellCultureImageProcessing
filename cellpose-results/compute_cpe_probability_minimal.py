@@ -40,15 +40,18 @@ def cpe_probability(row):
 
 filtered['CellPose CPE Probability'] = filtered.apply(cpe_probability, axis=1)
 
+# Step 4b: Add binary CPE Detection column (1 if probability > 0.5, else 0)
+filtered['CPE Detection'] = (filtered['CellPose CPE Probability'] > 0.5).astype(int)
+
 # Step 5: Merge with airvic to get path, id, CRO_CPE
 final = airvic[['path', 'id', 'CRO_CPE', 'image']].merge(
-    filtered[['image', 'CellPose CPE Probability']],
+    filtered[['image', 'CellPose CPE Probability', 'CPE Detection']],
     on='image',
     how='left'
 )
 
-# Step 6: Minimal output with exactly the requested columns
-final = final[['path', 'id', 'CRO_CPE', 'CellPose CPE Probability']].copy()
+# Step 6: Minimal output with exactly the five requested columns
+final = final[['path', 'id', 'CRO_CPE', 'CellPose CPE Probability', 'CPE Detection']].copy()
 final.to_csv(OUTPUT_CSV, index=False)
 
 print(f"\nDone! Minimal report saved to {OUTPUT_CSV}")
