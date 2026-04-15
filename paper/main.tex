@@ -42,14 +42,12 @@ Characteristic CPE descriptors were extracted from CLSI M41 Table 7 through an i
 
 \input{clsi-table7-descriptors.tex}
 
-Next, the same mapping procedure was applied to the CRO image descriptions to generate a second incidence table (descriptor\_set + image\_description). Only five of the original ten CLSI descriptors appeared in the CRO descriptions. A sixth term, ``Dying Cells'', emerged directly from the CRO text and was retained as a distinct category (Dy) rather than being forced into the CLSI ``nonspecific degeneration'' bin. The resulting evaluation\_descriptor\_set used for ground truth and all subsequent analyses therefore consisted of: Dying cells (Dy), Rounded (Ro), Vacuolation (V), Detached (D), Granularity (G), and Refractile (Re). CRO image descriptions were cross-referenced with the evaluation\_descriptor\_set to establish ground-truth CPE presence and type for each image in the description set. The CRO incidence table is provided as supplementary information to illustrate the exact word-matching logic used to establish ground truth.
+Next, the same mapping procedure was applied to the CRO image descriptions to generate a second incidence table (CLSI descriptor set + image descriptions). Only five of the original ten CLSI descriptors appeared in the CRO descriptions. A sixth term, ``Dying Cells'', emerged directly from the CRO text and was retained as a distinct category (Dy) rather than being forced into the CLSI ``nonspecific degeneration'' bin. The resulting \textit{evaluation descriptor set} used for ground truth and all subsequent analyses therefore consisted of: Dying cells (Dy), Rounded (Ro), Vacuolation (V), Detached (D), Granularity (G), and Refractile (Re). The CRO incidence table below is a result of mapping the \textit{evaluation descriptor set} on to the image descriptions.
 
-\input{cro_cpe_detections.tex}
+\input{cro-cpe-detections.tex}
 
 \subsection{AIRVIC analysis}
 AIRVIC (Akkutay-Yoldar et al., 2025) is a ResNet-based classifier trained specifically for CPE detection and virus identification in cell-culture images. All 101 images were uploaded to the web interface[](https://airvic.turkai.com/) with cell line set to ``Vero'' and virus set to ``Unknown''. Because the interface does not support batch export, results were extracted manually and stored in CSV format. AIRVIC outputs a binary CPE decision (present/absent) and a predicted virus identity; the virus predictions are not used in this study, which focuses exclusively on CPE detection.
-
-\input{airvic-results.tex}
 
 \subsection{Cellpose analysis}
 Cellpose (Stringer et al., 2021) was used as the primary segmentation engine. A custom Python script, developed iteratively in collaboration with Grok, processed all 101 images to generate instance masks---binary images in which each individual cell is delineated as a separate labeled region. Post-processing metrics were then computed on the masks to derive a proxy for CPE presence. Circularity \((4\pi \cdot \text{area} / \text{perimeter}^2)\) was selected because quantitative studies of Vero-cell cultures have demonstrated that this metric reliably captures the morphological transition from spread polygonal cells to rounded cells that is characteristic of CPE while remaining independent of growth-rate changes caused by variations in fetal bovine serum concentration (PMC11180103). Eccentricity was retained as a complementary descriptor because prior label-free CPE analyses in Vero cultures have identified cell-rounding morphology---directly quantified by increased eccentricity---as a robust, objective visual proxy for cytopathic changes (Revvity, 2024). These two metrics were therefore chosen as the most suitable label-free proxies supported by the literature; the final post-processing pipeline was refined through collaborative testing to ensure the metrics were unaffected by the intentional 2 \% FBS reduction used in one experimental path of the dataset.
@@ -57,8 +55,6 @@ Cellpose (Stringer et al., 2021) was used as the primary segmentation engine. A 
 \input{cellpose-cpe-proxy-metrics.tex}
 
 Binary CPE detection was obtained by converting the combined metrics into a probability score; values $>$ 0.5 were classified as positive. No morphological subtype information was generated. The exact probability formula and post-processing code are available in the project GitHub repository.
-
-\input{cellpose-results.tex}
 
 \subsection{Multimodal AI analysis}
 Four multimodal large language models (ChatGPT, Claude, Gemini, Grok) were evaluated under identical conditions. For each model a dedicated Python script was written that (1) loads the PNG images, (2) supplies a standardized prompt requesting detection of the six evaluation\_descriptor\_set morphologies, and (3) requests JSON-formatted output. Each model was offered two example images with known ground truth for optional in-context learning. Prompt and processing-script engineering was performed collaboratively with the respective model. Model outputs were post-processed by a script to produce per-image, per-morphology-type binary decisions that were compared against CRO ground truth.
@@ -79,9 +75,13 @@ Performance results for each tool are presented below.
 \input{cellpose-results.tex}
 
 \subsection{Multimodal AI models}
-\input{cpe_confusion_table.tex}
+\input{llm-cpe-detections.tex}
 
 \subsection{Aggregate performance summary}
+Performance metrics of AIRVIC, CellPose, and four large language models for cytopathic effect (CPE) detection are shown in Table 8. 
+For AIRVIC and CellPose, metrics were computed directly on the binary CPE detection task (CellPose probabilities were binarized at the conventional threshold of 0.5). These binary classification model are compared against simple always true and always false binary classification models.
+For the large language models, false-positive rate (FP), false-negative rate (FN), true-positive rate (TP), true-negative rate (TN), and overall accuracy were first calculated separately for each of the six CPE morphological types and then macro-averaged.
+These CPE type classification models are compared against always true and always false CPE type classification models. The accuracy rate of the Always False model is a characteristic of the dataset. For any model to prove useful, it would have to significantly out perform the Always False model.
 \input{aggregate-results.tex}
 
 \section{Discussion}
