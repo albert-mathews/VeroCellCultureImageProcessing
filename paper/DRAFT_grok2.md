@@ -9,7 +9,7 @@ This study benchmarks the performance of two domain-specific computer-vision too
 The study used the publicly available Vero Cell Culture Image Dataset (Mathews, A., 2025. Zenodo. https://doi.org/10.5281/zenodo.17928456). This dataset comprises 101 microscope images (two experimental paths, multiple passages) captured under standardized conditions. The CRO was instructed to provide descriptive captions for any image that would benefit from accompanying text; no specific directive was given to search for, classify, or quantify CPE. Consequently, 22 images contain CRO descriptions (hereafter “description set”) while 83 do not. Only the description set was employed for accuracy analyses.
 
 ### Standard CPE descriptors
-Characteristic CPE descriptors were extracted from CLSI M41 Table 7 through an iterative review process. First, the full table was examined to identify the complete set of ten descriptors: rounded, ballooned/enlarged, syncytia, vacuolation, detachment, granularity, refractile, cytoplasmic strands, nonspecific degeneration, and no CPE. A “hit table” was then constructed by mapping every instance of these terms (or close semantic correlates) to each virus listed in Table 7. Next, the same mapping procedure was applied to the CRO image descriptions to generate a second hit table (descriptor_set + image_description). Only five of the original ten CLSI descriptors appeared in the CRO descriptions. A sixth term, “Dying Cells”, emerged directly from the CRO text and was retained as a distinct category (Dy) rather than being forced into the CLSI nonspecific degeneration bin. The resulting evaluation_descriptor_set used for ground truth and all subsequent analyses therefore consisted of: Dying cells (Dy), Rounded (Ro), Vacuolation (V), Detached (D), Granularity (G), and Refractile (Re). The full CLSI M41 Table 7 hit table is reproduced below for reference.
+Characteristic CPE descriptors were extracted from CLSI M41 Table 7 through an iterative review process. First, the full table was examined to identify the complete set of ten descriptors: rounded, ballooned/enlarged, syncytia, vacuolation, detachment, granularity, refractile, cytoplasmic strands, nonspecific degeneration, and no CPE. A “hit table” was then constructed by mapping every instance of these terms (or close semantic correlates) to the test in the'Appearance' column of Table 7. Next, the same mapping procedure was applied to the CRO image descriptions to generate a second hit table (descriptor_set + image_description). Only five of the original ten CLSI descriptors appeared in the CRO descriptions. A sixth term, “Dying Cells”, emerged directly from the CRO text and was retained as a distinct category (Dy) rather than being forced into the CLSI 'nonspecific degeneration' bin. The resulting evaluation_descriptor_set used for ground truth and all subsequent analyses therefore consisted of: Dying cells (Dy), Rounded (Ro), Vacuolation (V), Detached (D), Granularity (G), and Refractile (Re). The full CLSI M41 Table 7 hit table is reproduced below for reference.
 
 <insert clsi-table7-descriptors.tex>
 
@@ -19,23 +19,21 @@ The CRO hit table is provided as supplementary information to illustrate the exa
 
 CRO image descriptions were cross-referenced with the evaluation_descriptor_set to establish ground-truth CPE presence and type for each image in the description set. The resulting labels were verified manually.
 
-@Grok: Regarding your question in @Albert1 – yes, the differentiation is valid and preferable. “Dying Cells” is a concrete observational term chosen by the CRO, while CLSI’s “nonspecific degeneration” is a broader, catch-all category. Keeping them separate preserves fidelity to the ground-truth source and avoids introducing mapping bias. We can note the potential semantic overlap in the Discussion if a reviewer asks. @end
-
 ### AIRVIC analysis
 AIRVIC (Akkutay-Yoldar et al., 2025) is a ResNet-based classifier trained specifically for CPE detection and virus identification in cell-culture images. All 101 images were uploaded to the web interface[](https://airvic.turkai.com/) with cell line set to “Vero” and virus set to “Unknown”. Because the interface does not support batch export, results were extracted manually and stored in CSV format. AIRVIC outputs a binary CPE decision (present/absent) and a predicted virus identity; the virus predictions are not used in this study, which focuses exclusively on CPE detection.
 
 <insert airvic-results.tex>
 
 ### Cellpose analysis
-Cellpose (Stringer et al., 2021) was used as the primary segmentation engine. A custom Python script (co-developed with Grok) processed all 101 images to generate instance masks. Post-processing metrics were then computed on the masks to derive a proxy for CPE presence. The two retained metrics—circularity \((4\pi \cdot \text{area} / \text{perimeter}^2)\) and eccentricity—quantify the transition from spread polygonal to rounded morphology, a hallmark of CPE that is independent of serum-driven growth-rate changes (supported by prior Vero-cell CPE quantification studies).  
+Cellpose (Stringer et al., 2021) was used as the primary segmentation engine. A custom Python script (co-developed with Grok) processed all 101 images to generate instance masks. Post-processing metrics were then computed on the masks to derive a proxy for CPE presence. The two retained metrics—circularity \((4\pi \cdot \text{area} / \text{perimeter}^2)\) and eccentricity—quantify the transition from spread polygonal to rounded morphology, a hallmark of CPE that is independent of serum-driven growth-rate changes (supported by prior Vero-cell CPE quantification studies). 
+@Albert1: you said " @Albert4: References to PMC11180103 and Revvity page now cited inline." but they do not appear here.
+@end
 
 <insert cellpose-cpe-proxy-metrics.tex>
 
-Binary CPE detection was obtained by converting the combined metrics into a probability score; values > 0.5 were classified as positive. No morphological subtype information was generated. The exact probability formula and post-processing code are available in the project GitHub repository (or supplementary material).
+Binary CPE detection was obtained by converting the combined metrics into a probability score; values > 0.5 were classified as positive. No morphological subtype information was generated. The exact probability formula and post-processing code are available in the project GitHub repository.
 
 <insert cellpose-results.tex>
-
-@Grok: For @Albert5 – referencing the GitHub repo (or a Zenodo archive of the script) is sufficient and standard practice. We do not need to embed the full equations here unless they become central to a reviewer request. @end
 
 ### Multimodal AI analysis
 Four multimodal large language models (ChatGPT, Claude, Gemini, Grok) were evaluated under identical conditions. For each model a dedicated Python script was written that (1) loads the PNG images, (2) supplies a standardized prompt requesting detection of the six evaluation_descriptor_set morphologies, and (3) requests JSON-formatted output. Each model was offered two example images with known ground truth for optional in-context learning. Prompt and processing-script engineering was performed collaboratively with the respective model. Model outputs were post-processed by a script to produce per-image, per-morphology-type binary decisions that were compared against CRO ground truth.
@@ -52,18 +50,26 @@ Performance was quantified using false-positive rate, false-negative rate, true-
 
 ## Results
 The performance of each tool is presented in the tables referenced in the Methods section. AIRVIC and Cellpose results appear in Tables X and Y, respectively; the multimodal-model confusion matrix is shown in Table Z; and the aggregate performance metrics (including always-true and always-false baselines) are given in Table W.
+@Albert2. again. whats the point of this section? we're not telling the read anything they dont already know.
+either we have results in a 'Methods and results' section, or we split methods descriptions from results tables in their respective sections.
+@end
 
 ## Discussion
 
 ### Domain-specific tools
-AIRVIC detected CPE in 21 of the 22 description-set images and in 100 of the 101 total images, producing a high false-positive rate (0.909) and overall accuracy of only 0.545. The test images are visually similar to the Vero-cell images used in AIRVIC’s original training set, as demonstrated by the side-by-side comparison of key morphological features.
+AIRVIC detected CPE in 21 of the 22 description-set images and in 100 of the 101 total images, producing a high false-positive rate (0.909) and overall accuracy of only 0.545. The test images are visually similar to the Vero-cell images used in AIRVIC’s original training set, as demonstrated by the table below.
 
 <insert image-processing-vs-airvic-expectation-table.tex>
 
-Despite this similarity, the model failed to generalize effectively to the present dataset. Cellpose similarly classified nearly all images as CPE-positive (accuracy 0.500), again driven by an extremely high false-positive rate. The morphological-proxy approach therefore did not provide useful discrimination in this dataset.
+Despite this similarity, the model failed to generalize effectively to the present dataset. 
+
+Cellpose similarly classified nearly all images as CPE-positive (accuracy 0.500), again driven by an extremely high false-positive rate. The morphological-proxy approach therefore did not provide useful discrimination in this dataset.
 
 ### Multimodal AI tools
 The four general-purpose multimodal models exhibited macro-averaged accuracies between 0.542 and 0.709. Gemini achieved the highest overall accuracy (0.709) but at the cost of a very high false-negative rate, effectively behaving like a conservative “no-CPE” classifier; this performance was still lower than that of the simple always-negative baseline model. ChatGPT, Claude, and Grok showed balanced but still modest performance (accuracies 0.549–0.559) with substantial rates of both false positives and false negatives. None of the multimodal models reached a level of reliability that would support their use as objective CPE detection tools for this image set.
+@Albert3.
+"showed balanced but still modest ...", i think you're being too generous there. i think "showed poor ..." is a better description
+@end
 
 ### Limitations
 The ground-truth labels rest on CRO narrative descriptions that were not generated under a CPE-specific protocol. The description set is small (n = 22), and the remaining 83 images could not be evaluated quantitatively. Domain-specific tools were tested exactly as publicly available; no retraining or fine-tuning was performed. Prompt engineering for the multimodal models, while extensive, remains inherently model-dependent.
