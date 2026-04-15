@@ -23,7 +23,7 @@
 \definecolor{FPred}{HTML}{FFB6C1}
 
 
-\title{\textbf{Vero Cell Culture Morphology Classification Benchmarking}}
+\title{\textbf{Vero Cell Culture CPE Detection  Benchmarking}}
 \author{Albert Mathews \\ Independent Researcher}
 \date{\today}
 \begin{document}
@@ -41,6 +41,12 @@ The methodology involves the following steps:
 \item Run inference on each AI model using the respective Python scripts to generate JSON outputs with CPE detection results.
 \item Compare the AI results against CRO ground truth to compute accuracies for CPE detection and type identification.
 \end{itemize}
+
+\input{cellpose-cpe-proxy-metrics.tex}
+
 \section{Results}
+\input{airvic-results.tex}
 \input{cpe_confusion_table.tex}
+\section{Discussion}
+\input{image-processing-vs-airvic-expectation-table.tex}
 \end{document}
