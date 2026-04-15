@@ -5,23 +5,29 @@
 \small
 \setlength{\tabcolsep}{7pt}
 \renewcommand{\arraystretch}{1.55}
-
 \caption{Comparison of image acquisition and processing parameters between the AIRVIC training dataset (Nature Sci Rep 2025) and the current Vero cell culture dataset.}
 \label{tab:airvic-image-comparison}
-
 \vspace{10pt}
 
 \begin{tabular}{p{4.2cm} p{5.3cm} p{5.3cm} p{9.0cm}}
 \toprule
 \textbf{Aspect} & \textbf{AIRVIC expectation (training data)} & \textbf{Current dataset (this study)} & \textbf{Potential impact on AIRVIC accuracy} \\
 \midrule
+\arrayrulecolor{gray!30}
 Microscope system & ZEISS Axio Observer 5 widefield microscope & EVOS\textsuperscript{\textregistered} FL Auto system (Thermo Fisher, Cat. no. AMAFD1000) & Moderate — model trained exclusively on a single microscope brand and optical path; cross-platform generalization has not been validated \\
+\hline
 Objective magnification & 5×, 10×, 20×, 40× (phase contrast) & 10× and 20× (AMG LPlan FL PH objectives) & Low — strong overlap with the optimal training magnifications \\
+\hline
 Contrast / Illumination & Phase contrast only (Ph1/Ph2 phase rings) & Phase contrast only & Low — excellent match with training conditions \\
+\hline
 Camera & ZEISS Axiocam 506 color CMOS (2752 × 2208 px) & High-sensitivity CMOS (EVOS) & Moderate — differences in sensor response, color balance, and pixel characteristics possible \\
+\hline
 Original file format & JPEG (24-bit color) & TIFF & Negligible \\
+\hline
 Final format submitted to AIRVIC & JPEG (internally converted to grayscale) & PNG (converted from TIFF, color preserved) & Low–Moderate — model expects grayscale-like input; absence of explicit grayscale conversion may introduce minor color-related bias \\
+\hline
 Acquisition software & ZEISS ZEN lite 2.3 & DIBImage v1.0.0 (rev. 462) / Evos software & Low \\
+\arrayrulecolor{black}
 \bottomrule
 \end{tabular}
 

@@ -2,16 +2,25 @@
 \centering
 \caption{Performance metrics of AIRVIC, CellPose, and four large language models for cytopathic effect (CPE) detection. For the large language models, false-positive rate (FP rate), false-negative rate (FN rate), true-positive rate (TP rate), true-negative rate (TN rate), and overall accuracy were first calculated separately for each of the six CPE morphological types and then macro-averaged. For AIRVIC and CellPose, metrics were computed directly on the binary CPE detection task (CellPose probabilities were binarized at the conventional threshold of 0.5).}
 \label{tab:cpe-performance-metrics}
+
 \begin{tabular}{lrrrrr}
 \toprule
 \textbf{Model} & \textbf{FP rate} & \textbf{FN rate} & \textbf{TP rate} & \textbf{TN rate} & \textbf{Overall Accuracy} \\
 \midrule
+\arrayrulecolor{gray!30}
 AIRVIC     & 0.9091 & 0.0000 & 1.0000 & 0.0909 & 0.5455 \\
+\hline
 CellPose   & 1.0000 & 0.0000 & 1.0000 & 0.0000 & 0.5000 \\
+\hline
 ChatGPT    & 0.5520 & 0.3506 & 0.6494 & 0.4480 & 0.5588 \\
+\hline
 Claude     & 0.5902 & 0.3275 & 0.6725 & 0.4098 & 0.5425 \\
+\hline
 Gemini     & 0.1283 & 0.8468 & 0.1532 & 0.8717 & 0.7092 \\
+\hline
 Grok       & 0.5670 & 0.3566 & 0.6434 & 0.4330 & 0.5490 \\
+\arrayrulecolor{black}
 \bottomrule
 \end{tabular}
+
 \end{table}
