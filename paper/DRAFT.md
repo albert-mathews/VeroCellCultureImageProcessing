@@ -1,13 +1,10 @@
-# TODO
-
-
-# Draft paper outline
+# Draft paper
 
 ## introduction
 This study performs benchmark testing of various AI models on the task of detecting cytopathic effect (CPE) in cell culture microscope images.
-One goal of this study is to determine whether domain-specific or multi-model AI tools can serve as objective analysis tools for detecting and/or classifying CPE in previously unseen cell culture images. 
+The goal of this study is to determine whether domain-specific or multi-model AI tools can serve as objective analysis tools for detecting and/or classifying CPE in previously unseen cell culture images. 
 This study selected 2 domain-specific, and 4 multi-model AI tools for benchmarking. The domain-specific tools are:
-1-AIRVIC, a ResNet-based classifier that was specifically trained and fine-tuned on labeled cell-culture microscope images for CPE detection and virus identification. 
+1-AIRVIC, a ResNet-based classifier that was specifically trained on labeled cell-culture microscope images for CPE detection and virus identification. 
 2-Cellpose, <enter short description including python post processing>
 The general-purpose multi-model tools are: ChatGPT, Claude, Gemini, Grok.
 The ground truth for CPE presence and type in the images is sourced from image descriptions provided by the contract research organization (CRO) which conducted the cell culture experiment. The CRO was instructed to provide decriptions of cell culture images as follows. 
@@ -35,9 +32,11 @@ https://airvic.turkai.com/
 
 ### Cellpose methods
 1-Grok drafted a script that automatically processed the 101 images with Cellpose as the first layer. 
-2-Cellpose is used to produce the mask images, and Groks script was used to post process the mask images to detect features suggestive of CPE presence
+2-Cellpose is used to produce the mask images, and Grok's script was used to post process the mask images to compute metrics suggestive of CPE presence.
 3-<insert cellpose-cpe-proxy-metric>
-4-Cellpose  produces binary yes/no for CPE detection. No granularity w.r.t. to CPE descriptors.
+	Higher values directly quantify the transition from spread polygonal to rounded morphology, a core visual CPE feature; independent of FBS-driven growth-rate changes.
+	Captures loss of elongation; increased eccentricity indicates rounding and is a robust, label-free proxy for cytopathic changes; unaffected by the intentional 2\% FBS reduction in Path 2.
+4-Binary CPE detection was determined by computing CPE probability from the metrics. Greater than 50% was considered a positive detection. No granularity w.r.t. to CPE descriptors.
 References to justify metics:
 https://pmc.ncbi.nlm.nih.gov/articles/PMC11180103/ (Vero-cell CPE quantification confirming circularity and eccentricity as independent of growth-rate effects).
 https://www.revvity.com/ask/cytopathic-effects (label-free CPE analysis in Vero cultures highlighting rounding morphology as the key proxy).
@@ -91,6 +90,6 @@ references
 -AIRVIC paper
 -Cellpose
 -each AI tool: ChatGPT, Claude, Gemini, Grok. 
--grok for paper drafting and post processing python code
+-grok for paper drafting and python code
 -Revvity ImageArtist: https://www.revvity.com/ca-en/product/signals-image-artist-sw-5-user-subscript-inf02358
 
