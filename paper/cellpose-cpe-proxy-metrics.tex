@@ -1,17 +1,25 @@
 \begin{table}[htbp]
 \centering
-\caption{Summary of CPE proxy metrics derived from Cellpose segmentation of Vero-cell brightfield/phase-contrast images}
-\label{tab:cpe-proxies}
-\begin{tabular}{@{}p{2.8cm}p{4.5cm}p{2.8cm}p{2.8cm}p{5.5cm}@{}}
+\small
+\setlength{\tabcolsep}{8pt}
+\caption{CPE proxy metrics used for CellPose probability and detection (circularity and eccentricity only)}
+\label{tab:cpe-proxies-final}
+
+\begin{tabular}{@{}p{5.2cm}p{2.8cm}p{2.8cm}p{5.5cm}@{}}
 \toprule
-\textbf{Metric} & \textbf{Description} & \textbf{Healthy Range (10\% FBS)} & \textbf{CPE Range (2\% FBS)} & \textbf{Rationale as CPE Proxy} \\
+\textbf{Description} 
+& \textbf{Healthy Range (10\% FBS)} 
+& \textbf{CPE Range (2\% FBS)} 
+& \textbf{Rationale as CPE Proxy} \\
 \midrule
-cell\_count & Number of labeled adherent cells per field & High (>200--500/field) & Decreasing over days & Direct quantitative measure of cell detachment and loss of adhesion; classic early CPE hallmark in Vero monolayers. \\
-confluency\_percent & Percentage of image area occupied by cells & >70--90\% & <40--60\% in advanced stages & Tracks overall monolayer disruption and coverage loss; highly sensitive to serum-stress or viral-induced detachment without staining. \\
-mean\_area\_px & Average cell area in pixels & 800--2000 px & <600 px (rounding/shrinkage) & Reflects cell shrinkage or swelling; smaller area is a reliable morphological indicator of rounding and stress in adherent epithelial cultures. \\
-mean\_circularity & Degree of cell roundness (4π·area/perimeter², 0--1) & 0.3--0.6 & 0.7--1.0 & Higher values directly quantify the transition from spread polygonal to rounded morphology, a core visual CPE feature. \\
-mean\_eccentricity & Shape elongation descriptor (0 = circle, 1 = line) & 0.4--0.7 & 0.8--0.95 & Captures loss of elongation; increased eccentricity indicates rounding and is a robust, label-free proxy for cytopathic changes. \\
-mean\_perimeter\_px & Average cell boundary length in pixels & Variable & Often lower in rounded cells & Reduced perimeter reflects boundary smoothing during rounding; complements circularity as an independent texture/morphology cue. \\
+Degree of cell roundness (4π·area/perimeter², 0--1) 
+& 0.3--0.6 
+& 0.7--1.0 
+& Higher values directly quantify the transition from spread polygonal to rounded morphology, a core visual CPE feature; independent of FBS-driven growth-rate changes. \\
+Shape elongation descriptor (0 = circle, 1 = line) 
+& 0.4--0.7 
+& 0.8--0.95 
+& Captures loss of elongation; increased eccentricity indicates rounding and is a robust, label-free proxy for cytopathic changes; unaffected by the intentional 2\% FBS reduction in Path 2. \\
 \bottomrule
 \end{tabular}
 \end{table}
