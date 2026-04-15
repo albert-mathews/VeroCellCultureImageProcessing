@@ -10,6 +10,8 @@ The study used the publicly available Vero Cell Culture Image Dataset (Mathews, 
 
 ### Standard CPE descriptors
 Characteristic CPE descriptors were extracted from CLSI M41 Table 7 through an iterative review process. First, the full table was examined to identify the complete set of ten descriptors: rounded, ballooned/enlarged, syncytia, vacuolation, detachment, granularity, refractile, cytoplasmic strands, nonspecific degeneration, and no CPE. A “hit table” was then constructed by mapping every instance of these terms (or close semantic correlates) to the test in the'Appearance' column of Table 7. Next, the same mapping procedure was applied to the CRO image descriptions to generate a second hit table (descriptor_set + image_description). Only five of the original ten CLSI descriptors appeared in the CRO descriptions. A sixth term, “Dying Cells”, emerged directly from the CRO text and was retained as a distinct category (Dy) rather than being forced into the CLSI 'nonspecific degeneration' bin. The resulting evaluation_descriptor_set used for ground truth and all subsequent analyses therefore consisted of: Dying cells (Dy), Rounded (Ro), Vacuolation (V), Detached (D), Granularity (G), and Refractile (Re). The full CLSI M41 Table 7 hit table is reproduced below for reference.
+@Albert4. lets find a better name than 'hit table'. there must be a standard name for this concept. 
+@end
 
 <insert clsi-table7-descriptors.tex>
 
@@ -25,8 +27,10 @@ AIRVIC (Akkutay-Yoldar et al., 2025) is a ResNet-based classifier trained specif
 <insert airvic-results.tex>
 
 ### Cellpose analysis
-Cellpose (Stringer et al., 2021) was used as the primary segmentation engine. A custom Python script (co-developed with Grok) processed all 101 images to generate instance masks. Post-processing metrics were then computed on the masks to derive a proxy for CPE presence. The two retained metrics—circularity \((4\pi \cdot \text{area} / \text{perimeter}^2)\) and eccentricity—quantify the transition from spread polygonal to rounded morphology, a hallmark of CPE that is independent of serum-driven growth-rate changes (supported by prior Vero-cell CPE quantification studies). 
-@Albert1: you said " @Albert4: References to PMC11180103 and Revvity page now cited inline." but they do not appear here.
+Cellpose (Stringer et al., 2021) was used as the primary segmentation engine. A custom Python script (co-developed with Grok) processed all 101 images to generate instance masks. Post-processing metrics were then computed on the masks to derive a proxy for CPE presence. The two retained metrics—circularity \((4\pi \cdot \text{area} / \text{perimeter}^2)\) and eccentricity—quantify the transition from spread polygonal to rounded morphology, a hallmark of CPE that is independent of serum-driven growth-rate changes (supported by prior Vero-cell CPE quantification studies).
+@Albert5: can we provide the user with a short description if cellpose masks? i think it will be boring for readers if they dont know what a mask is in this context, and they may stop reading.
+@end 
+@Albert1: you said "References to PMC11180103 and Revvity page now cited inline." but they do not appear here.
 @end
 
 <insert cellpose-cpe-proxy-metrics.tex>
