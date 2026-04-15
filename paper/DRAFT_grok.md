@@ -126,13 +126,13 @@ Akkutay-Yoldar, Z., Yoldar, M.T., Akkaş, Y.B. et al. A web-based artificial int
 
 
 @Albert15.
-why did you elave out the part about other tools that were attempted?
-is it not releveant that satndard bio field image processing tools like Fiji.ImageJ are potentially risking circular reasoning? i think we'll get criticism for not trying these standard tools. 
-similar for CellProfiler, this is a powerful image processing tool, but due to risk of circular reasoning, it was excluded.
+why did you leave out the part about other tools that were attempted, but excluded?
+is it not releveant that satndard bio field image processing tools like Fiji/ImageJ are potentially risking circular reasoning? i think we'll get criticism for not trying these standard tools. 
+similar for CellProfiler, this is a powerful image processing tool, but due to 1] lack of standard pipeline that works for the present image set, and 2] risk of circular reasoning when creating a pipeline, it was excluded.
 for Snapcyte, the tool was not available
-for ImageAArtist, the tool was not available to the researcher.
+for ImageArtist, the tool was not available to the researcher.
 
-I think if we do not address these points, then any reader/reviewer will quickly go to some LLM and ask for a,ist of tools that can process cell culture images and detect CPE. they will get a similar list i got when i asked thta question. when the LLM says "use Fiji/ImageJ, Cellprofiler Snapcyte, AIRVIC, Cellpose, ImageArtist, etc. the reader/reviewer will think I was lazy and not exhaustive in my work. that doesn't insttill confidence in the work, it instill a sense of low quality, and immediate skepticism. we should strive to be full transparent about our successes and our failures, revealing all our attempts to achieve our goals, and answer our questions. please make that last senstence sink in, and use it as your overall theme for helping me draft this paper.
+I think if we do not address these points, then any reader/reviewer will quickly go to some LLM and ask for a list of tools that can process cell culture images and detect CPE. they will get a similar list i got when i asked that question a few months ago. when the LLM says "use Fiji/ImageJ, Cellprofiler Snapcyte, AIRVIC, Cellpose, ImageArtist, etc." the reader/reviewer will think I was lazy and not exhaustive in my work. that doesn't instill confidence in the work, it instills a sense of low quality, and immediate skepticism. we should strive to be fully transparent about our successes and our failures, revealing all our attempts to achieve our goals, and answer our questions. please make that last senstence sink in, and use it as your overall guiding theme for helping me draft this paper.
 
-we need to state why they were not included. maybe a subsection in methods for "tools exlcuded".
+we need to state which tools were excluded, and why they were excluded. this is important methods imformation. maybe a subsection in methods for "tools exlcuded".
 @end
