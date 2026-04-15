@@ -53,7 +53,7 @@ Results for each tool or group of tools are presented in tabular form below.
 <insert airvic-results.tex>
 
 ### Cellpose
-<no cellpose-results.tex>
+<insert cellpose-results.tex>
 
 ### Multi-modeal AI
 <insert cpe_confusion_table.tex>
@@ -65,7 +65,8 @@ Results for each tool or group of tools are presented in tabular form below.
 
 ### AIRVIC
 1-Note that AIRVIC did not perform well. 
-2-the image-processing-vs-airvic-expectation-table.tex provide a breakdown of the AIRVIC training set images vs the dataset images. although not identical, they are quite similar. not much can be done at this point to improve AIRVIC performance. 
+<insert image-processing-vs-airvic-expectation-table.tex>
+2-the table provides a breakdown of the AIRVIC training set images vs the dataset images. although not identical, they are quite similar. not much can be done at this point to improve AIRVIC performance. 
 3-Results for all 101 images are sumarized by the fact that AIRVIC detected CPE in all but one image: EXP_path1_passage4_201.png. 
 4-From this we can conclude that AIRVIC is not a useful tool for objectively assessing the presence of CPE in this image set. Given the images are of Vero cell cultures, and images captured almost ideally; it is dissapointing that AIRVIC performed so poorly.
 
