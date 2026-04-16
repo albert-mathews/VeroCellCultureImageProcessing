@@ -5,13 +5,14 @@
 \small
 \setlength{\tabcolsep}{7pt}
 \renewcommand{\arraystretch}{1.55}
-\caption{Comparison of image acquisition and processing parameters between the AIRVIC training dataset (Nature Sci Rep 2025) and the current Vero cell culture dataset.}
+\caption{Comparison of image acquisition and processing parameters between the AIRVIC training dataset \cite{airvic} and the current Vero cell culture dataset \cite{mathews2025}.}
 \label{tab:airvic-image-comparison}
 \vspace{10pt}
 
 \begin{tabular}{p{4.2cm} p{5.3cm} p{5.3cm} p{9.0cm}}
 \toprule
-\textbf{Aspect} & \textbf{AIRVIC expectation (training data)} & \textbf{Current dataset (this study)} & \textbf{Potential impact on AIRVIC accuracy} \\
+\textbf{Aspect} & \textbf{AIRVIC dataset} & \textbf{Vero cell
+culture dataset} & \textbf{Potential impact on AIRVIC accuracy} \\
 \midrule
 \arrayrulecolor{gray!30}
 Microscope system & ZEISS Axio Observer 5 widefield microscope & EVOS\textsuperscript{\textregistered} FL Auto system (Thermo Fisher, Cat. no. AMAFD1000) & Moderate — model trained exclusively on a single microscope brand and optical path; cross-platform generalization has not been validated \\

@@ -80,16 +80,13 @@ LLMs are compared against always true and always false CPE type classification m
 \section{Discussion}
 
 \subsection{Domain-specific tools}
-AIRVIC detected CPE in 21 of the 22 description-set images and in 100 of the 101 total images, producing a high false-positive rate (0.909) and overall accuracy of only 0.545. The test images are visually similar to the Vero-cell images used in AIRVIC's original training set, as demonstrated by the table below.
+AIRVIC detected CPE in 21 of the 22 \textit{description set} images and in 100 of the 101 images of the EXP-stage, producing a high false-positive rate (0.909) and overall accuracy of only 0.545. The test images are visually similar to the Vero-cell images used in AIRVIC's original training set, as demonstrated by the table below. Despite this similarity, the model failed to generalize effectively to the present dataset.
+Cellpose similarly classified nearly all images as CPE-positive (accuracy 0.500), again driven by an extremely high false-positive rate. The morphological-proxy approach therefore did not provide useful discrimination in this dataset.
 
 \input{image-processing-vs-airvic-expectation-table.tex}
 
-Despite this similarity, the model failed to generalize effectively to the present dataset. 
-
-Cellpose similarly classified nearly all images as CPE-positive (accuracy 0.500), again driven by an extremely high false-positive rate. The morphological-proxy approach therefore did not provide useful discrimination in this dataset.
-
 \subsection{Multimodal AI tools}
-The four general-purpose multimodal models exhibited macro-averaged accuracies between 0.542 and 0.709. Gemini achieved the highest overall accuracy (0.709) but at the cost of a very high false-negative rate, effectively behaving like a conservative ``no-CPE'' classifier; this performance was still lower than that of the simple always-negative baseline model. ChatGPT, Claude, and Grok showed poor performance (accuracies 0.549--0.559) with substantial rates of both false positives and false negatives. None of the multimodal models reached a level of reliability that would support their use as objective CPE detection tools for this image set.
+The four general-purpose multimodal models exhibited macro-averaged accuracies between 0.542 and 0.709. Gemini achieved the highest overall accuracy (0.709) but at the cost of a very high false-negative rate, effectively behaving like a conservative ``no-CPE'' classifier; this performance was still lower than that of the simple always-negative baseline model. ChatGPT, Claude, and Grok showed poor performance (accuracies 0.549--0.559) with substantial rates of both false positives and false negatives. None of the multimodal models reached a level of reliability that would support their use as objective CPE detection tools for this dataset.
 
 \subsection{Limitations}
 The ground-truth labels rest on CRO narrative descriptions that were not generated under a CPE-specific protocol. The description set is small (n = 22), and the remaining 83 images could not be evaluated quantitatively. Domain-specific tools were tested exactly as publicly available; no retraining or fine-tuning was performed. Prompt engineering for the multimodal models, while extensive, remains inherently model-dependent.
