@@ -26,7 +26,9 @@
 \maketitle
 
 \begin{abstract}
-This study benchmarks the performance of two domain-specific computer-vision tools (AIRVIC and Cellpose) and four general-purpose multimodal large language models (ChatGPT, Claude, Gemini, and Grok) on the task of detecting and classifying cytopathic effect (CPE) in Vero-cell culture microscope images. Ground-truth CPE status and morphological types were derived exclusively from image descriptions supplied by the contract research organization (CRO) that performed the cell-culture experiments and were cross-referenced against the standardized CPE descriptors listed in CLSI M41 Table 7. Only the 22 images that received CRO descriptions were used for quantitative accuracy assessment. None of the evaluated tools demonstrated sufficient accuracy or robustness to serve as objective, reproducible CPE analysis tools under the conditions tested.
+This study evaluates the ability of two domain-specific computer-vision tools (AIRVIC and Cellpose) and four general-purpose multimodal large language models (ChatGPT, Claude, Gemini, and Grok) to detect and classify cytopathic effects (CPE) in microscope images of Vero cell cultures. Ground truth CPE presence and morphological types were derived solely from narrative descriptions supplied by the contract research organization (CRO), cross-referenced with standardized descriptors from CLSI M41 Table 7. Quantitative analysis was performed on the 22 images that received CRO descriptions.
+
+None of the evaluated tools demonstrated adequate performance for reliable CPE detection. Domain-specific tools showed extremely high false-positive rates, while the multimodal models exhibited either strong conservative bias or only modest balanced accuracy. These findings indicate that current AI approaches, whether domain-specific or general-purpose, are not yet suitable as objective, reproducible tools for automated CPE analysis in Vero cell culture images.
 \end{abstract}
 
 \section{Introduction}
