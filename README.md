@@ -27,7 +27,3 @@ XAI_API_KEY=xai-<rest of your key>
 
 # Disclaimer
 This work was quite iterative. Many paths were started, and only few succeeded. Not all files still in the repo are used to produce the final results.
-
-# Next steps.
-
-1-proof read the paper.
