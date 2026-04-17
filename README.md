@@ -1,6 +1,6 @@
 # Description
 This repo has code and partial results used to produce the research paper:
-<enter zenodo link>
+https://zenodo.org/records/19631281
 Note: /paper/ contains the source latex file for the paper.
 
 The original source images and image descriptions are from:
