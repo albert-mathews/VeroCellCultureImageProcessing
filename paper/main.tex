@@ -11,6 +11,22 @@
 \usepackage[table]{xcolor}
 \usepackage{amsmath}
 \usepackage{ragged2e}
+\usepackage{changepage}
+
+\makeatletter
+\renewenvironment{abstract} {
+  \small
+  \begin{center}
+    \bfseries \abstractname\vspace{-.5em}\vspace{0pt}
+  \end{center}
+  \begin{adjustwidth}{0cm}{0cm} % Sets margins to 0 for full width
+    \justified % Applies full justification
+    \item\relax
+  \end{adjustwidth}
+} {
+  \end{adjustwidth}
+}
+\makeatother
 
 % Define the colors used in the CPE confusion table
 \definecolor{TPgreen}{HTML}{98FB98}
@@ -27,28 +43,21 @@
 \maketitle
 
 \begin{abstract}
-%\begin{center}
-%\begin{minipage}{\textwidth}
-%\justifying
-
-%\end{minipage}
-%\end{center}
-\end{abstract}
-
 This study evaluates the performance of two domain-specific computer-vision tools (AIRVIC and Cellpose) and four general-purpose multimodal large language models (ChatGPT, Claude, Gemini, and Grok) on the task of detecting and classifying cytopathic effect (CPE) in Vero-cell culture microscope images. Ground-truth CPE presence and morphological types were derived solely from narrative descriptions supplied by the contract research organization (CRO) that performed the cell-culture experiments and were cross-referenced against the standardized CPE descriptors listed in CLSI M41 Table 7. Quantitative analysis was performed exclusively on the 22 images that received CRO descriptions.
 
 None of the evaluated tools demonstrated adequate performance for reliable CPE detection. Domain-specific tools showed extremely high false-positive rates, while the multimodal models exhibited either strong conservative bias or only modest balanced accuracy. These findings indicate that current AI approaches, whether domain-specific or general-purpose, are not yet suitable as objective, reproducible tools for automated CPE analysis in Vero cell culture images.
+\end{abstract}
+
 
 \section{Introduction}
 This study benchmarks the performance of two domain-specific computer-vision tools (AIRVIC and Cellpose) and four general-purpose multimodal large language models (ChatGPT, Claude, Gemini, and Grok) on the task of detecting and classifying cytopathic effect (CPE) in Vero-cell culture microscope images. The objective is to evaluate whether any of these AI approaches can serve as objective, reproducible analysis tools for CPE detection in previously unseen images. Ground-truth CPE status and morphological types were derived exclusively from the image descriptions supplied by the contract research organization (CRO) that performed the cell-culture experiments. These descriptions were cross-referenced against the standardized CPE descriptors listed in Table 7 of the CLSI M41 Guideline.
 
 \section{Methods}
-
 \subsection{Image dataset and ground truth}
 The study utilized the publicly available Vero Cell Culture Image Dataset \cite{mathews2025}. This dataset consists of images acquired in two distinct stages: a preparation (PREP) stage comprising a single path in which cells were thawed and passaged until normal growth rates were achieved, followed by an experimental (EXP) stage. The present study focuses exclusively on the 101 images from the EXP stage. These images were obtained from two experimental paths (Path 1 maintained at 10\% FBS and Path 2 reduced to 2\% FBS) initiated at passage 4. The contract research organization (CRO) was instructed to provide descriptive captions for any image that would benefit from accompanying text; no specific directive was given to search for, classify, or quantify cytopathic effects (CPE). Consequently, only 22 of the 101 EXP-stage images contain CRO descriptions (hereafter referred to as the ``description set''), while the remaining 83 do not. Accuracy analyses were performed exclusively on the \textit{description set}.
 
 \subsection{Standard CPE descriptors}
-Characteristic CPE descriptors were extracted from CLSI M41 Table 7 \cite{clsi} through an iterative review process. First, the full table was examined to identify a set of ten descriptors: rounded, ballooned/enlarged, syncytia, vacuolation, detachment, granularity, refractile, cytoplasmic strands, nonspecific degeneration, and no CPE. A CPE descriptor incidence table was then constructed by identifying every instance of these terms (or close semantic correlates) to text entries in the ``Appearance'' column of Table 7. The CLSI M41 Table 7 incidence table is reproduced below for reference.
+Characteristic CPE descriptors were extracted from Table 7 of the CLSI M41 Guideline \cite{clsi}. First, the full table was examined to identify a set of ten descriptors: rounded, ballooned/enlarged, syncytia, vacuolation, detachment, granularity, refractile, cytoplasmic strands, nonspecific degeneration, and no CPE. A CPE descriptor incidence table was then constructed by identifying every instance of these terms (or close semantic correlates) to text entries of the ``Appearance'' column.
 
 \input{clsi-table7-descriptors.tex}
 
