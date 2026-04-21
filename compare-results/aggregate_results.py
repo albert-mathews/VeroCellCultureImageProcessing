@@ -5,6 +5,7 @@ import numpy as np
 cpe_df = pd.read_csv('cpe_confusion_table.csv')
 airvic_df = pd.read_csv('../airvic-results/airvic-results.csv')
 cellpose_df = pd.read_csv('../cellpose-results/cellpose-results.csv')
+dvice_df = pd.read_csv('../dvice-results/dvice-final-results.csv')   # <-- NEW
 
 # CPE types for macro-averaging (LLMs only)
 cpe_types = ['Dy', 'Ro', 'V', 'D', 'G', 'Re']
@@ -87,34 +88,39 @@ pred_cell = (cellpose_df['CellPose CPE Probability'] >= 0.5).astype(int)
 results['Cellpose'] = compute_binary_rates(gt_cell, pred_cell)
 
 
+# ====================== COMPUTE FOR DVICE ======================
+results['DVICE'] = compute_binary_rates(
+    dvice_df['CRO_CPE'], 
+    dvice_df['DVICE_CPE']
+)
+
+
 # ====================== COMPUTE BINARY BASELINES (22-image scale) ======================
 gt_binary = airvic_df['CRO_CPE']
 
-# Always_true_binary = predict CPE in EVERY image (22 predictions)
+# Always_true_binary = predict CPE in EVERY image
 pred_true_bin = pd.Series(1, index=gt_binary.index)
 results['Always_true_binary'] = compute_binary_rates(gt_binary, pred_true_bin)
 
-# Always_false_binary = predict no CPE in EVERY image (22 predictions)
+# Always_false_binary = predict no CPE in EVERY image
 pred_false_bin = pd.Series(0, index=gt_binary.index)
 results['Always_false_binary'] = compute_binary_rates(gt_binary, pred_false_bin)
 
 
 # ====================== COMPUTE LLM-SCALE BASELINES (612 predictions) ======================
-# Flatten all 102 samples × 6 CPE types = 612 ground-truth labels
 all_gt = pd.concat([cpe_df[f'CRO_{t}'] for t in cpe_types], ignore_index=True).values
 
-# Always_true = predict 1 for every single cell (612 predictions)
 pred_always_true = np.ones(len(all_gt), dtype=int)
 results['Always_true'] = compute_binary_rates(all_gt, pred_always_true)
 
-# Always_false = predict 0 for every single cell (612 predictions)
 pred_always_false = np.zeros(len(all_gt), dtype=int)
 results['Always_false'] = compute_binary_rates(all_gt, pred_always_false)
 
 
-# ====================== BUILD FINAL TABLE (exact order requested) ======================
+# ====================== BUILD FINAL TABLE ======================
 model_order = [
     'AIRVIC',
+    'DVICE',
     'Cellpose',
     'Always_true_binary',
     'Always_false_binary',
