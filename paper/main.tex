@@ -75,12 +75,13 @@ AIRVIC \cite{airvic} is a ResNet-based classifier trained specifically for CPE d
 % -accuracy and AURROC reslts were computed from the porediction results.
 
 \subsection{Cellpose analysis}
-Cellpose \cite{cellpose} was used as the primary segmentation engine. A custom Python script, developed iteratively in collaboration with Grok, processed all 101 images to generate instance masks---binary images in which each individual cell is delineated as a separate labeled region. Post-processing metrics were then computed on the masks to derive a proxy for CPE presence. Circularity \((4\pi \cdot \text{area} / \text{perimeter}^2)\) was selected because it is a standard morphometric parameter that effectively quantifies the transition from spread polygonal to rounded cell shape, a morphological change widely recognized as a hallmark of cytopathic effect (CPE) in Vero-cell cultures \cite{pmc11180103}. Eccentricity was retained as a complementary descriptor because prior label-free CPE analyses in Vero cultures have identified cell-rounding morphology as a robust, objective visual proxy for cytopathic changes, which can be quantified using shape descriptors such as aspect ratio \cite{revvity}. These two metrics were therefore chosen as the most suitable label-free proxies supported by the literature; the final post-processing pipeline was refined through collaborative testing to ensure the metrics were unaffected by the intentional FBS reduction used in one experimental stage of the dataset.
+Cellpose \cite{cellpose} was used as the primary segmentation engine. A custom Python script, developed iteratively in collaboration with Grok, processed all 101 images to generate instance masks---binary images in which each individual cell is delineated as a separate labeled region. Post-processing metrics were then computed on the masks to derive a proxy for CPE presence. Circularity \((4\pi \cdot \text{area} / \text{perimeter}^2)\) was selected because it is a standard morphometric parameter that effectively quantifies the transition from spread polygonal to rounded cell shape, a morphological change widely recognized as a hallmark of cytopathic effect (CPE) in Vero-cell cultures \cite{pmc11180103}. Eccentricity was retained as a complementary descriptor because prior label-free CPE analyses in Vero cultures have identified cell-rounding morphology as a robust, objective visual proxy for cytopathic changes, which can be quantified using shape descriptors such as aspect ratio \cite{revvity}. These two metrics were therefore chosen as the most suitable label-free proxies supported by the literature.
 
 \input{cellpose-cpe-proxy-metrics.tex}
 
-Binary CPE detection was obtained by converting the combined metrics into a probability score; values $>$ 0.5 were classified as positive. No morphological subtype information was generated. The exact probability formula and post-processing code are available in the project GitHub repository.
-% @Albert2: need to update section for the sensitivity and AURROC results.
+Post-processing metrics (circularity and eccentricity) were computed on the masks to derive a continuous CPE probability score. Binary CPE detection was obtained using the conventional threshold of 0.5 (values $>$ 0.5 classified as positive).A threshold sweep was performed across the description set to evaluate sensitivity to the decision threshold. The exact probability formula, post-processing code, and full threshold sweep are available in the project GitHub repository.
+
+\input{cellpose-cpe-proxy-metrics.tex}
 
 \subsection{Multimodal AI analysis}
 Four multimodal large language models \cite{llms} were evaluated under identical conditions. For each model a dedicated Python script was written that (1) loads the PNG images, (2) supplies a standardized prompt requesting detection of the six \textit{evaluation descriptor set} morphologies, and (3) requests formatted output. Each model was offered two example images with known ground truth for optional in-context learning. Prompt and processing-script engineering was performed collaboratively with the respective model (i.e. models' are co-authors of the script and prompt). Model outputs were post-processed by a script to produce per-image, per-morphology-type binary decisions that were compared against CRO ground truth.
@@ -95,7 +96,9 @@ Performance was quantified using false-positive rate, false-negative rate, true-
 Performance results are presented the tables below.
 \input{airvic-results.tex}
 %inputs{dvice-results.tex} % @Albert3:  need to create this from the various csv results.
-\input{cellpose-results.tex}  % @Albert4:  need to extend to include the 
+\subsection{Cellpose}
+\input{cellpose-results.tex}
+\input{cellpose-performance.tex}
 \input{llm-cpe-detections.tex}
 \subsection{Aggregate performance summary}
 % @Albert5:  need to update this section to include DVICE results. 
