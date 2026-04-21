@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{DVICE CPE detection performance metrics (description set, n=22). Three models were provided by the authors; the average probability across the three models was used for scoring and final binary decision.}
+\label{tab:dvice-performance}
+
+\begin{tabular}{lrr}
+\toprule
+\textbf{Metric} & \textbf{Value} & \textbf{Note} \\
+\midrule
+Accuracy (default threshold 0.5)     & 0.5455 & Binary decision used in main analysis \\
+Best accuracy from threshold sweep   & 0.5909 & achieved at thresholds 0.35--0.65 \\
+Area under the ROC curve (AUROC)     & 0.4132 & averaged across the three models \\
+\bottomrule
+\end{tabular}
+
+\end{table}

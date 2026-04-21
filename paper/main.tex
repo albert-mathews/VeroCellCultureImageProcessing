@@ -70,9 +70,7 @@ Next, the same mapping procedure was applied to the CRO image descriptions to ge
 AIRVIC \cite{airvic} is a ResNet-based classifier trained specifically for CPE detection and virus identification in Vero and MDBK cell-culture images. All 101 images of the data set were uploaded to the web interface \cite{airvicweb} with \textit{cell line type} set to ``Vero'' and \textit{virus type} set to ``Unknown''. Because the interface does not support batch export, results were extracted manually and stored in CSV format. AIRVIC outputs a binary CPE decision (present/absent) and a predicted virus identity; the virus predictions are not used in this study, which focuses exclusively on CPE detection.
 
 \subsection{DVICE analysis}
-% @Albert1: text for writting the paragraph
-% -all 101 images were processed by all 3 models provided by the authors
-% -accuracy and AURROC reslts were computed from the porediction results.
+DVICE \cite{dvice} is a versatile automated pipeline for label-free virus infectivity quantification using deep learning on light-microscopy images. Access to three pre-trained models was provided by the authors. All 101 EXP-stage images were processed by each of the three models. The final DVICE CPE probability score was computed as the average of the three model outputs. A threshold sweep was performed on the description set to evaluate the sensitivity of accuracy to the decision threshold. Binary CPE detection was determined using the conventional threshold of 0.5 applied to the averaged probability. The exact code, model outputs, and full threshold sweep are available in the project GitHub repository.
 
 \subsection{Cellpose analysis}
 Cellpose \cite{cellpose} was used as the primary segmentation engine. A custom Python script, developed iteratively in collaboration with Grok, processed all 101 images to generate instance masks---binary images in which each individual cell is delineated as a separate labeled region. Post-processing metrics were then computed on the masks to derive a proxy for CPE presence. Circularity \((4\pi \cdot \text{area} / \text{perimeter}^2)\) was selected because it is a standard morphometric parameter that effectively quantifies the transition from spread polygonal to rounded cell shape, a morphological change widely recognized as a hallmark of cytopathic effect (CPE) in Vero-cell cultures \cite{pmc11180103}. Eccentricity was retained as a complementary descriptor because prior label-free CPE analyses in Vero cultures have identified cell-rounding morphology as a robust, objective visual proxy for cytopathic changes, which can be quantified using shape descriptors such as aspect ratio \cite{revvity}. These two metrics were therefore chosen as the most suitable label-free proxies supported by the literature.
@@ -94,11 +92,14 @@ Performance was quantified using false-positive rate, false-negative rate, true-
 
 \section{Results}
 Performance results are presented the tables below.
+\subsection{AIRVIC}
 \input{airvic-results.tex}
-%inputs{dvice-results.tex} % @Albert3:  need to create this from the various csv results.
+\subsection{DVICE}
+\input{dvice-performance.tex}
 \subsection{Cellpose}
 \input{cellpose-results.tex}
 \input{cellpose-performance.tex}
+\subsection{Multimodal}
 \input{llm-cpe-detections.tex}
 \subsection{Aggregate performance summary}
 % @Albert5:  need to update this section to include DVICE results. 
