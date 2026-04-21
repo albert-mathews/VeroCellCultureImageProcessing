@@ -9,4 +9,5 @@ __pycache__/
 *.bat
 clsi-table7-raw-text.txt
 /cellpose-results/results/
-/dvice-results/
+/dvice-results/resources.zip
+/dvice-results/resources/
