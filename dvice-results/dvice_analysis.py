@@ -83,13 +83,27 @@ def main():
         raise FileNotFoundError(f"Images directory not found: {images_dir}")
 
     # Load the three DVICE models once (EfficientNet-B3 based binary classifiers)
-    model_files = ['model1.keras', 'model2.keras', 'model3.keras']
+    # === MODEL LOADING - Fixed for legacy HDF5 format ===
+    # if you extracted modelX.keras from resources.zip, you need to change the file extension to modelX.h5
+    model_files = ['model1.h5', 'model2.h5', 'model3.h5']
     models = []
     for mf in model_files:
         model_path = models_dir / mf
-        print(f"Loading model: {model_path}")
-        model = tf.keras.models.load_model(str(model_path))
+        full_path = str(model_path.resolve().absolute())
+        
+        print(f"Loading model: {full_path}")
+        
+        if not model_path.exists():
+            raise FileNotFoundError(f"Model file not found: {full_path}")
+        
+        # Load legacy HDF5 models (this is what your files actually are)
+        model = tf.keras.models.load_model(
+            full_path,
+            compile=False,      # Important - models were saved without optimizer state
+            safe_mode=False
+        )
         models.append(model)
+        print(f"✅ Successfully loaded {mf}")
 
     # Find all 101 PNG images
     png_files = sorted(list(images_dir.glob('*.png')))
