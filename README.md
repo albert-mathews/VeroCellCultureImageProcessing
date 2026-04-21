@@ -6,6 +6,9 @@ Note: /paper/ contains the source latex file for the paper.
 The original source images and image descriptions are from:
 https://zenodo.org/records/16619228
 
+## TODO
+review and correct the references.
+
 ## To reproduce the results
 1. download the dataset from zenodo. extract all and copy the 'EXP stage' folder to the root of this repo clone.
 2. create the converted_pngs dir from the source images. use convert_images_to_png.py
