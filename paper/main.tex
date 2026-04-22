@@ -13,21 +13,6 @@
 \usepackage{ragged2e}
 \usepackage{changepage}
 
-\makeatletter
-\renewenvironment{abstract} {
-  \small
-  \begin{center}
-    \bfseries \abstractname\vspace{-.5em}\vspace{0pt}
-  \end{center}
-  \begin{adjustwidth}{0cm}{0cm} % Sets margins to 0 for full width
-    \justified % Applies full justification
-    \item\relax
-  \end{adjustwidth}
-} {
-  \end{adjustwidth}
-}
-\makeatother
-
 % Define the colors used in the CPE confusion table
 \definecolor{TPgreen}{HTML}{98FB98}
 \definecolor{TNwhite}{HTML}{FFFFFF}
