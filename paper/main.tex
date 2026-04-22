@@ -74,24 +74,31 @@ Standard image-processing tools commonly used in cell-culture analysis were eval
 Performance was quantified using false-positive rate, false-negative rate, true-positive rate, true-negative rate, and overall accuracy. For the multimodal models these metrics were first computed separately for each of the six CPE morphological types and then macro-averaged. For AIRVIC, DVICE, and Cellpose the metrics were calculated directly on the binary CPE detection task. Baseline ``always-positive'' and ``always-negative'' classifiers were also evaluated for comparison. All calculations were performed on the 22-image \textit{description set} only.
 
 \section{Results}
-Performance results are presented in the tables below.
+
+Performance results for each tool are presented below.
 
 \subsection{AIRVIC}
 \input{airvic-results.tex}
 
 \subsection{DVICE}
+The per-image CPE detection results and summary performance metrics for DVICE are shown in the following two tables.
+
 \input{dvice-results.tex}
 \input{dvice-performance.tex}
 
 \subsection{Cellpose}
+The per-image CPE detection results and summary performance metrics for Cellpose are shown in the following two tables.
+
 \input{cellpose-results.tex}
 \input{cellpose-performance.tex}
 
 \subsection{Multimodal AI models}
+The confusion matrix showing per-morphology CPE detection results for the four multimodal large language models is presented below.
+
 \input{llm-cpe-detections.tex}
 
 \subsection{Aggregate performance summary}
-Performance metrics of AIRVIC, DVICE, CellPose, and the four multimodal models for cytopathic effect (CPE) detection are shown in Table \ref{tab:aggregate-results}. AIRVIC, DVICE, and CellPose are compared against simple always-true and always-false binary classification models. The multimodal models are compared against always-true and always-false CPE-type classification models. The accuracy of the always-false CPE-type classification model is a characteristic of the dataset. For any model to prove useful, it would have to significantly outperform this baseline.
+Overall performance metrics of AIRVIC, DVICE, CellPose, and the four multimodal models for cytopathic effect (CPE) detection are summarized in Table \ref{tab:aggregate-results}. AIRVIC, DVICE, and CellPose are compared against simple always-true and always-false binary classifiers. The multimodal models are compared against always-true and always-false CPE-type classifiers. The accuracy of the always-false CPE-type classifier is a property of the dataset; any useful model must substantially outperform this baseline.
 
 \input{aggregate-results.tex}
 
