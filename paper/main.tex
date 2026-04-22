@@ -46,7 +46,6 @@ The study utilized the publicly available Vero Cell Culture Image Dataset \cite{
 Characteristic CPE descriptors were extracted from Table 7 of the CLSI M41 Guideline \cite{clsi} through an iterative review process. First, the full table was examined to identify a set of ten descriptors: rounded, ballooned/enlarged, syncytia, vacuolation, detachment, granularity, refractile, cytoplasmic strands, nonspecific degeneration, and ``no CPE''. An incidence table was then constructed by identifying every instance of these terms (or close semantic correlates) in the ``Appearance'' column (see Table \ref{tab:clsi-m41-cpe}).
 
 \input{clsi-table7-descriptors.tex}
-
 Next, the same mapping procedure was applied to the CRO image descriptions to generate a second incidence table. Only five of the original ten CLSI descriptors appeared in the CRO descriptions. A sixth term, ``Dying Cells'', emerged directly from the CRO text and was retained as a distinct category (Dy) rather than being forced into the CLSI ``nonspecific degeneration'' bin. The resulting \textit{evaluation descriptor set} used for ground truth and all subsequent analyses therefore consisted of: Dying cells (Dy), Rounded (Ro), Vacuolation (V), Detached (D), Granularity (G), and Refractile (Re). The CRO incidence table \ref{tab:cro-cpe-detections} below shows the result of applying this evaluation descriptor set to the image descriptions.
 
 \input{cro-cpe-detections.tex}
@@ -76,22 +75,24 @@ Performance was quantified using false-positive rate, false-negative rate, true-
 \section{Results}
 
 Performance results for each tool are presented below.
-
+\clearpage
 \subsection{AIRVIC}
 The CPE detection and virus prediction results obtained with AIRVIC are shown in Table~\ref{tab:airvic-results}.
 \input{airvic-results.tex}
+\clearpage
 
 \subsection{DVICE}
 The per-image CPE detection results and summary performance metrics for DVICE are shown in the following two tables.
-
 \input{dvice-results.tex}
 \input{dvice-performance.tex}
+\clearpage
 
 \subsection{Cellpose}
 The per-image CPE detection results and summary performance metrics for Cellpose are shown in the following two tables.
 
 \input{cellpose-results.tex}
 \input{cellpose-performance.tex}
+\clearpage
 
 \subsection{Multimodal AI models}
 The confusion matrix showing per-morphology CPE detection results for the four multimodal large language models is presented below.
