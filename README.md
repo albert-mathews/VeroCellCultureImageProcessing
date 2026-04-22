@@ -7,8 +7,8 @@ The original source images and image descriptions are from:
 https://zenodo.org/records/16619228
 
 ## TODO
-results section is poorly formatted, tables appear where ever, not in their section. 
-review and correct the references.
+break up sections into their own .tex files, align main.tex with that. 
+slowly adapt main_plos.tex to include the section text and table .tex files.
 
 ## To reproduce the results
 1. download the dataset from zenodo. extract all and copy the 'EXP stage' folder to the root of this repo clone.
