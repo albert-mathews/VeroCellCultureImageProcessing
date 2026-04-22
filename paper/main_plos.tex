@@ -1,78 +1,3 @@
-% Template for PLoS
-% Version 3.8 Apr 2026
-%
-% % % % % % % % % % % % % % % % % % % % % %
-%
-% -- IMPORTANT NOTE
-%
-% This template contains comments intended 
-% to minimize problems and delays during our production 
-% process. Please follow the template instructions
-% whenever possible.
-%
-% % % % % % % % % % % % % % % % % % % % % % % 
-%
-% Once your paper is accepted for publication, 
-% PLEASE REMOVE ALL TRACKED CHANGES in this file 
-% and leave only the final text of your manuscript. 
-% PLOS recommends the use of latexdiff to track changes during review, as this will help to maintain a clean tex file.
-% Visit https://www.ctan.org/pkg/latexdiff?lang=en for info.
-%
-%
-% IMPORTANT
-% Below are a few tips to help format manuscript according to our specifications. For more tips to help reduce the possibility of formatting errors during conversion, please see our LaTeX guidelines at http://journals.plos.org/plosone/s/latex
-%
-% There are no restrictions on package use within the LaTeX files except that no packages listed in the template may be deleted.
-%
-% Please do not include colors or graphics in the text.
-%
-% The manuscript LaTeX source should be contained within a single file (do not use \input, \externaldocument, or similar commands).
-%
-% % % % % % % % % % % % % % % % % % % % % % %
-%
-% -- FIGURES AND TABLES
-%
-% Please include tables/figure captions directly after the paragraph where they are first cited in the text.
-%
-% DO NOT INCLUDE GRAPHICS IN YOUR MANUSCRIPT
-% - Figures should be uploaded separately from your manuscript file. 
-% - Figures generated using LaTeX should be extracted and removed from the PDF before submission. 
-% - Figures containing multiple panels/subfigures must be combined into one image file before submission.
-% For figure citations, please use "Fig" instead of "Figure".
-% See http://journals.plos.org/plosone/s/figures for PLOS figure guidelines.
-%
-% Tables should be cell-based and may not contain:
-% - spacing/line breaks within cells to alter layout or alignment
-% - do not nest tabular environments (no tabular environments within tabular environments)
-% - no graphics or colored text (cell background color/shading OK)
-% See http://journals.plos.org/plosone/s/tables for table guidelines.
-%
-% For tables that exceed the width of the text column, use the adjustwidth environment as illustrated in the example table in text below.
-%
-% % % % % % % % % % % % % % % % % % % % % % % %
-%
-% -- EQUATIONS, MATH SYMBOLS, OTHER SPECIAL FORMATTING
-%
-% - For bold symbols, use the \boldsymbol command and not \mathbf. 
-% - For inline equations, please be sure to include all portions of an equation in the math environment.  For example, x$^2$ is incorrect; this should be formatted as $x^2$ (or $\mathrm{x}^2$ if the romanized font is desired).
-% - Do not include text that is not math in the math environment. For example, CO2 should be written as CO\textsubscript{2} instead of CO$_2$.
-% - Avoid capturing simple text as equations, for example $<$.
-% - For inline equations, please do not include punctuation (commas, etc) within the math environment unless this is part of the equation.
-% - When adding superscript or subscripts outside of brackets/braces, please group using {}.  For example, change "[U(D,E,\gamma)]^2" to "{[U(D,E,\gamma)]}^2". 
-% - Do not use \cal for caligraphic font.  Instead, use \mathcal{}.
-% - Avoid splitting for fragmenting a single equation into multiple objects/environments, for example $f(x)$ = $g(x)$ + $h(x)$.
-% - Use math environment for all equations, do not mimic using text.
-% - Avoid using single letters in math mode where possible.
-% - Always use matching parentheses and delimiters, avoid mixing math and text brackets.
-% - Insert spaces around inline equations to ensure proper display after conversion.
-% - Do not use forced numbers for display equation labeling or suppress numbering with \nonumber. 
-%
-% % % % % % % % % % % % % % % % % % % % % % % % 
-%
-% Please contact customercare@plos.org with any questions.
-%
-% % % % % % % % % % % % % % % % % % % % % % % %
-
 \documentclass[10pt,letterpaper]{article}
 \usepackage[top=0.85in,left=2.75in,footskip=0.75in]{geometry}
 
@@ -122,10 +47,6 @@
 \noalign{\global\arrayrulewidth\savedwidth}}
 
 
-% Remove comment for double spacing
-%\usepackage{setspace} 
-%\doublespacing
-
 % Text layout
 \raggedright
 \setlength{\parindent}{0.5cm}
@@ -137,24 +58,16 @@
 \usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,justification=raggedright,singlelinecheck=off]{caption}
 \renewcommand{\figurename}{Fig}
 
-% Please use the included `plos2025.bst` as your BibTeX style
-\bibliographystyle{plos2025}
-
 % Remove brackets from numbering in List of References
 \makeatletter
 \renewcommand{\@biblabel}[1]{\quad#1.}
 \makeatother
 
-
-
 % Header and Footer with logo
 \usepackage{lastpage,fancyhdr,graphicx}
 \usepackage{epstopdf}
-%\pagestyle{myheadings}
 \pagestyle{fancy}
 \fancyhf{}
-%\setlength{\headheight}{27.023pt}
-%\lhead{\includegraphics[width=2.0in]{PLOS-submission.eps}}
 \rfoot{\thepage/\pageref{LastPage}}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrule}{\hrule height 2pt \vspace{2mm}}
@@ -164,222 +77,163 @@
 
 %% Include all user-defined macros below
 
-\newcommand{\lorem}{\textbf{LOREM}}
-\newcommand{\ipsum}{\textbf{IPSUM}}
-
 %% END MACROS SECTION
-
 
 \begin{document}
 \vspace*{0.2in}
 
-% Title must be 250 characters or less.
 \begin{flushleft}
 {\Large
-\textbf{Title of submission to PLOS journals} % Please use "sentence case" for title and headings (capitalize only the first word in a title (or heading), the first word in a subtitle (or subheading), and any proper nouns).
+\textbf{Vero Cell Culture CPE Detection Benchmarking}
 }
 \newline
-% Insert author names, affiliations and corresponding author email (do not include titles, positions, or degrees).
 \\
-Name1 Surname\textsuperscript{1,2\Yinyang},
-Name2 Surname\textsuperscript{2\Yinyang},
-Name3 Surname\textsuperscript{2,3\textcurrency},
-Name4 Surname\textsuperscript{2},
-Name5 Surname\textsuperscript{2\ddag},
-Name6 Surname\textsuperscript{2\ddag},
-Name7 Surname\textsuperscript{1,2,3*},
-with the Lorem Ipsum Consortium\textsuperscript{\textpilcrow}
+Albert Mathews\textsuperscript{1*}
 \\
 \bigskip
-\textbf{1} Affiliation Dept/Program/Center, Institution Name, City, State, Country
-\\
-\textbf{2} Affiliation Dept/Program/Center, Institution Name, City, State, Country
-\\
-\textbf{3} Affiliation Dept/Program/Center, Institution Name, City, State, Country
+\textbf{1} Independent Researcher
 \\
 \bigskip
-
-% Insert additional author notes using the symbols described below. Insert symbol callouts after author names as necessary.
-% 
-% Remove or comment out the symbols in the byline and the author notes below if they aren't used.
-%
-% Primary Equal Contribution Note
-\Yinyang These authors contributed equally to this work.
-
-% Additional Equal Contribution Note
-% Also use this double-dagger symbol for special authorship notes, such as senior authorship.
-\ddag These authors also contributed equally to this work.
-
-% Current address notes
-\textcurrency Current Address: Dept/Program/Center, Institution Name, City, State, Country % change symbol to "\textcurrency a" if more than one current address note
-% \textcurrency b Insert second current address 
-% \textcurrency c Insert third current address
-
-% Deceased author note
-\dag Deceased
-
-% Group/Consortium Author Note
-\textpilcrow Membership list can be found in the Acknowledgments section.
-
-% Use the asterisk to denote corresponding authorship and provide email address in note below.
-* correspondingauthor@institute.edu
-
+* albert.mathews.research@gmail.com
 \end{flushleft}
-% Please keep the abstract below 300 words
 
-% For PLOS Medicine research article authors, please structure your abstract
-% with "Background", "Method and Findings" and "Conclusion" sections per
-% journal requirements.
-
-% For PLOS Neglected Tropical Diseases research article authors, please
-% structure your abstract with "Background", "Methodology", "Findings", and
-% "Conclusion" sections per journal requirements.
-%
 \section*{Abstract}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
+This study evaluates the performance of three domain-specific computer-vision tools (AIRVIC, DVICE, and Cellpose) and four general-purpose multimodal large language models (ChatGPT, Claude, Gemini, and Grok) on the task of detecting and classifying cytopathic effect (CPE) in Vero-cell culture microscope images. Ground-truth CPE presence and morphological types were derived solely from narrative descriptions supplied by the contract research organization (CRO) that performed the cell-culture experiments and were cross-referenced against the standardized CPE descriptors listed in Table 7 of the CLSI M41 Guideline. Quantitative analysis was performed exclusively on the 22 images that received CRO descriptions.
 
-
-% Please keep the Author Summary between 150 and 200 words. Use first person.
-% PLOS ONE, PLOS Biology, PLOS Global Public Health, PLOS Mental Health, and PLOS Water authors please skip this step. Author Summary is not valid for submissions to these journals.
-
-% For PLOS Medicine authors, please structure your author summary with answers to the following questions:
-% Why was this study done?
-% What did the researchers do and find?
-% What do these findings mean?
-%
-\section*{Author summary}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
-
+None of the evaluated tools demonstrated adequate performance for reliable CPE detection. Domain-specific tools showed extremely high false-positive rates, while the multimodal models exhibited either strong conservative bias or only modest balanced accuracy. These findings indicate that current AI approaches, whether domain-specific or general-purpose, are not suitable as objective tools for automated CPE analysis of the Vero cell culture image dataset used in this study.
 
 \clearpage
 \newgeometry{top=0.85in,left=1in,right=1in,footskip=0.75in}
 \linenumbers
 
-% Use "Eq" instead of "Equation" for equation citations.
-\section*{Introduction}
-Lorem ipsum dolor sit~\cite{bib1} amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam Eq~(\ref{eq:schemeP}) sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id.~\cite{bib2} Nunc convallis sodales ante, ut ullamcorper est egestas vitae~\cite{bib3}. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus~\cite{bib4}.
+\section{Introduction}
+This study benchmarks the performance of three domain-specific computer-vision tools (AIRVIC, DVICE, and Cellpose) and four general-purpose multimodal large language models (ChatGPT, Claude, Gemini, and Grok) on the task of detecting and classifying cytopathic effect (CPE) in Vero-cell culture microscope images. The objective is to evaluate whether any of these AI approaches can serve as objective, reproducible analysis tools for CPE detection in previously unseen images. Ground-truth CPE status and morphological types were derived exclusively from the image descriptions supplied by the contract research organization (CRO) that performed the cell-culture experiments. These descriptions were cross-referenced against the standardized CPE descriptors listed in Table 7 of the CLSI M41 Guideline.
 
-\begin{eqnarray}
-\label{eq:schemeP}
-	\mathrm{P_Y} = \underbrace{H(Y_n) - H(Y_n|\mathbf{V}^{Y}_{n})}_{S_Y} + \underbrace{H(Y_n|\mathbf{V}^{Y}_{n})- H(Y_n|\mathbf{V}^{X,Y}_{n})}_{T_{X\rightarrow Y}},
-\end{eqnarray}
+\section{Methods}
+All code and scripts are available in the project GitHub repository \cite{github-verocell}.
 
-\section*{Materials and methods}
-\subsection*{Etiam eget sapien nibh}
+\subsection{Image dataset and ground truth}
+The study utilized the publicly available Vero Cell Culture Image Dataset \cite{mathews2025}. This dataset consists of images acquired in two distinct stages: a preparation (PREP) stage in which cells were thawed and passaged until normal growth rates were achieved, followed by an experimental (EXP) stage. The present study focuses exclusively on the 101 images from the EXP stage. These images were obtained from two experimental paths (Path 1 maintained at 10\% FBS and Path 2 reduced to 2\% FBS) initiated at passage 4. The CRO was instructed to provide descriptive captions for any image that would benefit from accompanying text; no specific directive was given to search for, classify, or quantify cytopathic effects (CPE). Consequently, only 22 of the 101 EXP-stage images contain CRO descriptions (hereafter referred to as the ``description set''), while the remaining 83 do not. Accuracy analyses were performed exclusively on the description set.
 
-% For figure citations, please use "Fig" instead of "Figure".
-Nulla mi mi, Fig~\ref{fig1} venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, \nameref{S1_Video} vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero.
+\subsection{Standard CPE descriptors}
+Characteristic CPE descriptors were extracted from Table 7 of the CLSI M41 Guideline \cite{clsi} through an iterative review process. First, the full table was examined to identify a set of ten descriptors: rounded, ballooned/enlarged, syncytia, vacuolation, detachment, granularity, refractile, cytoplasmic strands, nonspecific degeneration, and ``no CPE''. An incidence table was then constructed by identifying every instance of these terms (or close semantic correlates) in the ``Appearance'' column (see Table \ref{tab:clsi-m41-cpe}).
 
-% Place figure captions after the first paragraph in which they are cited.
-\begin{figure}[!h]
-\caption{\textbf{Bold the figure title.}
-Figure caption text here, please use this space for the figure panel descriptions instead of using subfigure commands. A: Lorem ipsum dolor sit amet. B: Consectetur adipiscing elit.}
-\label{fig1}
-\end{figure}
+\input{clsi-table7-descriptors.tex}
 
-% Results and Discussion can be combined.
-\section*{Results}
-Nulla mi mi, venenatis sed ipsum varius, Table~\ref{table1} volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero.
+Next, the same mapping procedure was applied to the CRO image descriptions to generate a second incidence table. Only five of the original ten CLSI descriptors appeared in the CRO descriptions. A sixth term, ``Dying Cells'', emerged directly from the CRO text and was retained as a distinct category (Dy) rather than being forced into the CLSI ``nonspecific degeneration'' bin. The resulting \textit{evaluation descriptor set} used for ground truth and all subsequent analyses therefore consisted of: Dying cells (Dy), Rounded (Ro), Vacuolation (V), Detached (D), Granularity (G), and Refractile (Re). The CRO incidence table \ref{tab:cro-cpe-detections} below shows the result of applying this evaluation descriptor set to the image descriptions.
 
-% Place tables after the first paragraph in which they are cited.
-\begin{table}[!ht] 
-\centering
-\caption{\textbf{Table caption Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam.}}
-\begin{tabular}{|l+l|l|l|l|l|l|l|}
-\hline
-\multicolumn{4}{|l|}{\textbf{Heading1}} & \multicolumn{4}{|l|}{\textbf{Heading2}}\\ \thickhline
-$cell1 row1$ & cell2 row 1 & cell3 row 1 & cell4 row 1 & cell5 row 1 & cell6 row 1 & cell7 row 1 & cell8 row 1\\ \hline
-$cell1 row2$ & cell2 row 2 & cell3 row 2 & cell4 row 2 & cell5 row 2 & cell6 row 2 & cell7 row 2 & cell8 row 2\\ \hline
-$cell1 row3$ & cell2 row 3 & cell3 row 3 & cell4 row 3 & cell5 row 3 & cell6 row 3 & cell7 row 3 & cell8 row 3\\ \hline
-\end{tabular}
-\begin{flushleft} Table notes Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed.
-\end{flushleft}
-\label{table1}
-\end{table}
+\input{cro-cpe-detections.tex}
 
-\vspace*{-10pt}
-%PLOS does not support heading levels beyond the 3rd (no 4th level headings).
-\subsection*{\lorem\ and \ipsum\ nunc blandit a tortor}
-\subsubsection*{3rd level heading} 
-Maecenas convallis mauris sit amet sem ultrices gravida~\cite{bib5}. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. Quisque augue sem, tincidunt sit amet feugiat eget, ullamcorper sed velit~\cite{bib6}. Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo justo ac dui pretium imperdiet. Sed suscipit iaculis mi at feugiat. 
+\subsection{AIRVIC analysis}
+AIRVIC \cite{airvic} is a ResNet-based classifier trained specifically for CPE detection and virus identification in Vero and MDBK cell-culture images. All 101 images were uploaded to the web interface \cite{airvicweb} with cell line set to ``Vero'' and virus set to ``Unknown''. Because the interface does not support batch export, results were extracted manually and stored in CSV format. AIRVIC outputs a binary CPE decision (present/absent) and a predicted virus identity; the virus predictions are not used in this study, which focuses exclusively on CPE detection.
 
-\begin{enumerate}
-	\item react
-	\item diffuse free particles
-	\item increment time by dt and go to 1
-\end{enumerate}
+\subsection{DVICE analysis}
+DVICE \cite{dvice} is a versatile automated pipeline for label-free virus infectivity quantification using deep learning on light-microscopy images. Access to three pre-trained models was provided by the authors. All 101 EXP-stage images were processed by each of the three models. The final DVICE CPE probability score was computed as the average of the three model outputs. A threshold sweep was performed on the description set to evaluate the sensitivity of accuracy to the decision threshold. Binary CPE detection was determined using the conventional threshold of 0.5 applied to the averaged probability. The exact code, model outputs, and full threshold sweep are available in the project GitHub repository \cite{github-verocell}.
 
+\subsection{Cellpose analysis}
+Cellpose \cite{cellpose} was used as the primary segmentation engine. A custom Python script, developed iteratively in collaboration with Grok \cite{llms}, processed all 101 images to generate instance masks---binary images in which each individual cell is delineated as a separate labeled region. Post-processing metrics were then computed on the masks to derive a proxy for CPE presence. Circularity \((4\pi \cdot \text{area} / \text{perimeter}^2)\) was selected because it is a standard morphometric parameter that effectively quantifies the transition from spread polygonal to rounded cell shape, a morphological change widely recognized as a hallmark of cytopathic effect (CPE) in Vero-cell cultures \cite{pmc11180103}. Eccentricity was retained as a complementary descriptor because prior label-free CPE analyses in Vero cultures have identified cell-rounding morphology as a robust, objective visual proxy for cytopathic changes, which can be quantified using shape descriptors such as aspect ratio \cite{revvity}. These two metrics were therefore chosen as the most suitable label-free proxies supported by the literature.
 
-\subsection*{Sed ac quam id nisi malesuada congue}
+\input{cellpose-cpe-proxy-metrics.tex}
 
-Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit~\cite{bib7}. Morbi at justo vitae nulla elementum commodo eu id massa~\cite{bib8}. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis~\cite{bib9}. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero.
+The circularity and eccentricity metrics were post-processed to derive a continuous CPE probability score. Binary CPE detection was obtained using the conventional threshold of 0.5 (values $>$ 0.5 classified as positive). A threshold sweep was performed across the description set to evaluate sensitivity to the decision threshold. The exact probability formula, post-processing code, and full threshold sweep are available in the project GitHub repository \cite{github-verocell}.
 
-\begin{itemize}
-	\item First bulleted item.
-	\item Second bulleted item.
-	\item Third bulleted item.
-\end{itemize}
+\subsection{Multimodal AI analysis}
+Four multimodal large language models \cite{llms} were evaluated under identical conditions. For each model a dedicated Python script was written that (1) loads the PNG images, (2) supplies a standardized prompt requesting detection of the six evaluation descriptor set morphologies, and (3) requests formatted output. Each model was offered two example images with known ground truth for optional in-context learning. Prompt and processing-script engineering was performed collaboratively with the respective model. Model outputs were post-processed by a script to produce per-image, per-morphology-type binary decisions that were compared against CRO ground truth.
 
-\section*{Discussion}
-Nulla mi mi, venenatis sed ipsum varius, Table~\ref{table1} volutpat euismod diam~\cite{bib10}. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa~\cite{bib11}. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero~\cite{bib12}.
+\subsection{Other tools considered and excluded}
+Standard image-processing tools commonly used in cell-culture analysis were evaluated but excluded for the following reasons. Fiji/ImageJ \cite{fiji} requires manual filter tuning or macro development that would necessarily incorporate knowledge of the CRO descriptions, introducing circular reasoning and violating the requirement for an objective, a-priori tool. CellProfiler \cite{cellprofiler} was tested with the ``ExampleHuman'' pipeline; however, the pipeline proved too rigid for the present image set, and any custom pipeline development would again risk circular reasoning. Snapcyte \cite{snapcyte} could not be accessed after repeated failed account-creation attempts and lack of response from the vendor. Revvity Signals Image Artist \cite{revvityIA} was discussed with the vendor but commercial and technical setup barriers prevented its inclusion. These exclusions are reported for transparency; the tools ultimately benchmarked represent the most readily available and least biased options that could be applied without post-hoc tuning to the ground truth.
 
-\section*{Conclusion}
+\subsection{Statistical evaluation}
+Performance was quantified using false-positive rate, false-negative rate, true-positive rate, true-negative rate, and overall accuracy. For the multimodal models these metrics were first computed separately for each of the six CPE morphological types and then macro-averaged. For AIRVIC, DVICE, and Cellpose the metrics were calculated directly on the binary CPE detection task. Baseline ``always-positive'' and ``always-negative'' classifiers were also evaluated for comparison. All calculations were performed on the 22-image description set only.
 
-CO\textsubscript{2} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. Quisque augue sem, tincidunt sit amet feugiat eget, ullamcorper sed velit~\cite{bib13}. 
+\section{Results}
 
-Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo justo ac dui pretium imperdiet. Sed suscipit iaculis mi at feugiat. Ut neque ipsum, luctus id lacus ut, laoreet scelerisque urna. Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed. Nam condimentum sem eget mollis euismod. Nullam dui urna, gravida venenatis dui et, tincidunt sodales ex. Nunc est dui, sodales sed mauris nec, auctor sagittis leo. Aliquam tincidunt, ex in facilisis elementum, libero lectus luctus est, non vulputate nisl augue at dolor. For more information, see \nameref{S1_Appendix}.
+Performance results for each tool are presented below.
 
-\section*{Supporting information}
+\subsection{AIRVIC}
+The CPE detection and virus prediction results obtained with AIRVIC are shown in Table~\ref{tab:airvic-results}.
 
-% Include only the SI item label in the paragraph heading. Use the \nameref{label} command to cite SI items in the text.
-\paragraph*{S1 Fig.}
-\label{S1_Fig}
-\textbf{Bold the title sentence.} Add descriptive text after the title of the item (optional).
+\input{airvic-results.tex}
 
-\paragraph*{S2 Fig.}
-\label{S2_Fig}
-\textbf{Lorem ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+\subsection{DVICE}
+The per-image CPE detection results and summary performance metrics for DVICE are shown in the following two tables.
 
-\paragraph*{S1 File.}
-\label{S1_File}
-\textbf{Lorem ipsum.}  Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+\input{dvice-results.tex}
+\input{dvice-performance.tex}
 
-\paragraph*{S1 Video.}
-\label{S1_Video}
-\textbf{Lorem ipsum.}  Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+\subsection{Cellpose}
+The per-image CPE detection results and summary performance metrics for Cellpose are shown in the following two tables.
 
-\paragraph*{S1 Appendix.}
-\label{S1_Appendix}
-\textbf{Lorem ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+\input{cellpose-results.tex}
+\input{cellpose-performance.tex}
 
-\paragraph*{S1 Table.}
-\label{S1_Table}
-\textbf{Lorem ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+\subsection{Multimodal AI models}
+The confusion matrix showing per-morphology CPE detection results for the four multimodal large language models is presented below.
 
-\section*{Acknowledgments}
+\input{cpe_confusion_table.tex}
 
-This section is intended only for general acknowledgements and thanks. Any
-information related to funding, data availability, author contributions, etc.
-should be entered directly into their dedicated fields in the PLOS Editorial
-Manager submission system, which will then be incorporated into the appropriate
-section in your article during the production process.
+\subsection{Aggregate performance summary}
+Overall performance metrics of AIRVIC, DVICE, CellPose, and the four multimodal models for cytopathic effect (CPE) detection are summarized in Table~\ref{tab:cpe-performance-metrics}. AIRVIC, DVICE, and CellPose are compared against simple always-true and always-false binary classifiers. The multimodal models are compared against always-true and always-false CPE-type classifiers. The accuracy of the always-false CPE-type classifier is a property of the dataset; any useful model must substantially outperform this baseline.
+
+\input{aggregate-results.tex}
+
+\section{Discussion}
+
+\subsection{Domain-specific tools}
+AIRVIC detected CPE in 21 of the 22 images in the description set and in 100 of the 101 total images, resulting in a high false-positive rate of 0.909 and an overall accuracy of only 0.545. The test images are visually similar to the Vero-cell images used in AIRVIC’s original training set, as demonstrated by Table \ref{tab:airvic-image-comparison}. Despite this similarity, the model failed to generalize effectively to the present dataset. Although direct access to the AIRVIC training data was not available, it is possible that the generally low confluency of the current dataset was not well represented in the original training set.
+
+\input{airvic-image-comparison.tex}
+
+The three pre-trained DVICE models performed similarly poorly, yielding a high false-positive rate of 0.818 and an overall accuracy of only 0.545. When the average probability across the three models was used, DVICE achieved a maximum accuracy of 0.5909 (AUROC = 0.4132) even after threshold optimization. The models produced many false positives on CPE-negative images while missing some true positives. It should be noted that the DVICE training set consisted of transmitted-light microscope images, whereas the current dataset consists of phase-contrast images (see Table \ref{tab:dvice-image-comparison}). This difference in imaging modality alone may account for the poor performance of the DVICE models in this study. The low confluency of the current dataset is unlikely to explain the poor performance, since the DVICE authors explicitly state that their process enabled ``the network to learn that low cell confluency is not a defining hallmark of viral infection state'' \cite{dvice}.
+
+\input{dvice-image-comparison.tex}
+
+Cellpose similarly classified nearly all images as CPE-positive (accuracy of 0.500 at the default threshold of 0.5, with a maximum accuracy of 0.5909). Consequently, the morphological-proxy approach did not provide useful discrimination in this dataset.
+
+\subsection{Multimodal AI tools}
+The four general-purpose multimodal models exhibited macro-averaged accuracies between 0.542 and 0.709. Gemini achieved the highest overall accuracy (0.709) but at the cost of a very high false-negative rate, effectively behaving like a conservative ``no-CPE'' classifier; this performance was still lower than that of the simple always-negative baseline model. ChatGPT, Claude, and Grok showed poor performance (accuracies 0.549--0.559) with substantial rates of both false positives and false negatives. None of the multimodal models reached a level of reliability that would support their use as objective CPE detection tools for this dataset.
+
+\subsection{Limitations}
+The ground-truth labels are based on narrative descriptions provided by the CRO that were not generated under a CPE-specific protocol. The description set is small (\(n = 22\)), and the remaining 83 images could not be evaluated quantitatively. Domain-specific tools were tested exactly as publicly available, with no retraining or fine-tuning performed. Prompt engineering for the multimodal models, although extensive, remains inherently model-dependent.
+
+Furthermore, the images from the experimental stage exhibited relatively low cell confluency compared with typical culture conditions under which CPE is normally observed. It is possible that the training sets of the domain-specific models did not include images with similarly low confluency.
+
+\subsection{Implications}
+None of the evaluated AI tools demonstrated sufficient accuracy or robustness to replace or act as an objective second opinion for human expert interpretation of CPE in Vero-cell cultures under the conditions tested. As a consequence, an objective assessment of CPE presence could not be obtained for the remaining 83 images of the EXP stage. Future work may benefit from larger, prospectively labeled datasets and from domain-specific fine-tuning of multimodal models.
 
 \nolinenumbers
 
-% Please compile your BiBTeX database using the "plos2025.bst" BibTeX style.
-% This file is part of the current package.
-% A sample BibTeX file is also included as "plos_bibtex_sample.bib".
-%
-% or
-%
-% Type in your references following Vancouver style and reference formatting instructions
-% available at https://journals.plos.org/plosone/s/submission-guidelines#loc-references
-% \begin{thebibliography}{}
-% \bibitem{}
-% Text
-% \end{thebibliography}
+\begin{thebibliography}{10}
 
-\bibliography{plos_bibtex_sample}
+\bibitem{mathews2025} Mathews, A. (2025). Vero Cell Culture Image Dataset [Data set]. Zenodo. https://doi.org/10.5281/zenodo.17928456
+
+\bibitem{clsi} CLSI M41. Viral Culture. Clinical and Laboratory Standards Institute. https://clsi.org/shop/standards/m41/
+
+\bibitem{airvic} Akkutay-Yoldar, Z., Yoldar, M.T., Akkaş, Y.B. et al. (2025). A web-based artificial intelligence system for label-free virus classification and detection of cytopathic effects. \textit{Sci Rep} 15, 5904. https://doi.org/10.1038/s41598-025-89639-0
+
+\bibitem{airvicweb} AIRVIC web interface. https://airvic.turkai.com/ (accessed 16 April 2026).
+
+\bibitem{dvice} Petkidis A, Andriasyan V, Murer L, Volle R, Greber UF. A versatile automated pipeline for quantifying virus infectivity by label-free light microscopy and artificial intelligence. Nat Commun. 2024 Jun 15;15(1):5112. doi: 10.1038/s41467-024-49444-1. PMID: 38879641; PMCID: PMC11180103.
+
+\bibitem{cellpose} Stringer, C. et al. (2021). Cellpose: a generalist algorithm for cellular segmentation. \textit{Nature Methods}.
+
+\bibitem{pmc11180103} PMC11180103. Vero-cell CPE quantification reference. https://pmc.ncbi.nlm.nih.gov/articles/PMC11180103/
+
+\bibitem{revvity} Revvity. Cytopathic effects analysis notes. https://www.revvity.com/ask/cytopathic-effects
+
+\bibitem{llms} ChatGPT (OpenAI), Claude (Anthropic), Gemini (Google), Grok (xAI) -- model versions used in 2025--2026.
+
+\bibitem{fiji} Schindelin, J., Arganda-Carreras, I., Frise, E. et al. (2012) Fiji: an open-source platform for biological-image analysis. \textit{Nature Methods} \textbf{9}, 676–682.
+
+\bibitem{cellprofiler} Carpenter, A.E., Jones, T.R., Lamprecht, M.R. et al. (2006) CellProfiler: image analysis software for identifying and quantifying cell phenotypes. \textit{Genome Biology} \textbf{7}, R100.
+
+\bibitem{snapcyte} SnapCyte. AI Image Analysis \& Custom AI Models. https://www.snapcyte.com/ (accessed 16 April 2026).
+
+\bibitem{revvityIA} Revvity. Signals Image Artist. https://www.revvity.com/ca-en/product/signals-image-artist-sw-5-user-subscript-inf02358 (accessed 16 April 2026).
+
+\bibitem{github-verocell}
+Mathews, A. (2026). VeroCellCultureImageProcessing: Code and scripts for the Vero cell culture CPE detection benchmarking study. GitHub repository. https://github.com/albert-mathews/VeroCellCultureImageProcessing (accessed 22 April 2026).
+
+\end{thebibliography}
 
 \end{document}
-
