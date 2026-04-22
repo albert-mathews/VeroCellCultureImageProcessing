@@ -7,10 +7,7 @@ The original source images and image descriptions are from:
 https://zenodo.org/records/16619228
 
 ## TODO
-address the @Albert comments in main.tex
-section 4.2 domain specicifc tools has duplicate content
 results section is poorly formatted, tables appear where ever, not in their section. 
-3.5 Aggregate performance summary section not updated with DVICE results. re-run aggregate-results.py
 review and correct the references.
 
 ## To reproduce the results
