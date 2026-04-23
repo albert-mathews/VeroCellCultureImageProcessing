@@ -1,0 +1,31 @@
+\section{Results}
+\label{sec:results}
+Performance results for each tool are presented below.
+\clearpage
+\subsection{AIRVIC}
+The CPE detection and virus prediction results obtained with AIRVIC are shown in Table~\ref{tab:airvic-results}.
+\input{airvic-results.tex}
+\clearpage
+
+\subsection{DVICE}
+The per-image CPE detection results and summary performance metrics for DVICE are shown in the following two tables.
+\input{dvice-results.tex}
+\input{dvice-performance.tex}
+\clearpage
+
+\subsection{Cellpose}
+The per-image CPE detection results and summary performance metrics for Cellpose are shown in the following two tables.
+
+\input{cellpose-results.tex}
+\input{cellpose-performance.tex}
+\clearpage
+
+\subsection{Multimodal AI models}
+The confusion matrix showing per-morphology CPE detection results for the four multimodal large language models is presented below.
+
+\input{llm-cpe-detections.tex}
+
+\subsection{Aggregate performance summary}
+Overall performance metrics of AIRVIC, DVICE, CellPose, and the four multimodal models for cytopathic effect (CPE) detection are summarized in Table \ref{tab:aggregate-results}. AIRVIC, DVICE, and CellPose are compared against simple always-true and always-false binary classifiers. The multimodal models are compared against always-true and always-false CPE-type classifiers. The accuracy of the always-false CPE-type classifier is a property of the dataset; any useful model must substantially outperform this baseline.
+
+\input{aggregate-results.tex}
