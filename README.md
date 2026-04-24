@@ -7,8 +7,11 @@ The original source images and image descriptions are from:
 https://zenodo.org/records/16619228
 
 ## TODO
+add refs to sample images in the body
+continue proof read discussion
 verify revity eccentricity reference.
-add example images as supplementary material
+verify DVICE microscope images technique.
+remove images from PDF
 
 ## To reproduce the results
 1. download the dataset from zenodo. extract all and copy the 'EXP stage' folder to the root of this repo clone.
