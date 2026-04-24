@@ -104,6 +104,9 @@
 % array package and thick rules for tables
 \usepackage{array}
 
+% user packages
+\usepackage{booktabs}
+
 % create "+" rule type for thick vertical lines
 \newcolumntype{+}{!{\vrule width 2pt}}
 
@@ -246,14 +249,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta er
 \newgeometry{top=0.85in,left=1in,right=1in,footskip=0.75in}
 \linenumbers
 
-% Use "Eq" instead of "Equation" for equation citations.
-\section*{Introduction}
-Lorem ipsum dolor sit~\cite{bib1} amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam Eq~(\ref{eq:schemeP}) sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id.~\cite{bib2} Nunc convallis sodales ante, ut ullamcorper est egestas vitae~\cite{bib3}. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus~\cite{bib4}.
-
-\begin{eqnarray}
-\label{eq:schemeP}
-	\mathrm{P_Y} = \underbrace{H(Y_n) - H(Y_n|\mathbf{V}^{Y}_{n})}_{S_Y} + \underbrace{H(Y_n|\mathbf{V}^{Y}_{n})- H(Y_n|\mathbf{V}^{X,Y}_{n})}_{T_{X\rightarrow Y}},
-\end{eqnarray}
+\input{intro.tex}
+\input{methods.tex}
 
 \section*{Materials and methods}
 \subsection*{Etiam eget sapien nibh}
@@ -370,7 +367,7 @@ section in your article during the production process.
 % Text
 % \end{thebibliography}
 
-\bibliography{plos_bibtex_sample}
+\bibliography{references}
 
 \end{document}
 
