@@ -1,11 +1,11 @@
-\section{Methods}
+\section*{Methods}
 \label{sec:methods}
 All code and scripts are available in the project GitHub repository \cite{github-verocell}.
 
-\subsection{Image dataset and ground truth}
+\subsection*{Image dataset and ground truth}
 The study utilized the publicly available Vero Cell Culture Image Dataset \cite{mathews2025}. This dataset consists of images acquired in two distinct stages: a preparation (PREP) stage in which cells were thawed and passaged until normal growth rates were achieved, followed by an experimental (EXP) stage. The present study focuses exclusively on the 101 images from the EXP stage. These images were obtained from two experimental paths (Path 1 maintained at 10\% FBS and Path 2 reduced to 2\% FBS) initiated at passage 4. The CRO was instructed to provide descriptive captions for any image that would benefit from accompanying text; no specific directive was given to search for, classify, or quantify cytopathic effects (CPE). Consequently, only 22 of the 101 EXP-stage images contain CRO descriptions (hereafter referred to as the ``description set''), while the remaining 83 do not. Accuracy analyses were performed exclusively on the description set.
 
-\subsection{Standard CPE descriptors}
+\subsection*{Standard CPE descriptors}
 Characteristic CPE descriptors were extracted from Table 7 of the CLSI M41-A Guideline \cite{clsi} through an iterative review process. First, the full table was examined to identify a set of ten descriptors: rounded, ballooned/enlarged, syncytia, vacuolation, detachment, granularity, refractile, cytoplasmic strands, nonspecific degeneration, and ``no CPE''. An incidence table was then constructed by identifying every instance of these terms (or close semantic correlates) in the ``Appearance'' column (see Table \ref{tab:clsi-m41-cpe}).
 
 \input{clsi-table7-descriptors.tex}
@@ -13,24 +13,24 @@ Next, the same mapping procedure was applied to the CRO image descriptions to ge
 
 \input{cro-cpe-detections.tex}
 
-\subsection{AIRVIC analysis}
+\subsection*{AIRVIC analysis}
 AIRVIC \cite{airvic} is a ResNet-based classifier trained specifically for CPE detection and virus identification in Vero and MDBK cell-culture images. All 101 images were uploaded to the web interface \cite{airvicweb} with \textit{cell line type} set to ``Vero'' and \textit{virus type} set to ``Unknown''. Because the interface does not support batch export, results were extracted manually and stored in CSV format. AIRVIC outputs a binary CPE decision (present/absent) and a predicted virus identity; the virus predictions are not used in this study, which focuses exclusively on CPE detection.
 
-\subsection{DVICE analysis}
+\subsection*{DVICE analysis}
 DVICE \cite{dvice} is a versatile automated pipeline for label-free virus infectivity quantification using deep learning on light-microscopy images. Access to three pre-trained models was provided by the authors. All 101 EXP-stage images were processed by each of the three models. The final DVICE CPE probability score was computed as the average of the three model outputs. A threshold sweep was performed on the description set to evaluate the sensitivity of accuracy to the decision threshold. Binary CPE detection was determined using the conventional threshold of 0.5 applied to the averaged probability. The exact code, model outputs, and full threshold sweep are available in the project GitHub repository \cite{github-verocell}.
 
-\subsection{Cellpose analysis}
+\subsection*{Cellpose analysis}
 Cellpose \cite{cellpose} was used as the primary segmentation engine. A custom Python script, developed iteratively in collaboration with Grok \cite{grok}, processed all 101 images to generate instance masks---binary images in which each individual cell is delineated as a separate labeled region. Post-processing metrics were then computed on the masks to derive a proxy for CPE presence. Circularity \((4\pi \cdot \text{area} / \text{perimeter}^2)\) was selected because it is a standard morphometric parameter that effectively quantifies the transition from spread polygonal to rounded cell shape, a morphological change widely recognized as a hallmark of cytopathic effect (CPE) in cell cultures \cite{clsi} \cite{fukaya}. Eccentricity was retained as a complementary descriptor because prior label-free CPE analyses in Vero cultures have identified cell-rounding morphology as a robust, objective visual proxy for cytopathic changes, which can be quantified using shape descriptors such as aspect ratio \cite{revvity}. These two metrics were therefore chosen as the most suitable label-free proxies supported by the literature.
 
 \input{cellpose-cpe-proxy-metrics.tex}
 
 The circularity and eccentricity metrics were post-processed to derive a continuous CPE probability score. Binary CPE detection was obtained using the conventional threshold of 0.5 (values $>$ 0.5 classified as positive). A threshold sweep was performed across the description set to evaluate sensitivity to the decision threshold. The exact probability formula, post-processing code, and full threshold sweep are available in the project GitHub repository \cite{github-verocell}.
 
-\subsection{Multimodal AI analysis}
+\subsection*{Multimodal AI analysis}
 Four multimodal large language models \cite{chatgpt} \cite{claude} \cite{gemini} \cite{grok} were evaluated under identical conditions. For each model a dedicated Python script was written that (1) loads the PNG images, (2) supplies a standardized prompt requesting detection of the six \textit{evaluation descriptor set} morphologies, and (3) requests formatted output. Each model was offered two example images with known ground truth for optional in-context learning. Prompt and processing-script engineering was performed collaboratively with the respective model (i.e. models' are co-authors of the script and prompt). Model outputs were post-processed by a script to produce per-image, per-morphology-type binary decisions that were compared against CRO ground truth.
 
-\subsection{Other tools considered and excluded}
+\subsection*{Other tools considered and excluded}
 Standard image-processing tools commonly used in cell-culture analysis were evaluated but excluded for the following reasons. Fiji/ImageJ \cite{fiji} requires manual filter tuning or macro development that would necessarily incorporate knowledge of the CRO descriptions, introducing circular reasoning and violating the requirement for an objective, a-priori tool. CellProfiler \cite{cellprofiler} was tested with the ``ExampleHuman'' pipeline; however, the pipeline proved too rigid for the present image set, and any custom pipeline development would again risk circular reasoning. Snapcyte \cite{snapcyte} could not be accessed after repeated failed account-creation attempts and lack of response from the vendor. Revvity Signals Image Artist \cite{revvityIA} was discussed with the vendor but commercial and technical setup barriers prevented its inclusion. These exclusions are reported for transparency; the tools ultimately benchmarked represent the most readily available and least biased options that could be applied without post-hoc tuning to the ground truth.
 
-\subsection{Statistical evaluation}
+\subsection*{Statistical evaluation}
 Performance was quantified using false-positive rate, false-negative rate, true-positive rate, true-negative rate, and overall accuracy. For the multimodal models these metrics were first computed separately for each of the six CPE morphological types and then macro-averaged. For AIRVIC, DVICE, and Cellpose the metrics were calculated directly on the binary CPE detection task. Baseline ``always-positive'' and ``always-negative'' classifiers were also evaluated for comparison. All calculations were performed on the 22-image \textit{description set} only.
