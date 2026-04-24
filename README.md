@@ -8,7 +8,7 @@ https://zenodo.org/records/16619228
 
 ## TODO
 verify revity eccentricity reference.
-PLOS version landscape tables
+add example images as supplementary material
 
 ## To reproduce the results
 1. download the dataset from zenodo. extract all and copy the 'EXP stage' folder to the root of this repo clone.
