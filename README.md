@@ -7,10 +7,9 @@ The original source images and image descriptions are from:
 https://zenodo.org/records/16619228
 
 ## TODO
-add refs to sample images in the body
 continue proof read discussion
 verify revity eccentricity reference.
-verify DVICE microscope images technique.
+verify DVICE microscope images technique. bright field.
 remove images from PDF
 
 ## To reproduce the results
