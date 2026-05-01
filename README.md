@@ -8,8 +8,6 @@ https://zenodo.org/records/16619228
 
 ## TODO
 continue proof read discussion
-verify revity eccentricity reference.
-verify DVICE microscope images technique. bright field.
 remove images from PDF
 
 ## To reproduce the results
